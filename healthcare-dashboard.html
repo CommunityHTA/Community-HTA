@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard</title>
+    <link rel="stylesheet" href="healthcare-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Evalia</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active">
+                    <span class="icon">⬛</span>
+                    Dashboard
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="icon">📅</span>
+                    Calendar
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="icon">👥</span>
+                    My patients
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="icon">📋</span>
+                    Assessments
+                </a>
+                <div class="sidebar-footer">
+                    <a href="#" class="menu-item">
+                        <span class="icon">⚙️</span>
+                        Settings
+                    </a>
+                    <a href="#" class="menu-item">
+                        <span class="icon">❓</span>
+                        Help and support
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="back-button">
+                        <span>←</span>
+                    </button>
+                    <h1>Welcome back, Dr. Ana</h1>
+                </div>
+                <div class="header-right">
+                    <button class="icon-button">
+                        <span class="icon">📄</span>
+                    </button>
+                    <button class="icon-button">
+                        <span class="icon">🔔</span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ana Silva">
+                        <div class="user-info">
+                            <p class="user-name">Ana Silva</p>
+                            <p class="user-email">anasilva@hospitaluz.com</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Left Column -->
+                <div class="dashboard-left">
+                    <!-- Patient Fit Card -->
+                    <div class="card blue-card">
+                        <div class="card-content">
+                            <h2>Find the best fit for your patient</h2>
+                            <p>Review the current app or explore new options to ensure it meets your patient's needs.</p>
+                            <a href="assessment.html" class="primary-button">
+                                Start assessment
+                                <span class="icon">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Assessments Results -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h2>Latest assessments results</h2>
+                                <p>The percentage is based on each patient's needs</p>
+                            </div>
+                            <a href="#" class="view-all">View all</a>
+                        </div>
+
+                        <!-- Glycemic Control Section -->
+                        <div class="assessment-section">
+                            <h3>GLYCEMIC CONTROL</h3>
+                            <div class="assessment-cards">
+                                <div class="assessment-card">
+                                    <div class="app-icon blue">
+                                        <span>📊</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Glycemic Index</h4>
+                                        <p>Medical</p>
+                                        <div class="percentage">82%</div>
+                                    </div>
+                                </div>
+                                <div class="assessment-card">
+                                    <div class="app-icon orange">
+                                        <span>🍽️</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Foodnoms</h4>
+                                        <p>Health & Fitness</p>
+                                        <div class="percentage">67%</div>
+                                    </div>
+                                </div>
+                                <div class="assessment-card">
+                                    <div class="app-icon green">
+                                        <span>🥗</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Low GI Meal Plans</h4>
+                                        <p>Food & Drink</p>
+                                        <div class="percentage">76%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Heart Rate Tracking Section -->
+                        <div class="assessment-section">
+                            <h3>HEART RATE TRACKING</h3>
+                            <div class="assessment-cards">
+                                <div class="assessment-card">
+                                    <div class="app-icon red">
+                                        <span>❤️</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Heart Monitor</h4>
+                                        <p>Health</p>
+                                        <div class="percentage">74%</div>
+                                    </div>
+                                </div>
+                                <div class="assessment-card">
+                                    <div class="app-icon dark">
+                                        <span>🫀</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Welltory</h4>
+                                        <p>Medical</p>
+                                        <div class="percentage">32%</div>
+                                    </div>
+                                </div>
+                                <div class="assessment-card">
+                                    <div class="app-icon teal">
+                                        <span>📱</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Fitbit</h4>
+                                        <p>Fitness</p>
+                                        <div class="percentage">68%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sleep Monitoring Section -->
+                        <div class="assessment-section">
+                            <h3>SLEEP MONITORING</h3>
+                            <div class="assessment-cards">
+                                <div class="assessment-card">
+                                    <div class="app-icon orange">
+                                        <span>⏱️</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Sleep Cycle</h4>
+                                        <p>Health</p>
+                                        <div class="percentage">71%</div>
+                                    </div>
+                                </div>
+                                <div class="assessment-card">
+                                    <div class="app-icon teal">
+                                        <span>🛏️</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Sleep</h4>
+                                        <p>Health</p>
+                                        <div class="percentage">93%</div>
+                                    </div>
+                                </div>
+                                <div class="assessment-card">
+                                    <div class="app-icon navy">
+                                        <span>🌙</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Bedtime Sleep</h4>
+                                        <p>Health</p>
+                                        <div class="percentage">78%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Physical Activity Section -->
+                        <div class="assessment-section">
+                            <h3>PHYSICAL ACTIVITY</h3>
+                            <div class="assessment-cards">
+                                <div class="assessment-card">
+                                    <div class="app-icon multi">
+                                        <span>🎯</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Fitness +</h4>
+                                        <p>Fitness</p>
+                                        <div class="percentage">86%</div>
+                                    </div>
+                                </div>
+                                <div class="assessment-card">
+                                    <div class="app-icon black">
+                                        <span>🏃</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Nike Run</h4>
+                                        <p>Fitness</p>
+                                        <div class="percentage">81%</div>
+                                    </div>
+                                </div>
+                                <div class="assessment-card">
+                                    <div class="app-icon dark">
+                                        <span>🏋️</span>
+                                    </div>
+                                    <div class="app-info">
+                                        <h4>Gymverse</h4>
+                                        <p>Fitness</p>
+                                        <div class="percentage">82%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="dashboard-right">
+                    <!-- Calendar Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Calendar</h2>
+                            <a href="#" class="view-all">View all</a>
+                        </div>
+                        <div class="calendar-header">
+                            <h3>February 2025</h3>
+                            <div class="calendar-nav">
+                                <button class="nav-button">←</button>
+                                <button class="nav-button">→</button>
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            <div class="calendar-days">
+                                <div class="day-name">MON</div>
+                                <div class="day-name">TUE</div>
+                                <div class="day-name">WED</div>
+                                <div class="day-name">THU</div>
+                                <div class="day-name">FRI</div>
+                                <div class="day-name">SAT</div>
+                                <div class="day-name">SUN</div>
+                            </div>
+                            <div class="calendar-dates">
+                                <div class="date prev-month">27</div>
+                                <div class="date prev-month">28</div>
+                                <div class="date prev-month">29</div>
+                                <div class="date prev-month">30</div>
+                                <div class="date prev-month">31</div>
+                                <div class="date">1</div>
+                                <div class="date">2</div>
+                                <div class="date">3</div>
+                                <div class="date">4</div>
+                                <div class="date">5</div>
+                                <div class="date">6</div>
+                                <div class="date active">7</div>
+                                <div class="date">8</div>
+                                <div class="date">9</div>
+                                <div class="date">10</div>
+                                <div class="date has-event">11</div>
+                                <div class="date">12</div>
+                                <div class="date">13</div>
+                                <div class="date has-event">14</div>
+                                <div class="date">15</div>
+                                <div class="date">16</div>
+                                <div class="date">17</div>
+                                <div class="date">18</div>
+                                <div class="date">19</div>
+                                <div class="date has-event">20</div>
+                                <div class="date has-event">21</div>
+                                <div class="date">22</div>
+                                <div class="date">23</div>
+                                <div class="date">24</div>
+                                <div class="date">25</div>
+                                <div class="date">26</div>
+                                <div class="date">27</div>
+                                <div class="date">28</div>
+                                <div class="date next-month">1</div>
+                                <div class="date next-month">2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- This Week's Assessments -->
+                    <div class="card">
+                        <h2>This week's assessments</h2>
+                        <div class="assessment-list">
+                            <div class="assessment-item">
+                                <div class="patient-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="José Oliveira">
+                                </div>
+                                <div class="patient-info">
+                                    <h4>José Oliveira</h4>
+                                    <p>10 February</p>
+                                </div>
+                                <div class="assessment-status today">Today</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- This Month's Assessments -->
+                    <div class="card">
+                        <h2>This month's assessments</h2>
+                        <div class="assessment-list">
+                            <div class="assessment-item">
+                                <div class="patient-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Luis Rodrigues">
+                                </div>
+                                <div class="patient-info">
+                                    <h4>Luis Rodrigues</h4>
+                                    <p>10 February</p>
+                                </div>
+                                <div class="assessment-status days-left">3 days left</div>
+                            </div>
+                            <div class="assessment-item">
+                                <div class="patient-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Teresa Almeida">
+                                </div>
+                                <div class="patient-info">
+                                    <h4>Teresa Almeida</h4>
+                                    <p>11 February</p>
+                                </div>
+                                <div class="assessment-status days-left">4 days left</div>
+                            </div>
+                            <div class="assessment-item">
+                                <div class="patient-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Paula Santos">
+                                </div>
+                                <div class="patient-info">
+                                    <h4>Paula Santos</h4>
+                                    <p>20 February</p>
+                                </div>
+                                <div class="assessment-status weeks-left">2 weeks left</div>
+                            </div>
+                            <div class="assessment-item">
+                                <div class="patient-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="António Ferreira">
+                                </div>
+                                <div class="patient-info">
+                                    <h4>António Ferreira</h4>
+                                    <p>21 February</p>
+                                </div>
+                                <div class="assessment-status weeks-left">2 weeks left</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

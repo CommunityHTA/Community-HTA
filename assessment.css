@@ -1,0 +1,356 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+/* Sidebar */
+.logo {
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+}
+
+.logo h2 {
+    color: #3366ff;
+    font-weight: 700;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.menu-item:hover {
+    background-color: #f5f7fa;
+}
+
+.menu-item.active {
+    background-color: #eef2ff;
+    color: #3366ff;
+    font-weight: 500;
+}
+
+.menu-item .icon {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: #666;
+}
+
+.breadcrumb a:hover {
+    color: #3366ff;
+}
+
+.breadcrumb .separator {
+    margin: 0 0.5rem;
+}
+
+.breadcrumb .current {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #666;
+}
+
+.step.active .step-circle {
+    background-color: #3366ff;
+    border-color: #3366ff;
+    color: white;
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 0 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.step-label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.step.active .step-label {
+    color: #3366ff;
+    font-weight: 500;
+}
+
+/* Patient List Section */
+.patient-list-section {
+    margin-bottom: 2rem;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Search Bar */
+.search-container {
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-icon {
+    margin-right: 0.75rem;
+    color: #666;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+/* Patient Table */
+.patient-table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table-header {
+    display: flex;
+    background-color: #f8f9fb;
+    padding: 1rem;
+    font-weight: 500;
+    color: #666;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-cell {
+    flex: 1;
+}
+
+.table-row {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.table-row:hover {
+    background-color: #f5f7fa;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.cell {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.patient-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+/* Column Widths */
+.patient-name {
+    flex: 1.5;
+}
+
+.patient-id {
+    flex: 0.8;
+}
+
+.location {
+    flex: 1;
+}
+
+.health-condition {
+    flex: 1.5;
+}
+
+.contact-number {
+    flex: 1;
+}
+
+.email {
+    flex: 1.2;
+}
+
+/* Next Step Button */
+.next-step-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.next-step-button {
+    background-color: #3366ff;
+    color: white;
+    border-radius: 24px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.next-step-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(51, 102, 255, 0.2);
+}
+
+.arrow-icon {
+    margin-left: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .table-header, .table-row {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .patient-table {
+        overflow-x: auto;
+    }
+    
+    .table-header, .table-row {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .progress-steps {
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+}
