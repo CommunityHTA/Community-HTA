@@ -1,0 +1,888 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", -apple-system, Roboto, Helvetica, sans-serif;
+  color: #637391;
+}
+
+.screen {
+  border-radius: 1px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.layout {
+  display: flex;
+  gap: 0px;
+  height: 100vh; /* Para garantir que o layout preencha a altura da tela */
+}
+
+
+/* Sidebar styles */
+.sidebar {
+  width: 16%;
+  background-color: #fff;
+  border-right: 1px solid #c5cbe4;
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+  position: fixed; /* Fixar a sidebar */
+  height: 100vh; /* Fazer a sidebar ocupar toda a altura da tela */
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.menu-items {
+  padding-top: 10px;
+  width: 100%;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu-spacer {
+  min-height: 8px;
+  width: 100%;
+  padding-bottom: 8px;
+  
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.menu-item {
+  display: flex;
+  margin-top: 4px;
+  margin-right: 8px;
+  width: 100%;
+  padding: 12px 8px 12px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  color: #637391;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #f1f3f4;
+  color: #161d44;
+}
+
+.menu-item:active {
+  background-color: #f1f3f4;
+  color: #161d44;
+}
+
+.menu-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  align-self: stretch;
+  margin: auto 0;
+  flex-shrink: 0;
+}
+
+.menu-icon-small {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  align-self: stretch;
+  margin: auto 0;
+  flex-shrink: 0;
+}
+
+.menu-text {
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.sidebar-footer {
+  margin-top: 60px;
+  width: 100%;
+  padding: 0 16px 24px 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.logo {
+  object-fit: contain;
+  object-position: center;
+  width: 203px;
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 16%; /* Espaço para a sidebar */
+  width: 84%; /* O restante da largura */
+  overflow-y: auto; /* Permitir rolagem vertical */
+  height: 100vh; /* Fazer o main-content ocupar toda a altura da tela */
+}
+
+
+.main-container {
+  width: 100%;
+}
+
+/* Header styles */
+.header {
+  border-bottom: 1px solid #c5cbe4;
+  display: flex;
+  width: 100%;
+  padding: 16px 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px 100px;
+  position: sticky; /* Fixar o header */
+  top: 0; /* Manter o header no topo */
+  background-color: #f9f9f9; /* Para evitar que o conteúdo do dashboard fique atrás */
+  z-index: 10; /* Garantir que o header fique acima do conteúdo */
+}
+
+
+.welcome-text {
+  color: #161d44;
+  font-size: 24px;
+  font-weight: 500;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.user-actions {
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  align-items: center;
+  gap: 16px;
+}
+
+.action-icon {
+  border-radius: 1000px;
+  display: flex;
+  margin: auto 0;
+  padding: 6px;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+}
+
+.action-img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.divider {
+  border: 1px solid #c5cbe4;
+  align-self: stretch;
+  margin: auto 0;
+  width: 0;
+  height: 20px;
+}
+
+.user-profile {
+  border-radius: 8px;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+
+.user-avatar {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 32px;
+  border-radius: 50%;
+  align-self: stretch;
+  margin: auto 0;
+  flex-shrink: 0;
+}
+
+.user-info {
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.user-name {
+  color: #161d44;
+  font-size: 14px;
+}
+
+.user-email {
+  color: #161d44;
+  font-size: 12px;
+}
+
+.minimize-button {
+  border-radius: 99px;
+  background-color: #fff;
+  border: 1px solid #c5cbe4;
+  z-index: 10;
+  display: flex;
+  margin-top: -46px;
+  width: 24px;
+  padding: 4px;
+  align-items: center;
+  height: 24px;
+}
+
+.minimize-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+/* Dashboard content styles */
+.dashboard-content {
+  align-self: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 24px;
+  margin-right: 24px;
+  width: 100%;
+  max-width: 1143px;
+}
+
+.content-layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* Main column styles */
+.main-column {
+  width: 60%;
+}
+
+/* Assessment card styles */
+.assessment-card {
+  border-radius: 20px;
+  display: flex;
+  width: 100%;
+  padding: 27px 3px;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2d54df 0%, #161d44 100%);
+}
+
+.assessment-info {
+  display: flex;
+  padding: 0 24px 0 16px;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  justify-content: end;
+}
+
+.assessment-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.assessment-description {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  align-self: center;
+  margin-top: 4px;
+  width: 404px;
+}
+
+.assessment-button {
+  border-radius: 10000px;
+  background-color: #161d44;
+  align-self: center;
+  display: flex;
+  margin-top: 16px;
+  padding: 4px 4px 4px 16px;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.button-text {
+  color: #fff;
+  font-size: 16px;
+  font-family:
+    "DM Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 500;
+  text-align: center;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.button-icon {
+  transform: rotate(-3.1415925661670165rad);
+  border-radius: 1000px;
+  background-color: #fff;
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  padding: 6px;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+}
+
+.arrow-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+/* Results card styles */
+.results-card {
+  border-radius: 20px;
+  border: 0.5px solid #dadef1;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(12, 26, 75, 0.07);
+  background-color: #fefeff;
+  display: flex;
+  margin-top: 32px;
+  width: 100%;
+  padding-bottom: 63px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  width: 100%;
+  padding: 24px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-info {
+  align-self: stretch;
+  min-width: 240px;
+  margin: auto 0;
+  min-height: 40px;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 32px;
+}
+
+.card-title {
+  color: #161d44;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card-subtitle {
+  color: #637391;
+  font-size: 14px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.view-all-button {
+  align-self: stretch;
+  border-radius: 10000px;
+  margin: auto 0;
+  min-height: 40px;
+  padding: 10px 16px;
+  gap: 8px;
+  font-size: 16px;
+  color: #2d54df;
+  font-weight: 500;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.category-title {
+  align-self: stretch;
+  padding: 24px 24px 0;
+  gap: 10px;
+  font-size: 12px;
+  color: #161d44;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.app-list {
+  border-radius: 16px;
+  background-color: #f2f5fd;
+  align-self: center;
+  display: flex;
+  margin-top: 8px;
+  width: 624px;
+  max-width: 100%;
+  padding: 8px 12px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.app-row {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  width: 100%;
+  padding: 8px 0;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.app-item {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: flex-end;
+  gap: 8px;
+  flex: 1;
+}
+
+.app-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 56px;
+  box-shadow:
+    0px 0px 1px 0px rgba(12, 26, 75, 0.24),
+    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.app-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.app-name {
+  color: #0c112f;
+  align-self: stretch;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.app-category {
+  color: #47548c;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.app-score {
+  align-self: stretch;
+  font-size: 12px;
+  color: #637391;
+}
+
+/* Side column styles */
+.side-column {
+  width: 40%;
+}
+
+.calendar-card {
+  border-radius: 20px;
+  border: 0.5px solid #dadef1;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(12, 26, 75, 0.07);
+  background-color: #fefeff;
+  margin: 0 auto;
+  width: 100%;
+  padding-right: 6px;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  margin: 8px 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.month-title {
+  align-self: stretch;
+  margin: auto 0;
+  font-family:
+    "DM Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  color: #222b45;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1;
+}
+
+.calendar-controls {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-nav-button {
+  border-radius: 1000px;
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  padding: 6px;
+  align-items: center;
+  width: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.calendar {
+  margin: 19px 24px;
+  min-height: 266px;
+  font-family:
+    "DM Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 14px;
+  color: #161d44;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.weekdays {
+  display: flex;
+  width: 100%;
+  padding-bottom: 8px;
+  align-items: center;
+  gap: 18px;
+  font-size: 12px;
+  color: #1b2559;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+
+.weekday {
+  align-self: stretch;
+  margin: auto 0;
+  padding: 4px 5px;
+  width: 40px;
+  text-align: center;
+}
+
+.calendar-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+}
+
+.calendar-day {
+  align-self: stretch;
+  margin: auto 0;
+  padding: 10px;
+  width: 40px;
+  text-align: center;
+}
+
+.calendar-day.prev-month,
+.calendar-day.next-month {
+  color: #6b7588;
+}
+
+.calendar-day-wrapper {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  padding: 10px 3px;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+  width: 40px;
+}
+
+.today {
+  border-radius: 10000px;
+  background-color: #2d54df;
+  min-height: 34px;
+  width: 34px;
+  padding: 0 6px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider-line {
+  aspect-ratio: 500;
+  width: 100%;
+  margin: 24px 16px 0 15px;
+  border: none;
+  height: 1px;
+  background-color: #dadef1;
+}
+
+.assessments-title {
+  align-self: stretch;
+  margin-top: 5px;
+  padding: 24px 24px 0;
+  font-family:
+    "DM Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  color: #161d44;
+  font-weight: 400;
+}
+
+.assessments-list {
+  border-radius: 16px;
+  margin-top: 8px;
+  width: 100%;
+  padding: 16px;
+  font-family:
+    "DM Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.assessment-item {
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow:
+    0px 0px 1px 0px rgba(12, 26, 75, 0.24),
+    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+  background-color: #fefeff;
+  display: flex;
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.patient-info {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.avatar-with-info {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.patient-avatar {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 40px;
+  border-radius: 32px;
+  align-self: stretch;
+  margin: auto 0;
+  flex-shrink: 0;
+}
+
+.patient-details {
+  align-self: stretch;
+  margin: auto 0;
+  width: 121px;
+}
+
+.patient-name {
+  color: #161d44;
+  font-size: 16px;
+}
+
+.assessment-date {
+  width: 100%;
+  font-size: 14px;
+  color: #47548c;
+}
+
+.assessments-subtitle {
+  align-self: stretch;
+  flex: 1;
+  margin-top: 8px;
+  width: 100%;
+  padding: 24px 0 8px;
+  font-size: 16px;
+  color: #161d44;
+  font-weight: 400;
+}
+
+.status-tag {
+  align-self: stretch;
+  border-radius: 10000px;
+  margin: auto 0;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-tag.urgent {
+  background-color: #ffeeed;
+  color: #94101d;
+}
+
+.status-tag.warning {
+  background-color: #fff4cc;
+  color: #924f00;
+}
+
+.status-tag.success {
+  background-color: #dffddd;
+  color: #246406;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar-footer {
+    margin-top: 40px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .header {
+    max-width: 100%;
+    padding: 16px 20px;
+  }
+
+  .dashboard-content {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .content-layout {
+    flex-direction: column;
+  }
+
+  .main-column {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .assessment-title,
+  .assessment-description {
+    max-width: 100%;
+  }
+
+  .assessment-info {
+    padding-left: 20px;
+  }
+
+  .category-title {
+    margin-right: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .side-column {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .calendar-card {
+    max-width: 100%;
+  }
+
+  .calendar-header {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .calendar {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .divider-line {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .assessments-title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .assessments-list {
+    max-width: 100%;
+  }
+
+  .menu-item,
+  .weekday,
+  .calendar-day,
+  .calendar-day-wrapper,
+  .today,
+  .status-tag {
+    white-space: initial;
+  }
+}
