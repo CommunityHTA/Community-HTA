@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Assessment</title>
+    <link rel="stylesheet" href="patient-assessment.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="screen">
+      <header class="header">
+        <nav class="breadcrumb">
+          <span class="breadcrumb-item">Dashboard</span>
+          <div class="breadcrumb-current">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ee00d2dde44c7413cb2ac333d47d6b2c2227ec4220aaf5a5a9c85f21ec43c2b?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+              class="breadcrumb-icon"
+              alt="Breadcrumb separator"
+            />
+            <span class="breadcrumb-item-current">New assessment</span>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="stepper">
+          <div class="step active">Select patient</div>
+          <div class="step-divider active"></div>
+          <div class="step">
+            <div class="step-circle"></div>
+            <div class="step-label">Needs</div>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step">
+            <div class="step-circle"></div>
+            <div class="step-label">Focus</div>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step">
+            <div class="step-circle"></div>
+            <div class="step-label">Start assessment</div>
+          </div>
+        </section>
+
+        <section class="title-section">
+          <h1 class="page-title">Patient list</h1>
+          <p class="page-description">
+            Select a patient to make the assessment
+          </p>
+        </section>
+
+        <section class="search-section">
+          <div class="search-field">
+            <div class="search-content">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/2015cdb12a2eadbba2e6171cda6d37af5fcb6e99a25e96fe79fc1a07abb432dd?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                class="search-icon"
+                alt="Search icon"
+              />
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search patient name..."
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="patient-table">
+          <div class="table-header">
+            <div class="header-cell">Patient Name</div>
+            <div class="header-cell">Patient ID</div>
+            <div class="header-cell">Location</div>
+            <div class="header-cell">Health Condition</div>
+            <div class="header-cell">Contact Number</div>
+            <div class="header-cell">Email</div>
+          </div>
+
+          <div class="table-rows">
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8bcd3e27d2d3e9e13d84bde136b507c5f2c08d4a281476d1147e820e5fff667?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">Carlos Martins</div>
+              </div>
+              <div class="table-cell">1934</div>
+              <div class="table-cell">Lisbon</div>
+              <div class="table-cell">Primary hypertension</div>
+              <div class="table-cell">910 459 432</div>
+              <div class="table-cell">carlos@mail.com</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/f7ab5ba7683cd7e705f386302d7d020883d53779f64794eef3e81e4017249777?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">José Oliveira</div>
+              </div>
+              <div class="table-cell">4829</div>
+              <div class="table-cell">Porto</div>
+              <div class="table-cell">Ischemic heart disease</div>
+              <div class="table-cell">913 056 995</div>
+              <div class="table-cell">jose@mail.com</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/025e219e893593636cd58e284ca1dc35238d0a33675a8d6b742d72b65e2d0a4c?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">Ana Pereira</div>
+              </div>
+              <div class="table-cell">3355</div>
+              <div class="table-cell">Coimbra</div>
+              <div class="table-cell">Coronary artery disease</div>
+              <div class="table-cell">924 540 689</div>
+              <div class="table-cell">ana@mail.com</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/c2909ad44ef7781fbae960cd74c042940c0b87db68ef687abd2df1fae33f8ea9?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">José Silva</div>
+              </div>
+              <div class="table-cell">9481</div>
+              <div class="table-cell">Faro</div>
+              <div class="table-cell">Hospital Dyslipidemia</div>
+              <div class="table-cell">968 594 245</div>
+              <div class="table-cell">jose@mail.com</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/c42945ec9f57f26f76e62473c6402b008a1be215e2ad333f3744bcfbe9c09686?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">Paula Santos</div>
+              </div>
+              <div class="table-cell">1948</div>
+              <div class="table-cell">Braga</div>
+              <div class="table-cell">Ischemic heart</div>
+              <div class="table-cell">924 543 995</div>
+              <div class="table-cell">paula@mail.com</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b28de2812e42c5bbc2cdeac357fc19217e7efecf9833e2279078eee9fb70a58f?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">Luís Rodrigues</div>
+              </div>
+              <div class="table-cell">4892</div>
+              <div class="table-cell">Lisbon</div>
+              <div class="table-cell">Coronary artery</div>
+              <div class="table-cell">912 583 924</div>
+              <div class="table-cell">luis@mail.com</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/06bdd841c2a1dc2643c98aaaf7ba3b54f6d7f39468ab9cf3c91bb5c5928c0df9?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">Teresa Almeida</div>
+              </div>
+              <div class="table-cell">9918</div>
+              <div class="table-cell">Porto</div>
+              <div class="table-cell">Ischemic heart disease</div>
+              <div class="table-cell">914 853 953</div>
+              <div class="table-cell">teresa@mail.com</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f87e0dd3358332cd146d9f006fdbbb0d45f13fe2e0217e9dd7c387858b9fad4?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">Sérgio Fernandes</div>
+              </div>
+              <div class="table-cell">9183</div>
+              <div class="table-cell">Braga</div>
+              <div class="table-cell">Coronary artery</div>
+              <div class="table-cell">966 482 345</div>
+              <div class="table-cell">sergio@mail.com</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell patient-name">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b1e848ff89e6e3685fd5c3d18ad0eea9da70ca10c94e56466d959258f13b4d9?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <div class="cell-content">António Ferreira</div>
+              </div>
+              <div class="table-cell">8374</div>
+              <div class="table-cell">Setúbal</div>
+              <div class="table-cell">Ischemic cerebrovascular</div>
+              <div class="table-cell">913 585 938</div>
+              <div class="table-cell">antonio@mail.com</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <button class="next-button">
+          <span class="button-label">Next step</span>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f99f77719375f90161843b2832d7be19dc78f8c9edb84043dfd06cc624ffd17?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+            class="button-icon"
+            alt="Next icon"
+          />
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>
