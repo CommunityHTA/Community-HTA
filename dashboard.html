@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="builder.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="evalia.png" type="image/png" /> 
+  </head>
+  <body>
+    <div class="screen">
+      <div class="layout">
+        <nav class="sidebar">
+          <div class="sidebar-content">
+            <div class="menu-items">
+              <div class="menu-spacer">
+                  <img src="evalia.png" alt="Evalia" class="logo-img">
+              </div>
+              <div class="menu-item active">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8bcb60ca1b299778d9080519b24bee920ec389a52f93105815086b3dd800db14?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="menu-icon"
+                  alt="Dashboard icon"
+                />
+                <span class="menu-text">Dashboard</span>
+              </div>
+              <div class="menu-item">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/eaa318c1adfd221d7ac45b67853e200f3bbc41c611f06072c19a50a9e7713913?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="menu-icon"
+                  alt="Calendar icon"
+                />
+                <span class="menu-text">Calendar</span>
+              </div>
+              <div class="menu-item">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf6f0287c1fff5190dc328bae452e997cda03936bc5d0869f98d4732e5cf4663?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="menu-icon"
+                  alt="Patients icon"
+                />
+                <span class="menu-text">My patients</span>
+              </div>
+              <div class="menu-item">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b5ed5579b671cb3212fe36d691e855880eaccda8fbfb2f8491e501dae6d96bf?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="menu-icon"
+                  alt="Assessments icon"
+                />
+                <span class="menu-text">Assessments</span>
+              </div>
+            </div>
+            <div class="sidebar-footer">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f9d05226cf2224b175ab88d8b5cecda09275ae72be2bef24ccb48b0d7857599d?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                class="logo"
+                alt="Hospital logo"
+              />
+              <div class="menu-item">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/846f123fa7dbe58dde979afd251808af587e712b4a1e6199941cd7f923d6829a?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="menu-icon-small"
+                  alt="Settings icon"
+                />
+                <span class="menu-text">Settings</span>
+              </div>
+              <div class="menu-item">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/634becb02676f3b3747d467225cb59b9d40263458f31d9997251e56e3de04eb7?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="menu-icon-small"
+                  alt="Help icon"
+                />
+                <span class="menu-text">Help and support</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <main class="main-content">
+          <div class="main-container">
+            <header class="header">
+              <h1 class="welcome-text">Welcome back, Dr. Ana</h1>
+              <div class="user-actions">
+                <div class="action-icon">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/01868cd9b9cfae325e8ed124cb871187bfcf06176987838cd99eaa2476aecb8f?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                    class="action-img"
+                    alt="Notification"
+                  />
+                </div>
+                <div class="action-icon">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/7d25ac0f01303224fdefecd8a31224ecfc2fd0571db904928de05565961dfa05?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                    class="action-img"
+                    alt="Messages"
+                  />
+                </div>
+                <div class="divider"></div>
+                <div class="user-profile">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/987df7dab9d43ff31bf3cdb0b042a0a6503e1fa2a7e3a379d341dce794496c2f?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                    class="user-avatar"
+                    alt="User avatar"
+                  />
+                  <div class="user-info">
+                    <p class="user-name">Ana Silva</p>
+                    <p class="user-email">anasilva@hospitalluz.com</p>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="dashboard-content">
+              <div class="content-layout">
+                <section class="main-column">
+                  <div class="assessment-card">
+                    <div class="assessment-info">
+                      <h2 class="assessment-title">
+                        Find the best fit for your patient
+                      </h2>
+                      <p class="assessment-description">
+                        Review the current app or explore new options to ensure
+                        it meets your patient's needs.
+                      </p>
+                    </div>
+                    <button class="assessment-button">
+                      <span class="button-text">Start assessment</span>
+                      <div class="button-icon">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/e21c0ffba5a53147a8728d420aad9162b0efa9bec9b36b2c03d2c38703abf417?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          class="arrow-icon"
+                          alt="Arrow"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                  <div class="results-card">
+                    <div class="card-header">
+                      <div class="header-info">
+                        <h2 class="card-title">Latest assessments results</h2>
+                        <p class="card-subtitle">
+                          The percentage is based on each patient's needs
+                        </p>
+                      </div>
+                      <button class="view-all-button">View all</button>
+                    </div>
+
+                    <h3 class="category-title">Glycemic control</h3>
+                    <div class="app-list">
+                      <div class="app-row">
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/54f54180d417378c8a0a1cbc169dcc98211991939bee9ba5ac00928eb70bf8bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Glycemic Index app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Glycemic Index</h4>
+                            <p class="app-category">Medical</p>
+                            <p class="app-score">82%</p>
+                          </div>
+                        </div>
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/118ba5405b1140b1d75fa186c9665c2dbba282f5cf57ec1b934f2e041674a264?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Foodnoms app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Foodnoms</h4>
+                            <p class="app-category">Health & Fitness</p>
+                            <p class="app-score">67%</p>
+                          </div>
+                        </div>
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b83be3472f8ab6fdd46ad00a1f33cba79f45175c9d58b173989ee49def6681a?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Low GI Meal Plans app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Low GI Meal Plans</h4>
+                            <p class="app-category">Food & Drink</p>
+                            <p class="app-score">76%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h3 class="category-title">Heart rate tracking</h3>
+                    <div class="app-list">
+                      <div class="app-row">
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/3cc77465acd2cfd04de54042c130991be2dda34cafecd976c8ffb44b486fb046?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Heart Monitor app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Heart Monitor</h4>
+                            <p class="app-category">Health</p>
+                            <p class="app-score">74%</p>
+                          </div>
+                        </div>
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fb7b135590c7766c469efd22e6e98857ce8dcd3d21d557b4b86fa3c7a50bea7?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Welltory app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Welltory</h4>
+                            <p class="app-category">Medical</p>
+                            <p class="app-score">32%</p>
+                          </div>
+                        </div>
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/bb6b4f547c759b0e09c665da644261ad4e93ec80847cb489ae737f183c052f65?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Fitbit app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Fitbit</h4>
+                            <p class="app-category">Fitness</p>
+                            <p class="app-score">68%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h3 class="category-title">Sleep monitoring</h3>
+                    <div class="app-list">
+                      <div class="app-row">
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f229f7b71baead51669b5341190c182d77c6c097d00261ffb8819d0ec32c844d?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Sleep Cicle app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Sleep Cicle</h4>
+                            <p class="app-category">Health</p>
+                            <p class="app-score">71%</p>
+                          </div>
+                        </div>
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/3db15af4d42b0bd7e553550524fd215c1f260f8e1bef32dca5dedf220fee34da?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Sleep app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Sleep</h4>
+                            <p class="app-category">Health</p>
+                            <p class="app-score">93%</p>
+                          </div>
+                        </div>
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/fed2b9c564cd1c778f491e436dda3ef5b9fd7c8368f4b12e2eeb1b7e7bf285b7?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Bedtime Sleep app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Bedtime Sleep</h4>
+                            <p class="app-category">Health</p>
+                            <p class="app-score">78%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h3 class="category-title">Physical activity</h3>
+                    <div class="app-list">
+                      <div class="app-row">
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/093f5c28787214f360c6e403d3f7505b581492216d4d511e2f2f2a2b123184b3?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Fitness+ app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Fitness +</h4>
+                            <p class="app-category">Fitness</p>
+                            <p class="app-score">86%</p>
+                          </div>
+                        </div>
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/99cf31268fcc885c5d6e66574a6de37cb336b474f9cca038f120903084768eef?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Nike Run app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Nike Run</h4>
+                            <p class="app-category">Fitness</p>
+                            <p class="app-score">81%</p>
+                          </div>
+                        </div>
+                        <div class="app-item">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a20a2b5bf0b715d77f3a9795e63118b80b9bc579316c282a588c854cbbdb02c?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="app-icon"
+                            alt="Gymverse app"
+                          />
+                          <div class="app-details">
+                            <h4 class="app-name">Gymverse</h4>
+                            <p class="app-category">Fitness</p>
+                            <p class="app-score">82%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="side-column">
+                  <div class="calendar-card">
+                    <div class="card-header">
+                      <h2 class="card-title">Calendar</h2>
+                      <button class="view-all-button">View all</button>
+                    </div>
+                    <div class="calendar-header">
+                      <h3 class="month-title">February 2025</h3>
+                      <div class="calendar-controls">
+                        <button class="calendar-nav-button">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/94335c98757cbd027579af78287476600cc3feeb77bccad6bb231613a58ff563?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="nav-icon"
+                            alt="Previous"
+                          />
+                        </button>
+                        <button class="calendar-nav-button">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/48d813ead412d930a710b25d1e19d738e7eb7514b0a57d56383c2e3abd8a2dee?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="nav-icon"
+                            alt="Next"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="calendar">
+                      <div class="weekdays">
+                        <div class="weekday">Mon</div>
+                        <div class="weekday">TUE</div>
+                        <div class="weekday">WED</div>
+                        <div class="weekday">THU</div>
+                        <div class="weekday">FRI</div>
+                        <div class="weekday">SAT</div>
+                        <div class="weekday">SUN</div>
+                      </div>
+                      <div class="calendar-row">
+                        <div class="calendar-day prev-month">27</div>
+                        <div class="calendar-day prev-month">28</div>
+                        <div class="calendar-day prev-month">29</div>
+                        <div class="calendar-day prev-month">30</div>
+                        <div class="calendar-day prev-month">31</div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                      </div>
+                      <div class="calendar-row">
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day-wrapper">
+                          <div class="calendar-day today">7</div>
+                        </div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+                      </div>
+                      <div class="calendar-row">
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day">16</div>
+                      </div>
+                      <div class="calendar-row">
+                        <div class="calendar-day">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day">21</div>
+                        <div class="calendar-day">22</div>
+                        <div class="calendar-day">23</div>
+                      </div>
+                      <div class="calendar-row">
+                        <div class="calendar-day">24</div>
+                        <div class="calendar-day">25</div>
+                        <div class="calendar-day">26</div>
+                        <div class="calendar-day">27</div>
+                        <div class="calendar-day">28</div>
+                        <div class="calendar-day next-month">1</div>
+                        <div class="calendar-day next-month">2</div>
+                      </div>
+                    </div>
+                    <hr class="divider-line" />
+                    <h3 class="assessments-title">This week's assessments</h3>
+                    <div class="assessments-list">
+                      <div class="assessment-item">
+                        <div class="patient-info">
+                          <div class="avatar-with-info">
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/11a895ef8558e594c24b3f3b368e9d556c687f1dbb1d61a0c47815ccb8498732?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                              class="patient-avatar"
+                              alt="José Oliveira"
+                            />
+                            <div class="patient-details">
+                              <p class="patient-name">José Oliveira</p>
+                              <p class="assessment-date">10 February</p>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="status-tag urgent">Today</span>
+                      </div>
+                      <h3 class="assessments-subtitle">
+                        This month's assessments
+                      </h3>
+                      <div class="assessment-item">
+                        <div class="patient-info">
+                          <div class="avatar-with-info">
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f63fb73c15989ff5a6d1c9eb57f9eb394a054afc4442b6a8de3d7ac71c0843f8?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                              class="patient-avatar"
+                              alt="Luís Rodrigues"
+                            />
+                            <div class="patient-details">
+                              <p class="patient-name">Luís Rodrigues</p>
+                              <p class="assessment-date">10 February</p>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="status-tag warning">3 days left</span>
+                      </div>
+                      <div class="assessment-item">
+                        <div class="patient-info">
+                          <div class="avatar-with-info">
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/9cb4efdc79846b210616a0c033b59c0c8631d340115d542672fc11cb83d21edd?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                              class="patient-avatar"
+                              alt="Teresa Almeida"
+                            />
+                            <div class="patient-details">
+                              <p class="patient-name">Teresa Almeida</p>
+                              <p class="assessment-date">11 February</p>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="status-tag warning">4 days left</span>
+                      </div>
+                      <div class="assessment-item">
+                        <div class="patient-info">
+                          <div class="avatar-with-info">
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb9d8aa0e44774fbdfae104425f216b39041839afc51bde5e2387c6c6ee3b0a1?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                              class="patient-avatar"
+                              alt="Paula Santos"
+                            />
+                            <div class="patient-details">
+                              <p class="patient-name">Paula Santos</p>
+                              <p class="assessment-date">20 February</p>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="status-tag success">2 weeks left</span>
+                      </div>
+                      <div class="assessment-item">
+                        <div class="patient-info">
+                          <div class="avatar-with-info">
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/a504174a4d9ed1f65e6550472e53017bf79d0b4a170665825cdcc8879be5f720?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                              class="patient-avatar"
+                              alt="António Ferreira"
+                            />
+                            <div class="patient-details">
+                              <p class="patient-name">António Ferreira</p>
+                              <p class="assessment-date">21 February</p>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="status-tag success">2 weeks left</span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
