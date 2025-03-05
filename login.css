@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100vh; /* Ocupa 100% da altura da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   font-family:
     "DM Sans",
@@ -15,34 +22,35 @@ body {
 }
 
 .screen {
-  border-radius: 0.7px;
-  border: 0px solid #e3e0e0;
-  background-color: #f9f9f9;
+  height: 100vh; /* Garante que a tela ocupe toda a altura */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 32px 80px 32px 32px;
   overflow: hidden;
 }
 
+
 .container {
   display: flex;
   gap: 20px;
+  height: 100%; /* Garante que ocupe toda a altura disponível */
 }
 
-/* Promo Column (Left Side) */
-.promo-column {
+.promo-column, .login-column {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  line-height: normal;
-  width: 61%;
+  justify-content: center;
+  height: 100%; /* Ocupa toda a altura da tela */
+  width: 50%;
 }
+
 
 .promo-animation {
   border-radius: 24px;
+  height: 100vh;
   box-shadow: 0px 34px 10px rgba(83, 83, 116, 0);
   display: flex;
-  width: 100%;
-  padding-top: 686px;
-  padding-bottom: 111px;
   flex-direction: column;
   overflow: hidden;
   align-items: stretch;
@@ -99,23 +107,14 @@ body {
   width: 24px;
 }
 
-/* Login Column (Right Side) */
-.login-column {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  line-height: normal;
-  width: 39%;
-  margin-left: 20px;
-}
-
 .login-container {
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
   flex-direction: column;
-  align-self: stretch;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
+  height: 100hv;
+  margin: auto;
+  width: 60%;
 }
 
 .login-title {
@@ -215,6 +214,7 @@ body {
   text-decoration: none;
   font-size: 14px;
   display: block;
+  text-align: right;
 }
 
 .login-button {
@@ -257,10 +257,10 @@ body {
   }
 
   .promo-animation {
-    max-width: 100%;
-    margin-top: 40px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .promo-content {
@@ -320,4 +320,9 @@ body {
     max-width: 100%;
     margin-top: 40px;
   }
+}
+
+.logo-evalia {
+  height: 15%;
+  margin-bottom: 24px;
 }

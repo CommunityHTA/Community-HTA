@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Screen</title>
-    <link rel="stylesheet" href="login-screen.css" />
+    <link rel="stylesheet" href="login.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="evalia.png" type="image/png" /> 
   </head>
   <body>
     <main class="screen">
@@ -33,6 +34,7 @@
 
         <section class="login-column">
           <div class="login-container">
+            <img src="evalia.png" alt="Evalia" class="logo-evalia">
             <h1 class="login-title">Log in</h1>
             <div class="login-form-group">
               <form class="login-form">
@@ -42,7 +44,7 @@
                     <div class="input-content">
                       <input
                         type="text"
-                        class="input-field"
+                        class="input-field" id="username"
                         placeholder="Enter your username"
                       />
                     </div>
