@@ -78,7 +78,7 @@ body {
   color: #161d44;
 }
 
-.menu-item:active {
+.menu-item.active {
   background-color: #f1f3f4;
   color: #161d44;
 }

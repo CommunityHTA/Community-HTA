@@ -386,7 +386,15 @@ body {
   justify-content: start;
   flex-wrap: wrap;
   margin-top: 8px;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
 }
+
+.table-row.selected {
+  border: 2px solid blue;
+  background-color: rgba(0, 0, 255, 0.1); /* Fundo azul claro para destaque */
+}
+
 
 .table-row:first-child {
   margin-top: 8px;
@@ -495,7 +503,18 @@ body {
     sans-serif;
   font-size: 16px;
   font-weight: 500;
+  background-color: gray;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: background-color 0.3s ease;
 }
+
+.next-button.active {
+  background-color: blue;
+  pointer-events: auto;
+  opacity: 1;
+}
+
 
 .button-label {
   align-self: stretch;

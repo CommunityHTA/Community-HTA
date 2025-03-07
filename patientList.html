@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="img/evalia.png" type="image/png" /> 
   </head>
   <body>
     <div class="screen">
@@ -240,4 +241,30 @@
       </footer>
     </div>
   </body>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const rows = document.querySelectorAll(".table-row");
+    const nextButton = document.querySelector(".next-button");
+
+    rows.forEach(row => {
+      row.addEventListener("click", function () {
+        // Remover seleção anterior
+        rows.forEach(r => r.classList.remove("selected"));
+
+        // Adicionar classe selecionada à linha clicada
+        this.classList.add("selected");
+
+        // Ativar botão "Next step"
+        nextButton.classList.add("active");
+      });
+    });
+
+    // Redirecionar para selectApp.html ao clicar no botão ativo
+    nextButton.addEventListener("click", function () {
+      if (nextButton.classList.contains("active")) {
+        window.location.href = "selectApp.html";
+      }
+    });
+  });
+</script>
 </html>
