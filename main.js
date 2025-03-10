@@ -3,26 +3,48 @@ document.addEventListener("DOMContentLoaded", function () {
     const usernameInput = document.getElementById("username");
     const passwordInput = document.querySelector("input[type='password']");
 
-    function handleLogin() {
+    function handleLogin() { 
+        const usernameField = document.getElementById("input-content");
+        const passwordField = document.getElementById("password-content");
         const username = usernameInput.value;
         const password = passwordInput.value;
 
         if (username === "user100" && password === "user100") {
-            // Login bem-sucedido, redireciona para a página dashboard.html
+            usernameInput.style.border = "2px solid #ccc";
+            passwordInput.style.border = "2px solid #ccc";
             window.location.href = "dashboard.html";
         } else {
-            // Exibe um erro se o login falhar
             alert("Usuário ou senha incorretos!");
+            usernameField.style.border = "2px solid red";
+            passwordField.style.border = "2px solid red";
         }
     }
 
-    // Evento de clique no botão de login
     loginButton.addEventListener("click", handleLogin);
 
-    // Evento para detectar pressionamento da tecla "Enter"
     document.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             handleLogin();
         }
     });
+
+    mudaImagem();
 });
+
+function mudaImagem() {
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".indicator-dot");
+    let currentIndex = 0;
+
+    function changeSlide() {
+        slides.forEach((slide) => (slide.style.display = "none"));
+        dots.forEach((dot) => dot.classList.remove("active"));
+        slides[currentIndex].style.display = "block";
+        dots[currentIndex].classList.add("active");
+        currentIndex = (currentIndex + 1) % slides.length;
+    }
+
+    changeSlide();
+    setInterval(changeSlide, 3000);
+}
+

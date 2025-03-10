@@ -54,34 +54,57 @@ body {
   flex-direction: column;
   overflow: hidden;
   align-items: stretch;
-  background-color: #2d54df; /* Added background color for the animation area */
+  background: linear-gradient(60deg, #6191F9, #2D54DF);
 }
 
 .promo-content {
   display: flex;
-  padding: 0 48px;
   flex-direction: column;
   align-items: stretch;
+  justify-content: center;
+  padding: 0 48px;
   font-weight: 500;
   text-align: center;
+  flex: 9; 
+}
+
+.animation {
+  flex: 8; /* 70% da altura da .promo-content */
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.slide {
+  height: 400px;
 }
 
 .promo-title {
+  flex: 1; /* 10% */
   color: #fff;
   font-size: 28px;
   align-self: center;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .promo-description {
+  flex: 1; /* 10% */
   color: #e0e5f2;
   font-size: 20px;
-  margin-top: 16px;
+  margin-top: 8px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .scroll-indicator {
+  flex: 1; /* 10% da altura do container */
   align-self: center;
   display: flex;
   margin-top: 25px;
