@@ -61,16 +61,22 @@
                   <label class="field-label">Password</label>
                   <div class="input-container">
                     <div class="input-content" id="password-content">
-                      <input
-                        type="password"
-                        class="input-field"
-                        placeholder="Enter your password"
-                      />
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/ae0e46fed0a6d4db2a92395b1c4e17df61e448f6f52d332f9019fb2cede2a10d?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                        class="password-toggle"
-                        alt="Toggle password visibility"
-                      />
+                        <input
+                            type="password"
+                            class="input-field"
+                            id="password-input"
+                            placeholder="Enter your password"
+                        />
+                        <img
+                            src="icons/system/eye.svg"
+                            class="password-toggle"
+                            alt="Toggle password visibility"
+                            id="toggle-password"
+                        />
+                    </div>
+                    <div class="alertaErro" id="alertaErro">
+                        <img src="icons/system/exclamation-circle.svg" alt="Erro" class="alertaIcone" id="alertaErroIcon" style="display: none">
+                        <span class="alertaTexto" id="alertaErroLabel" style="display: none">User or password incorrect</span>
                     </div>
                     <a href="#" class="forgot-password">Forget password?</a>
                   </div>
