@@ -22,7 +22,7 @@
               </div>
               <div class="menu-item active">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8bcb60ca1b299778d9080519b24bee920ec389a52f93105815086b3dd800db14?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  src="icons/general/squares-2x2.svg"
                   class="menu-icon"
                   alt="Dashboard icon"
                 />
@@ -30,7 +30,7 @@
               </div>
               <div class="menu-item">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/eaa318c1adfd221d7ac45b67853e200f3bbc41c611f06072c19a50a9e7713913?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  src="icons/general/calendar.svg"
                   class="menu-icon"
                   alt="Calendar icon"
                 />
@@ -38,7 +38,7 @@
               </div>
               <div class="menu-item">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf6f0287c1fff5190dc328bae452e997cda03936bc5d0869f98d4732e5cf4663?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  src="icons/general/user-group.svg"
                   class="menu-icon"
                   alt="Patients icon"
                 />
@@ -46,7 +46,7 @@
               </div>
               <div class="menu-item">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b5ed5579b671cb3212fe36d691e855880eaccda8fbfb2f8491e501dae6d96bf?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  src="icons/general/clipboard-document-list.svg"
                   class="menu-icon"
                   alt="Assessments icon"
                 />
@@ -61,7 +61,7 @@
               />
               <div class="menu-item">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/846f123fa7dbe58dde979afd251808af587e712b4a1e6199941cd7f923d6829a?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  src="icons/system/cog-8-tooth.svg"
                   class="menu-icon-small"
                   alt="Settings icon"
                 />
@@ -69,7 +69,7 @@
               </div>
               <div class="menu-item">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/634becb02676f3b3747d467225cb59b9d40263458f31d9997251e56e3de04eb7?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  src="icons/system/question-mark-circle.svg"
                   class="menu-icon-small"
                   alt="Help icon"
                 />
@@ -502,5 +502,42 @@
         window.location.href = "patientList.html";
     });
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const inputFields = document.querySelectorAll(".input-field"); // Seleciona todos os campos de entrada
+    const icons = document.querySelectorAll(".menu-icon, .menu-icon-small"); // Seleciona todos os ícones
+
+    // Inicializa os ícones como inativos, exceto os que têm a classe active
+    icons.forEach(icon => {
+        if (!icon.closest('.menu-item').classList.contains('active')) {
+            icon.classList.add("inactive-icon");
+        }
+    });
+
+    // Função para atualizar os ícones
+    function updateIcons() {
+        icons.forEach(icon => {
+            const menuItem = icon.closest('.menu-item'); // Obtém o item do menu relacionado ao ícone
+            if (menuItem.classList.contains('active')) {
+                icon.classList.remove("inactive-icon"); // Mantém o ícone ativo sem a classe inativa
+            } else if (document.activeElement !== icon) { // Se o campo de entrada não está ativo
+                icon.classList.add("inactive-icon"); // Adiciona a classe se não estiver ativo
+            } else {
+                icon.classList.remove("inactive-icon"); // Remove a classe se o campo estiver ativo
+            }
+        });
+    }
+
+    // Adiciona eventos de foco e desfoco nos campos de entrada
+    inputFields.forEach(inputField => {
+        inputField.addEventListener("focus", updateIcons); // Quando o campo é focado
+        inputField.addEventListener("blur", updateIcons); // Quando o campo perde o foco
+    });
+
+    // Chama a função ao carregar para definir o estado inicial
+    updateIcons();
+});
+
+
 </script>
 </html>

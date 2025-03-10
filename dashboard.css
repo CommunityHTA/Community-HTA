@@ -467,6 +467,10 @@ body {
   flex: 1;
 }
 
+.app-item:hover {
+    cursor: pointer;
+}
+
 .app-icon {
   aspect-ratio: 1;
   object-fit: contain;
@@ -885,4 +889,18 @@ body {
   .status-tag {
     white-space: initial;
   }
+}
+
+.menu-icon,
+.menu-icon-small {
+    transition: filter 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.menu-icon.active,
+.menu-icon-small.active {
+    filter: none; /* Mantém a cor original do ícone quando ativo */
+}
+
+.inactive-icon {
+    filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(489%) hue-rotate(180deg) brightness(56%) contrast(92%); /* Cor do ícone inativo */
 }

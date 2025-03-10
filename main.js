@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const username = usernameInput.value;
         const password = passwordInput.value;
 
-        if (username === "user100" && password === "user100") {
+        if (username === "anasilva" && password === "user100") {
             // Reseta o estilo dos campos de entrada
             usernameContainer.classList.remove("input-error");
             passwordContainer.classList.remove("input-error");
