@@ -54,11 +54,6 @@
               </div>
             </div>
             <div class="sidebar-footer">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f9d05226cf2224b175ab88d8b5cecda09275ae72be2bef24ccb48b0d7857599d?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                class="logo"
-                alt="Hospital logo"
-              />
               <div class="menu-item">
                 <img
                   src="icons/system/cog-8-tooth.svg"
@@ -83,14 +78,14 @@
             <header class="header">
               <h1 class="welcome-text">Welcome back, Dr. Ana</h1>
               <div class="user-actions">
-                <div class="action-icon">
+                <div class="action-icon"> <!--icon falta mudar-->
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/01868cd9b9cfae325e8ed124cb871187bfcf06176987838cd99eaa2476aecb8f?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
                     class="action-img"
                     alt="Notification"
                   />
                 </div>
-                <div class="action-icon">
+                <div class="action-icon"> <!--icon falta mudar-->
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/7d25ac0f01303224fdefecd8a31224ecfc2fd0571db904928de05565961dfa05?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
                     class="action-img"
@@ -115,7 +110,46 @@
               <div class="content-layout">
                 <section class="main-column">
                   <div class="assessment-card">
+                    <table>
+                      <tr>
+                        <td>
+                          <img
+                            src="img/start_assessment_illustration.svg"
+                            class="asessment-illustration"
+                          />
+                        </td>
+                        <td>
+                          <div class="assessment-info">
+                            <h2 class="assessment-title">
+                              Find the best fit for your patient
+                            </h2>
+                            <p class="assessment-description">
+                              Review the current app or explore new options to ensure
+                              it meets your patient's needs.
+                            </p>
+                          </div>
+                          <button class="assessment-button">
+                            <span class="button-text">Start assessment</span>
+                            <div class="button-icon">
+                              <img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e21c0ffba5a53147a8728d420aad9162b0efa9bec9b36b2c03d2c38703abf417?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                                class="arrow-icon"
+                                alt="Arrow"
+                              />
+                            </div>
+                          </button>
+
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="article-card">
                     <div class="assessment-info">
+                      <img
+                          src="img/article_illustration.svg"
+                          class="article-illustration"
+                        />
+                      
                       <h2 class="assessment-title">
                         Find the best fit for your patient
                       </h2>
@@ -317,87 +351,34 @@
                 </section>
                 <section class="side-column">
                   <div class="calendar-card">
-                    <div class="card-header">
-                      <h2 class="card-title">Calendar</h2>
-                      <button class="view-all-button">View all</button>
-                    </div>
-                    <div class="calendar-header">
-                      <h3 class="month-title">February 2025</h3>
-                      <div class="calendar-controls">
-                        <button class="calendar-nav-button">
-                          <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/94335c98757cbd027579af78287476600cc3feeb77bccad6bb231613a58ff563?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                            class="nav-icon"
-                            alt="Previous"
-                          />
-                        </button>
-                        <button class="calendar-nav-button">
-                          <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/48d813ead412d930a710b25d1e19d738e7eb7514b0a57d56383c2e3abd8a2dee?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                            class="nav-icon"
-                            alt="Next"
-                          />
-                        </button>
+                    <div class="calendar-div">
+                      <div class="card-header">
+                        <h2 class="card-title">Calendar</h2>
+                        <button class="view-all-button">View all</button>
                       </div>
-                    </div>
-                    <div class="calendar">
-                      <div class="weekdays">
-                        <div class="weekday">Mon</div>
-                        <div class="weekday">TUE</div>
-                        <div class="weekday">WED</div>
-                        <div class="weekday">THU</div>
-                        <div class="weekday">FRI</div>
-                        <div class="weekday">SAT</div>
-                        <div class="weekday">SUN</div>
-                      </div>
-                      <div class="calendar-row">
-                        <div class="calendar-day prev-month">27</div>
-                        <div class="calendar-day prev-month">28</div>
-                        <div class="calendar-day prev-month">29</div>
-                        <div class="calendar-day prev-month">30</div>
-                        <div class="calendar-day prev-month">31</div>
-                        <div class="calendar-day">1</div>
-                        <div class="calendar-day">2</div>
-                      </div>
-                      <div class="calendar-row">
-                        <div class="calendar-day">3</div>
-                        <div class="calendar-day">4</div>
-                        <div class="calendar-day">5</div>
-                        <div class="calendar-day">6</div>
-                        <div class="calendar-day-wrapper">
-                          <div class="calendar-day today">7</div>
+                        <div class="calendar-header">
+                          <h3 id="month-year" class="month-title"></h3>
+                          <div class="calendar-controls">
+                              <button class="calendar-nav-button" onclick="changeMonth(-1)"><img
+                              src="icons/navigation/chevron-left.svg"
+                              class="calendar-icon"
+                              alt="Help icon"
+                            /></button>
+                                  <button class="calendar-nav-button" onclick="changeMonth(1)"><img
+                              src="icons/navigation/chevron-right.svg"
+                              class="calendar-icon"
+                              alt="Help icon"
+                              alt="Next"
+                            /></button>
+                              </div>
+                          </div>
+                          <div class="weekdays">
+                              <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+                          </div>
+                          <div id="calendar-days" class="calendar-days">
+                            
+                          </div>
                         </div>
-                        <div class="calendar-day">8</div>
-                        <div class="calendar-day">9</div>
-                      </div>
-                      <div class="calendar-row">
-                        <div class="calendar-day">10</div>
-                        <div class="calendar-day">11</div>
-                        <div class="calendar-day">12</div>
-                        <div class="calendar-day">13</div>
-                        <div class="calendar-day">14</div>
-                        <div class="calendar-day">15</div>
-                        <div class="calendar-day">16</div>
-                      </div>
-                      <div class="calendar-row">
-                        <div class="calendar-day">17</div>
-                        <div class="calendar-day">18</div>
-                        <div class="calendar-day">19</div>
-                        <div class="calendar-day">20</div>
-                        <div class="calendar-day">21</div>
-                        <div class="calendar-day">22</div>
-                        <div class="calendar-day">23</div>
-                      </div>
-                      <div class="calendar-row">
-                        <div class="calendar-day">24</div>
-                        <div class="calendar-day">25</div>
-                        <div class="calendar-day">26</div>
-                        <div class="calendar-day">27</div>
-                        <div class="calendar-day">28</div>
-                        <div class="calendar-day next-month">1</div>
-                        <div class="calendar-day next-month">2</div>
-                      </div>
-                    </div>
                     <hr class="divider-line" />
                     <h3 class="assessments-title">This week's assessments</h3>
                     <div class="assessments-list">
@@ -533,10 +514,46 @@ document.addEventListener("DOMContentLoaded", function () {
         inputField.addEventListener("focus", updateIcons); // Quando o campo é focado
         inputField.addEventListener("blur", updateIcons); // Quando o campo perde o foco
     });
-
-    // Chama a função ao carregar para definir o estado inicial
+    
     updateIcons();
 });
+
+ let currentDate = new Date();
+        
+  function renderCalendar() {
+      const monthYear = document.getElementById("month-year");
+      const calendarDays = document.getElementById("calendar-days");
+      calendarDays.innerHTML = "";
+      
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      monthYear.textContent = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(currentDate);
+      
+      const firstDay = (new Date(year, month, 1).getDay() + 6) % 7; 
+      const lastDate = new Date(year, month + 1, 0).getDate();
+      const prevLastDate = new Date(year, month, 0).getDate();
+      
+      for (let i = firstDay; i > 0; i--) {
+          calendarDays.innerHTML += `<div class="calendar-day prev-month">${prevLastDate - i + 1}</div>`;
+      }
+      
+      for (let i = 1; i <= lastDate; i++) {
+          const isToday = i === new Date().getDate() && month === new Date().getMonth() && year === new Date().getFullYear();
+          calendarDays.innerHTML += `<div class="calendar-day ${isToday ? 'today' : ''}">${i}</div>`;
+      }
+      
+      const remainingDays = (7 - (calendarDays.children.length % 7)) % 7;
+      for (let i = 1; i <= remainingDays; i++) {
+          calendarDays.innerHTML += `<div class="calendar-day next-month">${i}</div>`;
+      }
+  }
+
+  function changeMonth(direction) {
+      currentDate.setMonth(currentDate.getMonth() + direction);
+      renderCalendar();
+  }
+
+  renderCalendar();
 
 
 </script>
