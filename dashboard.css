@@ -275,71 +275,77 @@ body {
 
 /* Assessment card styles */
 .assessment-card {
-  border-radius: 20px;
-  display: flex;
-  width: 100%;
-  padding: 0px 3px;
-  flex-direction: column;
-  overflow: hidden;
-  background: linear-gradient(135deg, #2d54df 0%, #161d44 100%);
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+    height: 200px; /* Defina uma altura fixa ou ajuste conforme necessário */
+    overflow: hidden;
+    background: linear-gradient(45deg, #6191F9, #2D54DF);
 }
 
-.article-illustration {
-  height: 100%;
-  flex: 1; /* Faz a imagem ocupar todo o espaço possível */
-  object-fit: cover; /* Mantém proporção e cobre o espaço */
-  margin-bottom: 0;
+.assessment-illustration {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
 }
 
+.assessment-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante espaçamento adequado */
+    align-items: flex-start;
+    padding: 16px;
+    padding-bottom: 16px; /* Adiciona espaçamento inferior */
+    height: 100%;
+}
 
 .assessment-info {
-  display: flex;
-  padding: 0 24px 0 16px;
-  flex-direction: column;
-  align-items: stretch;
-  text-align: center;
-  justify-content: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
 }
 
 .assessment-title {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 500;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .assessment-description {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  align-self: center;
-  margin-top: 4px;
-  width: 404px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 4px;
 }
 
 .assessment-button {
-  border-radius: 10000px;
-  background-color: #161d44;
-  align-self: center;
-  display: flex;
-  margin-top: 16px;
-  padding: 4px 4px 4px 16px;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
+    border-radius: 10000px;
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-top: auto; /* Empurra o botão para baixo */
+}
+.article-card {
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+    height: 147px;
+    overflow: hidden;
+    margin-top: 24px;
+    padding-left: 16px;
+    background: linear-gradient(135deg, #F2F5FD 0%, #EAEEFC 100%);
 }
 
-.article-card {
-  border-radius: 20px;
-  display: flex;
-  width: 100%;
-  padding: 27px 3px;
-  flex-direction: column;
-  overflow: hidden;
-  margin-top: 24px;
-  background: green;
-}
 
 .article-info {
   display: flex;
@@ -351,13 +357,13 @@ body {
 }
 
 .article-title {
-  color: #fff;
-  font-size: 24px;
+  color: #0C112F;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .article-description {
-  color: #fff;
+  color: #637391;
   font-size: 14px;
   font-weight: 400;
   align-self: center;
@@ -366,23 +372,22 @@ body {
 }
 
 .article-button {
-  border-radius: 10000px;
-  background-color: #161d44;
-  align-self: center;
+  align-self: left;
   display: flex;
   margin-top: 16px;
-  padding: 4px 4px 4px 16px;
+  padding: 0px 4px 4px 0px;
   align-items: center;
   gap: 10px;
   justify-content: center;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 
 .button-text {
-  color: #fff;
-  font-size: 16px;
+  color: #2D54DF;
+  font-size: 14px;
   font-family:
     "DM Sans",
     -apple-system,
@@ -396,26 +401,21 @@ body {
 }
 
 .button-icon {
-  transform: rotate(-3.1415925661670165rad);
-  border-radius: 1000px;
-  background-color: #fff;
-  align-self: stretch;
   display: flex;
-  margin: auto 0;
-  padding: 6px;
   align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
   width: 32px;
   height: 32px;
+  padding: 2px;
 }
 
 .arrow-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 20px;
-  align-self: stretch;
-  margin: auto 0;
+  width: 16px;
+  height: 16px;
+  filter: invert(23%) sepia(92%) saturate(2172%) hue-rotate(206deg) brightness(98%) contrast(94%);
 }
+
 
 /* Results card styles */
 .results-card {
