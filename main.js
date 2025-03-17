@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
             alertaLabel.style.display = "none"; // Esconde a mensagem de erro
             window.location.href = "dashboard.html"; // Redireciona para a dashboard
         } else {
-            // Aplica estilo de erro
             usernameContainer.classList.add("input-error");
             passwordContainer.classList.add("input-error");
             alertaIcon.style.display = "block"; // Exibe o ícone de alerta

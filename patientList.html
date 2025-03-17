@@ -15,7 +15,7 @@
     <div class="screen">
       <header class="header">
         <nav class="breadcrumb">
-          <span class="breadcrumb-item">Dashboard</span>
+          <a href="dashboard.html" class="breadcrumb-item">Dashboard</a>
           <div class="breadcrumb-current">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ee00d2dde44c7413cb2ac333d47d6b2c2227ec4220aaf5a5a9c85f21ec43c2b?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
@@ -29,7 +29,14 @@
 
       <main class="main-content">
         <section class="stepper">
-          <div class="step active">Select patient</div>
+          <div class="step">
+                    <img
+                      src="icons/system/check-circle.svg"
+                      class="step-icon-check"
+                      alt="Check"
+                    />
+                    <span class="step-label">Select patient</span>
+                  </div>
           <div class="step-divider active"></div>
           <div class="step">
             <div class="step-circle"></div>
@@ -241,30 +248,44 @@
       </footer>
     </div>
   </body>
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector(".search-input");
     const rows = document.querySelectorAll(".table-row");
     const nextButton = document.querySelector(".next-button");
 
-    rows.forEach(row => {
-      row.addEventListener("click", function () {
-        // Remover seleção anterior
-        rows.forEach(r => r.classList.remove("selected"));
+    //pesquisa texto nos nomes da tabela
+    searchInput.addEventListener("input", function () {
+      const query = searchInput.value.toLowerCase();
 
-        // Adicionar classe selecionada à linha clicada
-        this.classList.add("selected");
-
-        // Ativar botão "Next step"
-        nextButton.classList.add("active");
+      rows.forEach(row => {
+        const name = row.querySelector(".cell-content").textContent.toLowerCase();
+        row.style.display = name.includes(query) ? "" : "none";
       });
     });
 
-    // Redirecionar para selectApp.html ao clicar no botão ativo
+    //seleciona row
+    rows.forEach(row => {
+      row.addEventListener("click", function () {
+        if (this.classList.contains("selected")) {
+          this.classList.remove("selected");
+          nextButton.classList.remove("active");
+        } else {
+          //se selecionar uma remove o outro ativo
+          rows.forEach(r => r.classList.remove("selected"));
+          this.classList.add("selected");
+          nextButton.classList.add("active");
+        }
+      });
+    });
+
+    //next page
     nextButton.addEventListener("click", function () {
       if (nextButton.classList.contains("active")) {
-        window.location.href = "selectApp.html";
+        window.location.href = "assessmentSetup.html";
       }
     });
   });
 </script>
 </html>
+
