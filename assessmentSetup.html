@@ -9,31 +9,31 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="img/evalia.png" type="image/png" /> 
   </head>
   <body>
     <div class="screen">
-      <header class="header">
+     <header class="header">
         <nav class="breadcrumb">
-          <span class="breadcrumb-item">Dashboard</span>
-          <div class="breadcrumb-item">
+          <a href="dashboard.html" class="breadcrumb-item">Dashboard</a>
+          <div class="breadcrumb-current">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ee00d2dde44c7413cb2ac333d47d6b2c2227ec4220aaf5a5a9c85f21ec43c2b?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+              src="icons/navigation/chevron-right.svg"
               class="breadcrumb-icon"
-              alt=""
+              alt="Breadcrumb separator"
             />
-            <span class="breadcrumb-text">New assessment</span>
+            <a href="patientList.html" class="breadcrumb-item">New assessment</a>
           </div>
-          <div class="breadcrumb-item active">
+          <div class="breadcrumb-current">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ee00d2dde44c7413cb2ac333d47d6b2c2227ec4220aaf5a5a9c85f21ec43c2b?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+              src="icons/navigation/chevron-right.svg"
               class="breadcrumb-icon"
-              alt=""
+              alt="Breadcrumb separator"
             />
-            <span class="breadcrumb-text">Set up your assessment</span>
+            <span class="breadcrumb-item-current">Set up your assessment</span>
           </div>
         </nav>
       </header>
-
       <main class="main-content">
         <div class="content-wrapper">
           <section class="assessment-column">
@@ -41,14 +41,21 @@
               <nav class="stepper">
                 <div class="step completed">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/569c61dfac9b161c2a7c0d6162972f5d6f53658db8327501987af0fac444afed?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                    class="step-icon"
-                    alt="Completed step"
+                    src="icons/system/check-circle.svg"
+                      class="step-icon-check"
+                      alt="Check"
                   />
                   <span class="step-label">Select patient</span>
                 </div>
                 <div class="step-divider completed"></div>
-                <div class="step active">Needs</div>
+                <div class="step active">
+                    <img
+                      src="icons/navigation/step.svg"
+                      class="step-icon"
+                      alt="Loading"
+                    />
+                    <span class="step-label">Needs</span>
+                </div>
                 <div class="step-divider"></div>
                 <div class="step pending">
                   <div class="step-circle"></div>
@@ -68,24 +75,22 @@
                 <p class="subtitle">Select one of the following options</p>
               </section>
 
-              <section class="selection-options">
+              <section class="selection-options simple-cards">
                 <div class="selection-row">
                   <div class="selection-column">
-                    <label class="selection-card">
+                    <label class="selection-card simple-card">
                       <div class="radio-container">
                         <div class="radio-button"></div>
                       </div>
-                      <span class="card-label">Find a new application</span>
+                      <span class="card-label-simple">Find a new application</span>
                     </label>
                   </div>
                   <div class="selection-column">
-                    <label class="selection-card">
+                    <label class="selection-card simple-card">
                       <div class="radio-container">
                         <div class="radio-button"></div>
                       </div>
-                      <span class="card-label"
-                        >Assessment on an application</span
-                      >
+                      <span class="card-label-simple">Assessment on an application</span>
                     </label>
                   </div>
                 </div>
@@ -103,12 +108,15 @@
                   <div class="selection-column">
                     <label class="selection-card icon-card">
                       <div class="checkbox-container">
-                        <div class="checkbox"></div>
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
                       </div>
                       <div class="card-content">
                         <img
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1409f5555f180b8b945f58fc938499299bc7efd0090f0710b852b140da84fe?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                          class="card-icon"
+                           src="icons/medical/automatic.svg"                          
+                           class="card-icon"
                           alt="Blood pressure icon"
                         />
                         <div class="card-label-container">
@@ -127,11 +135,14 @@
                   <div class="selection-column">
                     <label class="selection-card icon-card">
                       <div class="checkbox-container">
-                        <div class="checkbox"></div>
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
                       </div>
                       <div class="card-content">
                         <img
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/5604416b73d1c7ed7dd1b4aa3e6984bbce890382e805a80cacf1e7a7138d4155?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          src="icons/medical/glycemic.svg"
                           class="card-icon"
                           alt="Glycemic control icon"
                         />
@@ -149,11 +160,14 @@
                   <div class="selection-column">
                     <label class="selection-card icon-card">
                       <div class="checkbox-container">
-                        <div class="checkbox"></div>
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
                       </div>
                       <div class="card-content">
                         <img
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/040ff45e1ee3a23e0c39eb5d3f70de668dd1e89adbfcdab0476ddc693abfe0f1?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          src="icons/medical/activity.svg"
                           class="card-icon"
                           alt="Physical activity icon"
                         />
@@ -178,11 +192,14 @@
                   <div class="selection-column">
                     <label class="selection-card icon-card">
                       <div class="checkbox-container">
-                        <div class="checkbox"></div>
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
                       </div>
                       <div class="card-content">
                         <img
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/bb37eb4115d9662949982d1b5d4cf28de559da5fabbbcf355a49a554a380d0a3?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                           src="icons/medical/manual.svg"
                           class="card-icon"
                           alt="Manual blood pressure icon"
                         />
@@ -200,11 +217,14 @@
                   <div class="selection-column">
                     <label class="selection-card icon-card">
                       <div class="checkbox-container">
-                        <div class="checkbox"></div>
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
                       </div>
                       <div class="card-content">
                         <img
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f8f4a63d7692930d87fe9b30dad9397dc215c869abe785c04bcbe19f2491c48?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                           src="icons/medical/nutrition.svg"
                           class="card-icon"
                           alt="Diet icon"
                         />
@@ -222,11 +242,14 @@
                   <div class="selection-column">
                     <label class="selection-card icon-card">
                       <div class="checkbox-container">
-                        <div class="checkbox"></div>
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
                       </div>
                       <div class="card-content">
                         <img
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/53b684bd4e4e790c612f8716e820346340eb051c205c7430870870801f4e3437?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                           src="icons/medical/report.svg"
                           class="card-icon"
                           alt="Reports icon"
                         />
@@ -246,7 +269,7 @@
             </div>
 
             <div class="navigation-buttons">
-              <button class="btn btn-outline">
+              <button class="btn btn-outline previous">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9c57ab22192c42deac09b031db2fea45a20b61cc64626296ecff0f5fb97b999?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
                   class="btn-icon"
@@ -254,7 +277,7 @@
                 />
                 <span class="btn-label">Previous step</span>
               </button>
-              <button class="btn btn-disabled">
+              <button class="btn btn-disabled next">
                 <span class="btn-label">Next step</span>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f99f77719375f90161843b2832d7be19dc78f8c9edb84043dfd06cc624ffd17?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
@@ -374,7 +397,7 @@
 
                 <hr class="divider" />
 
-                <section class="appointments-section">
+            <!--     <section class="appointments-section">
                   <h3 class="section-title">Appointment history</h3>
                   <div class="appointments-timeline">
                     <div class="timeline-indicators">
@@ -485,7 +508,7 @@
                       </div>
                     </div>
                   </div>
-                </section>
+                </section> -->
               </div>
             </div>
           </aside>
@@ -493,4 +516,77 @@
       </main>
     </div>
   </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".simple-card");
+    const icons = document.querySelectorAll(".icon-card");
+    const previousButton = document.querySelector(".previous");
+    const nextButton = document.querySelector(".next");
+
+    function updateNextButtonState() {
+        const isSimpleCardSelected = document.querySelector(".simple-card.selected") !== null;
+        const isIconCardSelected = document.querySelector(".icon-card.selected") !== null;
+
+        if (isSimpleCardSelected && isIconCardSelected) {
+            nextButton.classList.add("active");
+        } else {
+            nextButton.classList.remove("active");
+        }
+    }
+
+    // Evento de clique para os .simple-card
+    cards.forEach(card => {
+        card.addEventListener("click", function () {
+            cards.forEach(c => c.classList.remove("selected"));
+            this.classList.add("selected");
+
+            updateNextButtonState();
+        });
+    });
+
+    // Evento de clique para os .icon-card
+    icons.forEach(icon => {
+        const checkboxIcon = icon.querySelector(".checkbox-icon");
+
+        icon.addEventListener("click", function () {
+            const isSelected = icon.classList.toggle("selected");
+
+            if (isSelected) {
+                checkboxIcon.src = "icons/checkbox/checked.svg";
+            } else {
+                checkboxIcon.src = "icons/checkbox/default.svg";
+            }
+
+            updateNextButtonState();
+        });
+
+        // Evento de hover para mudar a imagem da checkbox
+        icon.addEventListener("mouseenter", function () {
+            if (!icon.classList.contains("selected")) {
+                checkboxIcon.src = "icons/checkbox/hover.svg";
+            }
+        });
+
+        icon.addEventListener("mouseleave", function () {
+            if (!icon.classList.contains("selected")) {
+                checkboxIcon.src = "icons/checkbox/default.svg";
+            }
+        });
+    });
+
+    // Evento para o botão "Previous"
+    previousButton.addEventListener("click", function () {
+        window.location.href = "patientList.html";
+    });
+
+    // Evento para o botão "Next"
+    nextButton.addEventListener("click", function () {
+        if (nextButton.classList.contains("active")) {
+            window.location.href = "selectApp.html";
+        }
+    });
+});
+
+</script>
+
 </html>

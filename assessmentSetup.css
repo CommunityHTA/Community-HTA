@@ -1,20 +1,24 @@
-/* Base styles */
+
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: 'DM Sans', -apple-system, Roboto, Helvetica, sans-serif;
-  background-color: #f9f9f9;
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evita rolagem */
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Main screen container */
 .screen {
-  border-radius: 1px;
-  background-color: #f9f9f9;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda a altura da tela */
 }
 
 /* Header styles */
@@ -40,17 +44,39 @@ body {
 }
 
 .breadcrumb-item {
-  display: flex;
-  align-items: center;
-  gap: 7px;
+  align-self: stretch;
   margin: auto 0;
+  color: #8a8ea1;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 
 .breadcrumb-icon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
   width: 16px;
+  margin: auto 0;
+  filter: invert(64%) sepia(5%) saturate(180%) hue-rotate(200deg);
+}
+
+
+.breadcrumb-current {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 7px;
+  color: #161d44;
+  font-weight: 500;
+  justify-content: start;
+}
+
+.breadcrumb-item-current {
+  align-self: stretch;
   margin: auto 0;
 }
 
@@ -70,7 +96,7 @@ body {
 
 .content-wrapper {
   display: flex;
-  gap: 20px;
+  gap: 0px;
 }
 
 /* Assessment column */
@@ -78,7 +104,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 67%;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .assessment-content {
@@ -100,10 +126,13 @@ body {
 }
 
 .step {
+  align-self: stretch;
   display: flex;
+  margin: auto 0;
   align-items: center;
   gap: 8px;
-  margin: auto 0;
+  white-space: nowrap;
+  justify-content: start;
 }
 
 .step-icon {
@@ -112,6 +141,7 @@ body {
   object-position: center;
   width: 22px;
   margin: auto 0;
+  height: 20px;
 }
 
 .step-label {
@@ -169,7 +199,7 @@ body {
 
 /* Selection options */
 .selection-options {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .selection-row {
@@ -181,114 +211,200 @@ body {
   flex: 1;
 }
 
-/* Selection cards */
-.selection-card {
-  border-radius: 20px;
+/* 🔹 Estilos para os Cards Simples */
+.simple-card {
+  border-radius: 16px;
   border: 1px solid #dadef1;
   box-shadow: 0px 3.5px 5.5px 0px rgba(18, 75, 195, 0.1);
   background-color: #fff;
   display: flex;
   width: 100%;
-  padding-bottom: 39px;
+  padding: 20px 16px; /* Aumentando a altura do card */
   flex-direction: column;
+  align-items: center; /* Centraliza o texto no meio */
+  justify-content: center;
   overflow: hidden;
   cursor: pointer;
+  min-height: 80px; /* Mais altura no card */
+  position: relative; /* Permite posicionar o círculo */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.simple-card:hover {
+  border: 2px solid #2D54DF;
+  background-color: #F2F5FD;
+}
+
+.simple-card.selected {
+  border: 2px solid #2D54DF;
+  background-color: #DFE5FD;
+}
+
+.simple-card.selected .radio-button {
+  border-width: 6px;
+  background-color: #F2F5FD;
+}
+
+.simple-card .card-label {
+  font-size: 16px;
+  text-align: center;
+}
+
+.icon-card {
+  border-radius: 16px;
+  border: 1px solid #dadef1;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(18, 75, 195, 0.1);
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  padding: 20px 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 80px;
+  position: relative;
+}
+
+.icon-card:hover {
+  border: 2px solid #2D54DF;
+  background-color: #F2F5FD;
+}
+
+.icon-card.selected {
+  border: 2px solid #2D54DF;
+  background-color: #DFE5FD;
+}
+
+.icon-card .card-label-container {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Mantém o ícone de info próximo ao texto */
+}
+
+.icon-card .info-icon {
+  width: 20px;
 }
 
 .radio-container {
-  display: flex;
-  padding: 16px 0 0 16px;
-  align-items: center;
+  position: absolute;
+  top: 12px; /* Coloca o círculo na parte superior */
+  left: 12px; /* Alinha à esquerda */
 }
 
 .radio-button {
   background-color: #fff;
   border: 2px solid #2d54df;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .card-label {
-  display: block;
-  width: 100%;
-  padding: 0 24px;
   font-size: 16px;
   color: #0c112f;
   font-weight: 500;
-  text-align: center;
+  text-align: center; /* Centraliza o texto */
+  width: 100%;
 }
 
-/* Icon cards */
-.icon-card {
-  padding-bottom: 43px;
-}
+
 
 .checkbox-container {
-  display: flex;
-  padding: 16px 0 0 16px;
-  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .checkbox {
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: #fff;
-  border: 2px solid #2d54df;
-  width: 24px;
-  height: 24px;
+  border: 2px solid #2d54df; /* Borda padrão */
+  width: 18px;
+  height: 18px;
+  cursor: pointer; /* Para melhorar a experiência do usuário */
+}
+
+.checkbox-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+
+/* Aumenta a borda do checkbox quando o card é selecionado */
+.icon-card.selected .checkbox {
+  border: 4px solid #2d54df; /* Aumentando a borda para 4px quando o card está ativo */
 }
 
 .card-content {
   display: flex;
-  margin-top: 4px;
+  margin-top: 12px;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   color: #0c112f;
   font-weight: 500;
   text-align: center;
 }
 
 .card-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 64px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 40px;
+    filter: invert(27%) sepia(81%) saturate(1521%) hue-rotate(198deg) brightness(89%) contrast(91%);
+}
+
+.icon-card.selected .card-icon {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(80%) saturate(1951%) hue-rotate(208deg) brightness(97%) contrast(90%);
 }
 
 .card-label-container {
   display: flex;
-  margin-top: 8px;
-  width: 100%;
-  padding: 0 24px;
   align-items: center;
-  gap: 4px;
+  gap: 6px; /* Ajusta o espaço entre o texto e o ícone */
   justify-content: center;
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
 }
 
 .info-icon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 16px;
+  width: 20px;
 }
+
+
 
 /* Navigation buttons */
 .navigation-buttons {
   border-top: 1px solid #c5cbe4;
   display: flex;
-  margin-top: 67px;
+  margin-top: 16px;
   width: 100%;
   padding: 24px 32px;
   align-items: center;
   gap: 100px;
-  font-size: 16px;
   font-weight: 500;
   text-align: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  position: sticky; /* Mantém os botões fixos no final da seção */
+  bottom: 0;
+  background: white; /* Garante que os botões fiquem visíveis */
 }
+
 
 .btn {
   border-radius: 10000px;
@@ -299,6 +415,7 @@ body {
   gap: 8px;
   justify-content: center;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .btn-outline {
@@ -321,6 +438,13 @@ body {
   width: 20px;
 }
 
+.next.active {
+  background-color: blue;
+  cursor: pointer;
+  opacity: 1;
+}
+
+
 /* Patient sidebar */
 .patient-sidebar {
   display: flex;
@@ -339,27 +463,28 @@ body {
 .patient-header {
   border-radius: 20px;
   display: flex;
-  padding-top: 32px;
-  flex-direction: column;
+  padding: 16px 24px;
+  flex-direction: row;
   align-items: center;
   font-size: 24px;
   color: #0c112f;
   font-weight: 500;
+  gap: 32px;
 }
 
 .patient-avatar {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 64px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .patient-name {
-  margin-top: 22px;
-  width: 100%;
-  text-align: center;
+  margin-top: 0; /* Removido o margin-top */
+  text-align: left; /* Alinhar o texto à esquerda */
   font-size: 24px;
 }
+
 
 .patient-details {
   display: flex;
@@ -631,4 +756,6 @@ body {
   color: #8929a9;
 }
 
-.appointment-tag.red {
+.step-icon-check {
+  filter: invert(35%) sepia(99%) saturate(338%) hue-rotate(66deg) brightness(92%) contrast(89%);
+}
