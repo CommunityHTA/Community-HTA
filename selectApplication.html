@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patient Assessment Setup</title>
-    <link rel="stylesheet" href="assessmentSetup.css" />
+    <link rel="stylesheet" href="selectApplication.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -50,16 +50,20 @@
                 <div class="step-divider completed"></div>
                 <div class="step active">
                     <img
-                      src="icons/navigation/step.svg"
-                      class="step-icon"
-                      alt="Loading"
+                      src="icons/system/check-circle.svg"
+                      class="step-icon-check"
+                      alt="Check"
                     />
                     <span class="step-label">Needs</span>
                 </div>
                 <div class="step-divider"></div>
-                <div class="step pending">
-                  <div class="step-circle"></div>
-                  <span class="step-label">Focus</span>
+                <div class="step active">
+                    <img
+                      src="icons/navigation/step.svg"
+                      class="step-icon"
+                      alt="Loading"
+                    />
+                    <span class="step-label">Focus</span>
                 </div>
                 <div class="step-divider"></div>
                 <div class="step pending">
@@ -70,202 +74,310 @@
 
               <section class="section-title">
                 <h2 class="title">
-                  What is the intended outcome of the assessment?
+                  Which app do you want to assess?
                 </h2>
-                <p class="subtitle">Select one of the following options</p>
+                <p class="subtitle">Search the application name for results</p>
               </section>
 
-              <section class="selection-options simple-cards">
-                <div class="selection-row">
-                  <div class="selection-column">
-                    <label class="selection-card simple-card">
-                      <div class="radio-container">
-                        <div class="radio-button"></div>
-                      </div>
-                      <span class="card-label-simple">Find a new application</span>
-                    </label>
-                  </div>
-                  <div class="selection-column">
-                    <label class="selection-card simple-card">
-                      <div class="radio-container">
-                        <div class="radio-button"></div>
-                      </div>
-                      <span class="card-label-simple">Assessment on an application</span>
-                    </label>
+              <div class="search-container">
+                  <div class="search-field">
+                    <div class="search-content">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/2015cdb12a2eadbba2e6171cda6d37af5fcb6e99a25e96fe79fc1a07abb432dd?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="search-icon"
+                        alt="Search"
+                      />
+                      <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Search app's name..."
+                      />
+                    </div>
                   </div>
                 </div>
-              </section>
+                <hr class="divider" />
+                <div class="applications-content">
+                  <section class="applications-header">
+                    <h2 class="section-title">Top-ranked applications</h2>
+                    <p class="subtitle">Based on patient needs</p>
+                  </section>
+                  <div class="app-grid">
+                  <div class="app-grid-row">
+                    <article class="app-card">
+                      <div class="app-image-container">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf4397d964c13bcdad3026c9ed886286b3945eeb372d417ccb4f690effadae61?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          class="app-image"
+                          alt="HeartMath app"
+                        />
+                      </div>
+                      <div class="app-info">
+                        <span class="app-rank">1</span>
+                        <div class="app-details">
+                          <h3 class="app-name">HeartMath</h3>
+                          <span class="app-category">Health</span>
+                          <div class="app-rating">
+                            <span class="rating-value">4.9</span>
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                              class="rating-icon"
+                              alt="Star"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </article>
 
-              <section class="section-title">
-                <h2 class="title">What are your patient's needs?</h2>
-                <p class="subtitle">
-                  Select one or more of the following options
-                </p>
-              </section>
+                    <article class="app-card">
+                      <div class="app-image-container">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddf6a49a7c084c901492e3ca97af02a9c33904cc177600153e86f3af1e433091?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          class="app-image"
+                          alt="BP Log app"
+                        />
+                      </div>
+                      <div class="app-info">
+                        <span class="app-rank">2</span>
+                        <div class="app-details">
+                          <h3 class="app-name">BP Log</h3>
+                          <span class="app-category">Health</span>
+                          <div class="app-rating">
+                            <span class="rating-value">4.7</span>
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                              class="rating-icon"
+                              alt="Star"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </article>
 
-              <section class="selection-options">
-                <div class="selection-row">
-                  <div class="selection-column">
-                    <label class="selection-card icon-card">
-                      <div class="checkbox-container">
+                    <article class="app-card">
+                      <div class="app-image-container">
                         <img
-                            src="icons/checkbox/default.svg"
-                            class="checkbox-icon"
-                          />
-                      </div>
-                      <div class="card-content">
-                        <img
-                           src="icons/medical/automatic.svg"                          
-                           class="card-icon"
-                          alt="Blood pressure icon"
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a2bd32ba969c3c7f4b222cfbfb1fb84eff8fc343c978f9fc3a93022acb10859?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          class="app-image"
+                          alt="Blood Pressure Tracker app"
                         />
-                        <div class="card-label-container">
-                          <span class="card-label"
-                            >Automatic blood pressure</span
-                          >
-                          <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed85b7d33f3ba7a256ca0e504377cb01bd590ea8fc63434739144549ed53c032?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                            class="info-icon"
-                            alt="Info"
-                          />
+                      </div>
+                      <div class="app-info">
+                        <span class="app-rank">3</span>
+                        <div class="app-details">
+                          <h3 class="app-name">Blood Pressure Tracker</h3>
+                          <span class="app-category">Medical</span>
+                          <div class="app-rating">
+                            <span class="rating-value">4.6</span>
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                              class="rating-icon"
+                              alt="Star"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </label>
-                  </div>
-                  <div class="selection-column">
-                    <label class="selection-card icon-card">
-                      <div class="checkbox-container">
-                        <img
-                            src="icons/checkbox/default.svg"
-                            class="checkbox-icon"
-                          />
-                      </div>
-                      <div class="card-content">
-                        <img
-                          src="icons/medical/glycemic.svg"
-                          class="card-icon"
-                          alt="Glycemic control icon"
-                        />
-                        <div class="card-label-container">
-                          <span class="card-label">Glycemic control</span>
-                          <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed85b7d33f3ba7a256ca0e504377cb01bd590ea8fc63434739144549ed53c032?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                            class="info-icon"
-                            alt="Info"
-                          />
-                        </div>
-                      </div>
-                    </label>
-                  </div>
-                  <div class="selection-column">
-                    <label class="selection-card icon-card">
-                      <div class="checkbox-container">
-                        <img
-                            src="icons/checkbox/default.svg"
-                            class="checkbox-icon"
-                          />
-                      </div>
-                      <div class="card-content">
-                        <img
-                          src="icons/medical/activity.svg"
-                          class="card-icon"
-                          alt="Physical activity icon"
-                        />
-                        <div class="card-label-container">
-                          <span class="card-label"
-                            >Track physical activity</span
-                          >
-                          <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed85b7d33f3ba7a256ca0e504377cb01bd590ea8fc63434739144549ed53c032?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                            class="info-icon"
-                            alt="Info"
-                          />
-                        </div>
-                      </div>
-                    </label>
+                    </article>
                   </div>
                 </div>
-              </section>
 
-              <section class="selection-options">
-                <div class="selection-row">
-                  <div class="selection-column">
-                    <label class="selection-card icon-card">
-                      <div class="checkbox-container">
-                        <img
-                            src="icons/checkbox/default.svg"
-                            class="checkbox-icon"
-                          />
-                      </div>
-                      <div class="card-content">
-                        <img
-                           src="icons/medical/manual.svg"
-                          class="card-icon"
-                          alt="Manual blood pressure icon"
-                        />
-                        <div class="card-label-container">
-                          <span class="card-label">Manual blood pressure</span>
+                <div class="app-list">
+                  <div class="app-list-row">
+                    <article class="app-list-item">
+                      <span class="app-rank">3</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/444e9f4f801abb15e8526c2802a501e6ecc0eeb4d59471401bf431cb81feb2c4?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Glycemic Index app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Glycemic Index</h3>
+                        <span class="app-category">Medical</span>
+                        <div class="app-rating">
+                          <span class="rating-value">4.2</span>
                           <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d4ee41daccbd3fea900a0aff9fd9092ffa54469ecd101a5a81a91d986565fd1?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                            class="info-icon"
-                            alt="Info"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
                           />
                         </div>
                       </div>
-                    </label>
+                    </article>
+
+                    <article class="app-list-item">
+                      <span class="app-rank">4</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a1b64fe724793a019d0250ddc93cce121deb7f0842cfcc86dde2abfe01559cc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Foodnoms app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Foodnoms</h3>
+                        <span class="app-category">Health & Fitness</span>
+                        <div class="app-rating">
+                          <span class="rating-value">4.7</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
+                          />
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="app-list-item">
+                      <span class="app-rank">5</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1f2b465bcce7c43a2c1d88fc986d1db76908d4b8a4648823d6cbbd6513699d2?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Low GI Meal Plans app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Low GI Meal Plans</h3>
+                        <span class="app-category">Food & Drink</span>
+                        <div class="app-rating">
+                          <span class="rating-value">4.2</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
+                          />
+                        </div>
+                      </div>
+                    </article>
                   </div>
-                  <div class="selection-column">
-                    <label class="selection-card icon-card">
-                      <div class="checkbox-container">
-                        <img
-                            src="icons/checkbox/default.svg"
-                            class="checkbox-icon"
-                          />
-                      </div>
-                      <div class="card-content">
-                        <img
-                           src="icons/medical/nutrition.svg"
-                          class="card-icon"
-                          alt="Diet icon"
-                        />
-                        <div class="card-label-container">
-                          <span class="card-label">Diet/Nutrition diary</span>
+
+                  <div class="app-list-row">
+                    <article class="app-list-item">
+                      <span class="app-rank">6</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b97c3d1206b7234474e395495b9698b8a9e3d7757d9d7548074e0dbf57539e33?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Sleep Cicle app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Sleep Cicle</h3>
+                        <span class="app-category">Health</span>
+                        <div class="app-rating">
+                          <span class="rating-value">3.9</span>
                           <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d4ee41daccbd3fea900a0aff9fd9092ffa54469ecd101a5a81a91d986565fd1?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                            class="info-icon"
-                            alt="Info"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
                           />
                         </div>
                       </div>
-                    </label>
+                    </article>
+
+                    <article class="app-list-item">
+                      <span class="app-rank">7</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/e686c6ecaa4b06a8da6f38cdc0c47fcca3ac9cc078ec478117b3e33f8d5fa744?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Sleep app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Sleep</h3>
+                        <span class="app-category">Medical</span>
+                        <div class="app-rating">
+                          <span class="rating-value">4.8</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
+                          />
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="app-list-item">
+                      <span class="app-rank">8</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0d80a9ee843df71abab95ab255176cc00ddfa4ce47d806ef9191349b02455ec1?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Bedtime Sleep app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Bedtime Sleep</h3>
+                        <span class="app-category">Fitness</span>
+                        <div class="app-rating">
+                          <span class="rating-value">4.4.1</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
+                          />
+                        </div>
+                      </div>
+                    </article>
                   </div>
-                  <div class="selection-column">
-                    <label class="selection-card icon-card">
-                      <div class="checkbox-container">
-                        <img
-                            src="icons/checkbox/default.svg"
-                            class="checkbox-icon"
-                          />
-                      </div>
-                      <div class="card-content">
-                        <img
-                           src="icons/medical/report.svg"
-                          class="card-icon"
-                          alt="Reports icon"
-                        />
-                        <div class="card-label-container">
-                          <span class="card-label">Reports</span>
+
+                  <div class="app-list-row">
+                    <article class="app-list-item">
+                      <span class="app-rank">9</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b97c3d1206b7234474e395495b9698b8a9e3d7757d9d7548074e0dbf57539e33?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Sleep Cicle app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Sleep Cicle</h3>
+                        <span class="app-category">Health</span>
+                        <div class="app-rating">
+                          <span class="rating-value">3.9</span>
                           <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed85b7d33f3ba7a256ca0e504377cb01bd590ea8fc63434739144549ed53c032?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                            class="info-icon"
-                            alt="Info"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
                           />
                         </div>
                       </div>
-                    </label>
+                    </article>
+
+                    <article class="app-list-item">
+                      <span class="app-rank">10</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/e686c6ecaa4b06a8da6f38cdc0c47fcca3ac9cc078ec478117b3e33f8d5fa744?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Sleep app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Sleep</h3>
+                        <span class="app-category">Medical</span>
+                        <div class="app-rating">
+                          <span class="rating-value">4.8</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
+                          />
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="app-list-item">
+                      <span class="app-rank">11</span>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0d80a9ee843df71abab95ab255176cc00ddfa4ce47d806ef9191349b02455ec1?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="app-icon"
+                        alt="Bedtime Sleep app"
+                      />
+                      <div class="app-details">
+                        <h3 class="app-name">Bedtime Sleep</h3>
+                        <span class="app-category">Fitness</span>
+                        <div class="app-rating">
+                          <span class="rating-value">4.4.1</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e62ebe77cdcc80fc8a951289394dc9a4c7d2946cbda0cf7dc00eaab83ccc6bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="rating-icon"
+                            alt="Star"
+                          />
+                        </div>
+                      </div>
+                    </article>
                   </div>
                 </div>
-              </section>
+                </div>
+
             </div>
 
             <div class="navigation-buttons">
@@ -576,7 +688,7 @@
 
     // Evento para o botão "Previous"
     previousButton.addEventListener("click", function () {
-        window.location.href = "patientList.html";
+        window.location.href = "assessmentSetup.html";
     });
 
     // Evento para o botão "Next"

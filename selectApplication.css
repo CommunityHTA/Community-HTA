@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -115,8 +113,8 @@ html, body {
 .assessment-content {
   display: flex;
   width: 100%;
-  height: 100%;
-  padding: 0 32px;
+  height: 565px;
+  padding: 0 0px 0 32px;
   flex-direction: column;
 }
 
@@ -217,187 +215,236 @@ html, body {
   flex: 1;
 }
 
-/* 🔹 Estilos para os Cards Simples */
-.simple-card {
+.search-container {
+  margin-top: 16px;
+  width: 376px;
+  max-width: 100%;
+  font-size: 14px;
+  color: #8a8ea1;
+  font-weight: 400;
+}
+
+.search-field {
+  width: 100%;
+}
+
+.search-content {
+  border-radius: 8px;
+  background-color: #fefeff;
+  border: 1px solid #c5cbe4;
+  display: flex;
+  height: 48px;
+  width: 100%;
+  padding: 14px 16px;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  margin: auto 0;
+  flex-shrink: 0;
+}
+
+.search-input {
+  align-self: stretch;
+  min-width: 240px;
+  margin: auto 0;
+  gap: 8px;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  border: none;
+  background: transparent;
+  color: #8a8ea1;
+  font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+/*Applications content*/
+.applications-content {
+  flex-grow: 1; /* Faz a div ocupar todo o espaço restante */
+  overflow-y: auto; /* Habilita a rolagem vertical */
+  margin-top: 0;
+  padding: 0px 8px 0px 0px; /* Espaçamento interno */
+  height: 380px; /* Ajuste conforme necessário */
+  position: relative;
+  background-color: rgba(249, 249, 249, 1); /* Garante que o fundo tenha cor */
+}
+
+.applications-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; /* Altura do fade */
+  background: linear-gradient(to bottom, rgba(249, 249, 249, 1), rgba(249, 249, 249, 0));
+  z-index: 1; /* Garante que fique sobre o conteúdo */
+  pointer-events: none;
+}
+
+
+.applications-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; /* Altura do fade */
+  background: linear-gradient(to top, rgba(249, 249, 249, 1), rgba(249, 249, 249, 0));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* App grid */
+.app-grid {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.app-grid-row {
+  display: flex;
+  gap: 20px;
+}
+
+.app-card {
+  width: 33%;
+}
+
+.app-image-container {
   border-radius: 16px;
-  border: 1px solid #dadef1;
-  box-shadow: 0px 3.5px 5.5px 0px rgba(18, 75, 195, 0.1);
+  box-shadow:
+    0px 0px 1px 0px rgba(12, 26, 75, 0.24),
+    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
   background-color: #fff;
   display: flex;
   width: 100%;
-  padding: 20px 16px; /* Aumentando a altura do card */
   flex-direction: column;
-  align-items: center; /* Centraliza o texto no meio */
-  justify-content: center;
   overflow: hidden;
-  cursor: pointer;
-  min-height: 80px; /* Mais altura no card */
-  position: relative; /* Permite posicionar o círculo */
+}
+
+.app-image {
+  aspect-ratio: 2.16;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+.app-info {
   display: flex;
+  margin-top: 8px;
+  width: 100%;
+  align-items: flex-start;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.app-rank {
+  border-radius: 10000px;
+  background-color: #dfe5fd;
+  min-height: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #1b2559;
+  text-transform: uppercase;
+}
+
+.app-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.app-name {
+  color: #0c112f;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.app-category {
+  color: #47548c;
+  font-weight: 400;
+}
+
+.app-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #637391;
+}
+
+.rating-value {
+  margin: auto 0;
+}
+
+.rating-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+}
+
+/* App list */
+.app-list {
+  margin-top: 16px;
+  width: 100%;
+  font-weight: 500;
+}
+
+.app-list-row {
+  display: flex;
+  min-height: 72px;
+  width: 100%;
+  padding: 8px 0;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-list-item {
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
   align-items: center;
   gap: 8px;
+  flex: 1;
 }
 
-.simple-card:hover {
-  border: 2px solid #2D54DF;
-  background-color: #F2F5FD;
-}
-
-.simple-card.selected {
-  border: 2px solid #2D54DF;
-  background-color: #DFE5FD;
-}
-
-.simple-card.selected .radio-button {
-  border-width: 6px;
-  background-color: #F2F5FD;
-}
-
-.simple-card .card-label {
-  font-size: 16px;
-  text-align: center;
-}
-
-.icon-card {
-  border-radius: 16px;
-  border: 1px solid #dadef1;
-  box-shadow: 0px 3.5px 5.5px 0px rgba(18, 75, 195, 0.1);
-  background-color: #fff;
-  display: flex;
-  width: 100%;
-  padding: 20px 16px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-  min-height: 80px;
-  position: relative;
-}
-
-.icon-card:hover {
-  border: 2px solid #2D54DF;
-  background-color: #F2F5FD;
-}
-
-.icon-card.selected {
-  border: 2px solid #2D54DF;
-  background-color: #DFE5FD;
-}
-
-.icon-card .card-label-container {
-  display: flex;
-  align-items: center;
-  gap: 4px; /* Mantém o ícone de info próximo ao texto */
-}
-
-.icon-card .info-icon {
-  width: 20px;
-}
-
-.radio-container {
-  position: absolute;
-  top: 12px; /* Coloca o círculo na parte superior */
-  left: 12px; /* Alinha à esquerda */
-}
-
-.radio-button {
-  background-color: #fff;
-  border: 2px solid #2d54df;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-}
-
-.card-label {
-  font-size: 16px;
-  color: #0c112f;
-  font-weight: 500;
-  text-align: center; /* Centraliza o texto */
-  width: 100%;
-}
-
-
-
-.checkbox-container {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.checkbox {
-  border-radius: 6px;
-  background-color: #fff;
-  border: 2px solid #2d54df; /* Borda padrão */
-  width: 18px;
-  height: 18px;
-  cursor: pointer; /* Para melhorar a experiência do usuário */
-}
-
-.checkbox-icon {
+.app-icon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 20px;
+  width: 56px;
+  box-shadow:
+    0px 0px 1px 0px rgba(12, 26, 75, 0.24),
+    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+  margin: auto 0;
+  flex-shrink: 0;
 }
-
-
-/* Aumenta a borda do checkbox quando o card é selecionado */
-.icon-card.selected .checkbox {
-  border: 4px solid #2d54df; /* Aumentando a borda para 4px quando o card está ativo */
-}
-
-.card-content {
-  display: flex;
-  gap: 12px;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  font-size: 14px;
-  color: #0c112f;
-  font-weight: 500;
-  text-align: center;
-}
-
-.card-icon {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 40px;
-    filter: invert(27%) sepia(81%) saturate(1521%) hue-rotate(198deg) brightness(89%) contrast(91%);
-}
-
-.icon-card.selected .card-icon {
-    filter: brightness(0) saturate(100%) invert(16%) sepia(80%) saturate(1951%) hue-rotate(208deg) brightness(97%) contrast(90%);
-}
-
-.card-label-container {
-  display: flex;
-  align-items: center;
-  gap: 6px; /* Ajusta o espaço entre o texto e o ícone */
-  justify-content: center;
-}
-
-.card-label {
-  display: flex;
-  align-items: center;
-}
-
-.info-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 20px;
-}
-
 
 
 /* Navigation buttons */
 .navigation-buttons {
   border-top: 1px solid #c5cbe4;
   display: flex;
-  margin-top: 16px;
   width: 100%;
+  height: 60hv;
   padding: 16px 32px;
   align-items: center;
   gap: 100px;
@@ -407,6 +454,7 @@ html, body {
   flex-wrap: wrap;
   position: sticky;
   bottom: 0;
+  background-color: rgba(249, 249, 249, 1);
 }
 
 
@@ -569,6 +617,14 @@ html, body {
   justify-content: space-between;
 }
 
+.applications-header {
+  display: collum;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+
 .section-title {
   font-size: 18px;
   color: #0c112f;
@@ -638,7 +694,7 @@ html, body {
 .divider {
   aspect-ratio: 200;
   width: 100%;
-  margin-top: 24px;
+  margin-top: 16px;
   border: none;
   height: 1px;
   background-color: #c5cbe4;
