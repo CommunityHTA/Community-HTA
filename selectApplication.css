@@ -1,0 +1,772 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Evita rolagem */
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(249, 249, 249, 1);
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ocupa toda a altura da tela */
+}
+
+/* Header styles */
+.header {
+  border-bottom: 1px solid #c5cbe4;
+  display: flex;
+  height: 68px;
+  width: 100%;
+  padding: 25px 32px;
+  align-items: center;
+  font-size: 14px;
+  color: #8a8ea1;
+  font-weight: 400;
+  justify-content: space-between;
+}
+
+.breadcrumb {
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  align-items: center;
+  gap: 7px;
+}
+
+.breadcrumb-item {
+  align-self: stretch;
+  margin: auto 0;
+  color: #8a8ea1;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.breadcrumb-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+  margin: auto 0;
+  filter: invert(64%) sepia(5%) saturate(180%) hue-rotate(200deg);
+}
+
+
+.breadcrumb-current {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 7px;
+  color: #161d44;
+  font-weight: 500;
+  justify-content: start;
+}
+
+.breadcrumb-item-current {
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.breadcrumb-text {
+  margin: auto 0;
+}
+
+.breadcrumb-item.active {
+  color: #161d44;
+  font-weight: 500;
+}
+
+/* Main content layout */
+.main-content {
+  width: 100%;
+  height: 100vh; /* Para garantir que o layout geral ocupa a tela */
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 0px;
+  height: 100%; /* Garante que o content-wrapper ocupe toda a altura */
+}
+
+
+/* Assessment column */
+.assessment-column {
+  display: flex;
+  flex-direction: column;
+  width: 67%;
+  margin-top: 24px;
+  height: 100%;
+}
+
+.assessment-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 32px;
+  flex-direction: column;
+}
+
+/* Stepper component */
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #161d44;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.step {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  justify-content: start;
+}
+
+.step-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 22px;
+  margin: auto 0;
+  height: 20px;
+}
+
+.step-label {
+  margin: auto 0;
+}
+
+.step-divider {
+  border: 1px solid #637391;
+  margin: auto 0;
+  width: 88px;
+  height: 1px;
+}
+
+.step-divider.completed {
+  border-color: #161d44;
+}
+
+.step-circle {
+  background-color: #f2f5fd;
+  border: 1px dashed #637391;
+  border-radius: 50%;
+  display: flex;
+  margin: auto 0;
+  width: 20px;
+  height: 20px;
+}
+
+.step.active {
+  color: #161d44;
+  font-weight: 500;
+}
+
+.step.pending {
+  color: #637391;
+  font-weight: 400;
+}
+
+/* Section titles */
+.section-title {
+  margin-top: 26px;
+}
+
+.title {
+  color: #0c112f;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.subtitle {
+  color: #637391;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+/* Selection options */
+.selection-options {
+  margin-top: 16px;
+}
+
+.selection-row {
+  display: flex;
+  gap: 20px;
+}
+
+.selection-column {
+  flex: 1;
+}
+
+/* 🔹 Estilos para os Cards Simples */
+.simple-card {
+  border-radius: 16px;
+  border: 1px solid #dadef1;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(18, 75, 195, 0.1);
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  padding: 20px 16px; /* Aumentando a altura do card */
+  flex-direction: column;
+  align-items: center; /* Centraliza o texto no meio */
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 80px; /* Mais altura no card */
+  position: relative; /* Permite posicionar o círculo */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.simple-card:hover {
+  border: 2px solid #2D54DF;
+  background-color: #F2F5FD;
+}
+
+.simple-card.selected {
+  border: 2px solid #2D54DF;
+  background-color: #DFE5FD;
+}
+
+.simple-card.selected .radio-button {
+  border-width: 6px;
+  background-color: #F2F5FD;
+}
+
+.simple-card .card-label {
+  font-size: 16px;
+  text-align: center;
+}
+
+.icon-card {
+  border-radius: 16px;
+  border: 1px solid #dadef1;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(18, 75, 195, 0.1);
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  padding: 20px 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 80px;
+  position: relative;
+}
+
+.icon-card:hover {
+  border: 2px solid #2D54DF;
+  background-color: #F2F5FD;
+}
+
+.icon-card.selected {
+  border: 2px solid #2D54DF;
+  background-color: #DFE5FD;
+}
+
+.icon-card .card-label-container {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Mantém o ícone de info próximo ao texto */
+}
+
+.icon-card .info-icon {
+  width: 20px;
+}
+
+.radio-container {
+  position: absolute;
+  top: 12px; /* Coloca o círculo na parte superior */
+  left: 12px; /* Alinha à esquerda */
+}
+
+.radio-button {
+  background-color: #fff;
+  border: 2px solid #2d54df;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+}
+
+.card-label {
+  font-size: 16px;
+  color: #0c112f;
+  font-weight: 500;
+  text-align: center; /* Centraliza o texto */
+  width: 100%;
+}
+
+
+
+.checkbox-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.checkbox {
+  border-radius: 6px;
+  background-color: #fff;
+  border: 2px solid #2d54df; /* Borda padrão */
+  width: 18px;
+  height: 18px;
+  cursor: pointer; /* Para melhorar a experiência do usuário */
+}
+
+.checkbox-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+
+/* Aumenta a borda do checkbox quando o card é selecionado */
+.icon-card.selected .checkbox {
+  border: 4px solid #2d54df; /* Aumentando a borda para 4px quando o card está ativo */
+}
+
+.card-content {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #0c112f;
+  font-weight: 500;
+  text-align: center;
+}
+
+.card-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 40px;
+    filter: invert(27%) sepia(81%) saturate(1521%) hue-rotate(198deg) brightness(89%) contrast(91%);
+}
+
+.icon-card.selected .card-icon {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(80%) saturate(1951%) hue-rotate(208deg) brightness(97%) contrast(90%);
+}
+
+.card-label-container {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Ajusta o espaço entre o texto e o ícone */
+  justify-content: center;
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+}
+
+.info-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+
+
+/* Navigation buttons */
+.navigation-buttons {
+  border-top: 1px solid #c5cbe4;
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+  padding: 16px 32px;
+  align-items: center;
+  gap: 100px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  bottom: 0;
+}
+
+
+.btn {
+  border-radius: 10000px;
+  display: flex;
+  height: 40px;
+  padding: 10px 16px;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-outline {
+  border: 2px solid #2d54df;
+  color: #2d54df;
+  background-color: transparent;
+}
+
+.btn-disabled {
+  background-color: #c5cbe4;
+  border: 1px solid #c5cbe4;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.next.active {
+  background-color: blue;
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+/* Patient sidebar */
+.patient-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: 90vh;
+  background-color: #fefeff;
+}
+
+.patient-profile {
+  border-left: 1px solid #c5cbe4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.patient-header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 24px;
+  color: #0c112f;
+  font-weight: 500;
+  gap: 16px;
+  padding: 24px 40px 0px 40px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.patient-avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.patient-name {
+  margin-top: 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+.details-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  padding: 24px 56px 24px 40px;
+  text-align: center;
+  background: white;
+  position: sticky;
+  top: 100px;
+  z-index: 2;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #161d44;
+  margin-bottom: 8px;
+}
+
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.detail-content {
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.detail-label {
+  font-weight: 500;
+}
+
+.detail-value {
+  font-weight: 400;
+}
+
+.patient-details {
+  display: flex;
+  width: 100%;
+  padding: 0 40px;
+  flex-direction: column;
+  border-left: 1px solid #c5cbe4;
+  flex-grow: 1;
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Medication section */
+.medication-section {
+  width: 100%;
+  font-weight: 500;
+}
+
+.section-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #0c112f;
+}
+
+.view-details-btn {
+  border-radius: 10000px;
+  min-height: 40px;
+  padding: 10px 16px;
+  font-size: 16px;
+  color: #2d54df;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.medication-list {
+  display: flex;
+  margin-top: 8px;
+  width: 100%;
+  gap: 16px;
+}
+
+.medication-card {
+  border-radius: 16px;
+  border: 0.5px solid #dadef1;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(12, 26, 75, 0.07);
+  background-color: #fefeff;
+  display: flex;
+  padding: 12px;
+  flex: 1;
+}
+
+.medication-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.medication-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 32px;
+}
+
+.medication-details {
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.medication-name {
+  color: #161d44;
+  font-size: 14px;
+}
+
+.medication-dosage {
+  color: #637391;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Divider */
+.divider {
+  aspect-ratio: 200;
+  width: 100%;
+  margin-top: 24px;
+  border: none;
+  height: 1px;
+  background-color: #c5cbe4;
+}
+
+.appointments-timeline {
+  display: flex;
+  margin-top: 18px;
+  gap: 12px;
+}
+
+.timeline-indicators {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-dot {
+  background-color: #2d54df;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.timeline-connector {
+  margin: 6px 0;
+  height: 6px;
+}
+
+.timeline-content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+
+.appointment {
+  margin-bottom: 29px;
+}
+
+.appointment:last-child {
+  margin-bottom: 0;
+}
+
+.appointment-date {
+  color: #47548c;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.appointment-card {
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  margin-top: 8px;
+  min-height: 73px;
+  width: 100%;
+  padding: 14px 12px 14px 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.appointment-card.purple {
+  background-color: #fbf3ff;
+}
+
+.appointment-card.red {
+  background-color: #fff6f5;
+}
+
+.appointment-card.blue {
+  background-color: #f1f8ff;
+}
+
+.appointment-details {
+  z-index: 0;
+  display: flex;
+  min-width: 240px;
+  margin: auto 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.appointment-info {
+  margin: auto 0;
+  font-weight: 400;
+}
+
+.appointment-title {
+  color: #161d44;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.doctor-info {
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #637391;
+}
+
+.doctor-avatar {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.doctor-name {
+  flex: 1;
+}
+
+.appointment-tag {
+  border-radius: 10000px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.appointment-tag.purple {
+  background-color: #f3e0ff;
+  color: #8929a9;
+}
+
+.step-icon-check {
+  filter: invert(35%) sepia(99%) saturate(338%) hue-rotate(66deg) brightness(92%) contrast(89%);
+}
