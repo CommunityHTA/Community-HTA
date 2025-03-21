@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Assessment Setup</title>
+    <link rel="stylesheet" href="assessmentSetup.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/evalia.png" type="image/png" /> 
+  </head>
+  <body>
+    <div class="screen">
+     <header class="header">
+        <nav class="breadcrumb">
+          <a href="dashboard.html" class="breadcrumb-item">Dashboard</a>
+          <div class="breadcrumb-current">
+            <img
+              src="icons/navigation/chevron-right.svg"
+              class="breadcrumb-icon"
+              alt="Breadcrumb separator"
+            />
+            <a href="patientList.html" class="breadcrumb-item">New assessment</a>
+          </div>
+          <div class="breadcrumb-current">
+            <img
+              src="icons/navigation/chevron-right.svg"
+              class="breadcrumb-icon"
+              alt="Breadcrumb separator"
+            />
+            <span class="breadcrumb-item-current">Set up your assessment</span>
+          </div>
+        </nav>
+      </header>
+      <main class="main-content">
+        <div class="content-wrapper">
+          <section class="assessment-column">
+            <div class="assessment-content">
+              <nav class="stepper">
+                <div class="step completed">
+                  <img
+                    src="icons/system/check-circle.svg"
+                      class="step-icon-check"
+                      alt="Check"
+                  />
+                  <span class="step-label">Select patient</span>
+                </div>
+                <div class="step-divider completed"></div>
+                <div class="step active">
+                    <img
+                      src="icons/navigation/step.svg"
+                      class="step-icon"
+                      alt="Loading"
+                    />
+                    <span class="step-label">Needs</span>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step pending">
+                  <div class="step-circle"></div>
+                  <span class="step-label">Focus</span>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step pending">
+                  <div class="step-circle"></div>
+                  <span class="step-label">Start assessment</span>
+                </div>
+              </nav>
+
+              <section class="section-title">
+                <h2 class="title">
+                  What is the intended outcome of the assessment?
+                </h2>
+                <p class="subtitle">Select one of the following options</p>
+              </section>
+
+              <section class="selection-options simple-cards">
+                <div class="selection-row">
+                  <div class="selection-column">
+                    <label class="selection-card simple-card">
+                      <div class="radio-container">
+                        <div class="radio-button"></div>
+                      </div>
+                      <span class="card-label-simple">Find a new application</span>
+                    </label>
+                  </div>
+                  <div class="selection-column">
+                    <label class="selection-card simple-card">
+                      <div class="radio-container">
+                        <div class="radio-button"></div>
+                      </div>
+                      <span class="card-label-simple">Assessment on an application</span>
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+              <section class="section-title">
+                <h2 class="title">What are your patient's needs?</h2>
+                <p class="subtitle">
+                  Select one or more of the following options
+                </p>
+              </section>
+
+              <section class="selection-options">
+                <div class="selection-row">
+                  <div class="selection-column">
+                    <label class="selection-card icon-card">
+                      <div class="checkbox-container">
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
+                      </div>
+                      <div class="card-content">
+                        <img
+                           src="icons/medical/automatic.svg"                          
+                           class="card-icon"
+                          alt="Blood pressure icon"
+                        />
+                        <div class="card-label-container">
+                          <span class="card-label"
+                            >Automatic blood pressure</span
+                          >
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed85b7d33f3ba7a256ca0e504377cb01bd590ea8fc63434739144549ed53c032?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="info-icon"
+                            alt="Info"
+                          />
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="selection-column">
+                    <label class="selection-card icon-card">
+                      <div class="checkbox-container">
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
+                      </div>
+                      <div class="card-content">
+                        <img
+                          src="icons/medical/glycemic.svg"
+                          class="card-icon"
+                          alt="Glycemic control icon"
+                        />
+                        <div class="card-label-container">
+                          <span class="card-label">Glycemic control</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed85b7d33f3ba7a256ca0e504377cb01bd590ea8fc63434739144549ed53c032?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="info-icon"
+                            alt="Info"
+                          />
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="selection-column">
+                    <label class="selection-card icon-card">
+                      <div class="checkbox-container">
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
+                      </div>
+                      <div class="card-content">
+                        <img
+                          src="icons/medical/activity.svg"
+                          class="card-icon"
+                          alt="Physical activity icon"
+                        />
+                        <div class="card-label-container">
+                          <span class="card-label"
+                            >Track physical activity</span
+                          >
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed85b7d33f3ba7a256ca0e504377cb01bd590ea8fc63434739144549ed53c032?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="info-icon"
+                            alt="Info"
+                          />
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+              <section class="selection-options">
+                <div class="selection-row">
+                  <div class="selection-column">
+                    <label class="selection-card icon-card">
+                      <div class="checkbox-container">
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
+                      </div>
+                      <div class="card-content">
+                        <img
+                           src="icons/medical/manual.svg"
+                          class="card-icon"
+                          alt="Manual blood pressure icon"
+                        />
+                        <div class="card-label-container">
+                          <span class="card-label">Manual blood pressure</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d4ee41daccbd3fea900a0aff9fd9092ffa54469ecd101a5a81a91d986565fd1?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="info-icon"
+                            alt="Info"
+                          />
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="selection-column">
+                    <label class="selection-card icon-card">
+                      <div class="checkbox-container">
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
+                      </div>
+                      <div class="card-content">
+                        <img
+                           src="icons/medical/nutrition.svg"
+                          class="card-icon"
+                          alt="Diet icon"
+                        />
+                        <div class="card-label-container">
+                          <span class="card-label">Diet/Nutrition diary</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d4ee41daccbd3fea900a0aff9fd9092ffa54469ecd101a5a81a91d986565fd1?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="info-icon"
+                            alt="Info"
+                          />
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="selection-column">
+                    <label class="selection-card icon-card">
+                      <div class="checkbox-container">
+                        <img
+                            src="icons/checkbox/default.svg"
+                            class="checkbox-icon"
+                          />
+                      </div>
+                      <div class="card-content">
+                        <img
+                           src="icons/medical/report.svg"
+                          class="card-icon"
+                          alt="Reports icon"
+                        />
+                        <div class="card-label-container">
+                          <span class="card-label">Reports</span>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed85b7d33f3ba7a256ca0e504377cb01bd590ea8fc63434739144549ed53c032?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                            class="info-icon"
+                            alt="Info"
+                          />
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="navigation-buttons">
+              <button class="btn btn-outline previous">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9c57ab22192c42deac09b031db2fea45a20b61cc64626296ecff0f5fb97b999?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="btn-icon"
+                  alt="Previous"
+                />
+                <span class="btn-label">Previous step</span>
+              </button>
+              <button class="btn btn-disabled next">
+                <span class="btn-label">Next step</span>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f99f77719375f90161843b2832d7be19dc78f8c9edb84043dfd06cc624ffd17?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="btn-icon"
+                  alt="Next"
+                />
+              </button>
+            </div>
+          </section>
+
+          <aside class="patient-sidebar">
+           <div class="patient-profile">
+              <div class="patient-header">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/042f71c7e9331897ae549296373244902b40cc95e0b527b5fc5e03807c0b33e5?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="patient-avatar"
+                  alt="Patient avatar"
+                />
+                <h2 class="patient-name">José Silva</h2>
+              </div>
+
+              <section class="details-section">
+                <div class="detail-item">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1096fc5297fd5167f70474f7f0def7e4a523f0ec9ce34cafc620f203f159edf?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                    class="detail-icon"
+                    alt="ID"
+                  />
+                  <div class="detail-content">
+                    <span class="detail-label">Identification</span>
+                    <span class="detail-value">9481</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c9f957f6b9ef1350d9bd4799ba40fe2956906ac987391540d414182cfcf3641?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                    class="detail-icon"
+                    alt="Email"
+                  />
+                  <div class="detail-content">
+                    <span class="detail-label">E-mail</span>
+                    <span class="detail-value">jose@mail.com</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0468524b8f60fad2cde946e699a98c77b4e4a1a545da6add4c910fbb313ec071?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                    class="detail-icon"
+                    alt="Phone"
+                  />
+                  <div class="detail-content">
+                    <span class="detail-label">Phone</span>
+                    <span class="detail-value">968 594 245</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/cdcd2ce04a9ad1720711abe5e95fc69280cbdb9fb8baedc22c8e20e98cefffb6?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                    class="detail-icon"
+                    alt="Location"
+                  />
+                  <div class="detail-content">
+                    <span class="detail-label">Location</span>
+                    <span class="detail-value">Faro</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+              <div class="patient-details">
+                <section class="medication-section">
+                  <div class="section-header">
+                    <h3 class="section-title">Medication</h3>
+                    <button class="view-details-btn">View details</button>
+                  </div>
+                  <div class="medication-list">
+                    <div class="medication-card">
+                      <div class="medication-content">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8f829dab7a592c42d6c86ab7912d5799814665a6911aaa62500a7f2f29661e9?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          class="medication-icon"
+                          alt="Amlodipine"
+                        />
+                        <div class="medication-details">
+                          <span class="medication-name">Amlodipine</span>
+                          <span class="medication-dosage">5mg</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="medication-card">
+                      <div class="medication-content">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d237ab7bccf70612ee996205aad6d7e9a1c9bcb284d354dfc45655341095fd9?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          class="medication-icon"
+                          alt="Enalapril"
+                        />
+                        <div class="medication-details">
+                          <span class="medication-name">Enalapril</span>
+                          <span class="medication-dosage">20mg</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="medication-card">
+                      <div class="medication-content">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/34dc7d5d6e93606ea152f1ae1bc6739eecb37677c81d6d645507c17b615f8d02?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                          class="medication-icon"
+                          alt="Potassium"
+                        />
+                        <div class="medication-details">
+                          <span class="medication-name">Potassium</span>
+                          <span class="medication-dosage">99mg</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <hr class="divider" />
+
+                <section class="appointments-section">
+                  <h3 class="section-title">Appointment history</h3>
+                  <div class="appointments-timeline">
+                    <div class="timeline-indicators">
+                      <div class="timeline-dot"></div>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/45655b917721a455e8289d1c7f72c126bf5cbe47288b8f4a649d00ea6100d8bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="timeline-connector"
+                        alt=""
+                      />
+                      <div class="timeline-dot"></div>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/45655b917721a455e8289d1c7f72c126bf5cbe47288b8f4a649d00ea6100d8bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="timeline-connector"
+                        alt=""
+                      />
+                      <div class="timeline-dot"></div>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce15f6aad4df5bea0d68fa3705ece5aae369fe125441a89353b2d95d7dd1ea67?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                        class="timeline-connector"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="timeline-content">
+                      <div class="appointment">
+                        <time class="appointment-date"
+                          >5 February, 10:30 AM</time
+                        >
+                        <div class="appointment-card purple">
+                          <div class="appointment-details">
+                            <div class="appointment-info">
+                              <h4 class="appointment-title">
+                                Flow up - Chest Pain
+                              </h4>
+                              <div class="doctor-info">
+                                <img
+                                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/28d10b3f8051bfa7cf72d9f9ea2bb904977874dbcca412a1eb3bf8ca8e0a192f?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                                  class="doctor-avatar"
+                                  alt="Doctor"
+                                />
+                                <span class="doctor-name"
+                                  >Dr. James Carter</span
+                                >
+                              </div>
+                            </div>
+                            <span class="appointment-tag purple"
+                              >Medication</span
+                            >
+                          </div>
+                          <div class="appointment-indicator purple"></div>
+                        </div>
+                      </div>
+
+                      <div class="appointment">
+                        <time class="appointment-date"
+                          >28 January, 02:45 PM</time
+                        >
+                        <div class="appointment-card red">
+                          <div class="appointment-details">
+                            <div class="appointment-info">
+                              <h4 class="appointment-title">
+                                Emergency - Chest Pain
+                              </h4>
+                              <div class="doctor-info">
+                                <img
+                                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/18553a9c54be9152617c4711cb7a8250123a0ca72de05ad5dda4d140b2955183?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                                  class="doctor-avatar"
+                                  alt="Doctor"
+                                />
+                                <span class="doctor-name"
+                                  >Drª. Emily Bennett</span
+                                >
+                              </div>
+                            </div>
+                            <span class="appointment-tag red">Emergency</span>
+                          </div>
+                          <div class="appointment-indicator red"></div>
+                        </div>
+                      </div>
+
+                      <div class="appointment">
+                        <time class="appointment-date"
+                          >4 January, 09:30 AM</time
+                        >
+                        <div class="appointment-card blue">
+                          <div class="appointment-details">
+                            <div class="appointment-info">
+                              <h4 class="appointment-title">
+                                Medication Adjustment
+                              </h4>
+                              <div class="doctor-info">
+                                <img
+                                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7456287aa1cee1c2517b4828a38bd50fa56c680d9ed8fa03c19d9d41ee81df53?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                                  class="doctor-avatar"
+                                  alt="Doctor"
+                                />
+                                <span class="doctor-name"
+                                  >Dr. Daniel Reyes</span
+                                >
+                              </div>
+                            </div>
+                            <span class="appointment-tag blue"
+                              >Regular Check-up</span
+                            >
+                          </div>
+                          <div class="appointment-indicator blue"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".simple-card");
+    const icons = document.querySelectorAll(".icon-card");
+    const previousButton = document.querySelector(".previous");
+    const nextButton = document.querySelector(".next");
+
+    function updateNextButtonState() {
+        const isSimpleCardSelected = document.querySelector(".simple-card.selected") !== null;
+        const isIconCardSelected = document.querySelector(".icon-card.selected") !== null;
+
+        if (isSimpleCardSelected && isIconCardSelected) {
+            nextButton.classList.add("active");
+        } else {
+            nextButton.classList.remove("active");
+        }
+    }
+
+    // Evento de clique para os .simple-card
+    cards.forEach(card => {
+        card.addEventListener("click", function () {
+            cards.forEach(c => c.classList.remove("selected"));
+            this.classList.add("selected");
+
+            updateNextButtonState();
+        });
+    });
+
+    // Evento de clique para os .icon-card
+    icons.forEach(icon => {
+        const checkboxIcon = icon.querySelector(".checkbox-icon");
+
+        icon.addEventListener("click", function () {
+            const isSelected = icon.classList.toggle("selected");
+
+            if (isSelected) {
+                checkboxIcon.src = "icons/checkbox/checked.svg";
+            } else {
+                checkboxIcon.src = "icons/checkbox/default.svg";
+            }
+
+            updateNextButtonState();
+        });
+
+        // Evento de hover para mudar a imagem da checkbox
+        icon.addEventListener("mouseenter", function () {
+            if (!icon.classList.contains("selected")) {
+                checkboxIcon.src = "icons/checkbox/hover.svg";
+            }
+        });
+
+        icon.addEventListener("mouseleave", function () {
+            if (!icon.classList.contains("selected")) {
+                checkboxIcon.src = "icons/checkbox/default.svg";
+            }
+        });
+    });
+
+    // Evento para o botão "Previous"
+    previousButton.addEventListener("click", function () {
+        window.location.href = "patientList.html";
+    });
+
+    // Evento para o botão "Next"
+    nextButton.addEventListener("click", function () {
+        if (nextButton.classList.contains("active")) {
+            window.location.href = "selectApp.html";
+        }
+    });
+});
+
+</script>
+
+</html>
