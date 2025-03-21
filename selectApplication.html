@@ -81,20 +81,13 @@
 
               <div class="search-container">
                   <div class="search-field">
-                    <div class="search-content">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/2015cdb12a2eadbba2e6171cda6d37af5fcb6e99a25e96fe79fc1a07abb432dd?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                        class="search-icon"
-                        alt="Search"
-                      />
-                      <input
-                        type="text"
-                        class="search-input"
-                        placeholder="Search app's name..."
-                      />
-                    </div>
+                      <div class="search-content">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2015cdb12a2eadbba2e6171cda6d37af5fcb6e99a25e96fe79fc1a07abb432dd?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b" class="search-icon" alt="Search">
+                          <input type="text" class="search-input" placeholder="Search app's name...">
+                      </div>
+                      <ul class="suggestion-box"></ul>
                   </div>
-                </div>
+              </div>
                 <hr class="divider" />
                 <div class="applications-content">
                   <section class="applications-header">
@@ -699,6 +692,53 @@
     });
 });
 
+  document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.querySelector(".search-input");
+        const suggestionBox = document.querySelector(".suggestion-box");
+
+        const healthApps = [
+            "Cardi Health", "MediTrack", "HeartCare Plus", "Wellness Sync", "FitPulse", "TheraMind",
+            "Breathe Easy", "Glucose Guard", "SleepWell AI", "HealthSync Pro", "NeuroBalance", "Pulse Monitor",
+            "MindfulMe", "Active Heart", "SmartVitals", "HealthMate", "CareSync", "CuraTrack", "ClinicMate",
+            "VitalSense", "HeartFlow", "LiveWell", "MediCheck", "NutriGuide", "MyHealthLog", "BetterLife"
+        ];
+
+        searchInput.addEventListener("input", function () {
+            const query = this.value.toLowerCase().trim();
+            suggestionBox.innerHTML = "";
+
+            if (query.length > 0) {
+                const filteredApps = healthApps.filter(app => app.toLowerCase().startsWith(query));
+
+                filteredApps.forEach(app => {
+                    const li = document.createElement("li");
+                    li.textContent = app;
+                    li.addEventListener("click", function () {
+                        searchInput.value = app;
+                        suggestionBox.innerHTML = "";
+                        suggestionBox.style.display = "none";
+                    });
+                    suggestionBox.appendChild(li);
+                });
+
+                suggestionBox.style.display = "block";
+            } else {
+                suggestionBox.style.display = "none";
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!e.target.closest(".search-field")) {
+                suggestionBox.style.display = "none";
+            }
+        });
+
+        searchInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" && searchInput.value === "Cardi Health") {
+                window.location.href = "cardiHealth.html";
+            }
+        });
+    });
 </script>
 
 </html>
