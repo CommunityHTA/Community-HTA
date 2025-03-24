@@ -80,10 +80,15 @@
               </section>
 
               <div class="search-container">
-                  <div class="search-field">
+                  <div class="search-field">    
                       <div class="search-content">
                           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2015cdb12a2eadbba2e6171cda6d37af5fcb6e99a25e96fe79fc1a07abb432dd?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b" class="search-icon" alt="Search">
                           <input type="text" class="search-input" placeholder="Search app's name...">
+                          <div class="search-button">
+                            <button class="search-btn">
+                              Search
+                            </button>
+                          </div>
                       </div>
                       <ul class="suggestion-box"></ul>
                   </div>
@@ -96,11 +101,11 @@
                   </section>
                   <div class="app-grid">
                   <div class="app-grid-row">
-                    <article class="app-card">
+                    <article class="top-app-card">
                       <div class="app-image-container">
                         <img
                           src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf4397d964c13bcdad3026c9ed886286b3945eeb372d417ccb4f690effadae61?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                          class="app-image"
+                          class="top-app-image"
                           alt="HeartMath app"
                         />
                       </div>
@@ -121,11 +126,11 @@
                       </div>
                     </article>
 
-                    <article class="app-card">
+                    <article class="top-app-card">
                       <div class="app-image-container">
                         <img
                           src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddf6a49a7c084c901492e3ca97af02a9c33904cc177600153e86f3af1e433091?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                          class="app-image"
+                          class="top-app-image"
                           alt="BP Log app"
                         />
                       </div>
@@ -146,7 +151,7 @@
                       </div>
                     </article>
 
-                    <article class="app-card">
+                    <article class="top-app-card">
                       <div class="app-image-container">
                         <img
                           src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a2bd32ba969c3c7f4b222cfbfb1fb84eff8fc343c978f9fc3a93022acb10859?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
@@ -695,9 +700,10 @@
   document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.querySelector(".search-input");
         const suggestionBox = document.querySelector(".suggestion-box");
+        const searchButton = document.querySelector(".search-button");
 
         const healthApps = [
-            "Cardi Health", "MediTrack", "HeartCare Plus", "Wellness Sync", "FitPulse", "TheraMind",
+            "CardiHealth", "MediTrack", "HeartCare Plus", "Wellness Sync", "FitPulse", "TheraMind",
             "Breathe Easy", "Glucose Guard", "SleepWell AI", "HealthSync Pro", "NeuroBalance", "Pulse Monitor",
             "MindfulMe", "Active Heart", "SmartVitals", "HealthMate", "CareSync", "CuraTrack", "ClinicMate",
             "VitalSense", "HeartFlow", "LiveWell", "MediCheck", "NutriGuide", "MyHealthLog", "BetterLife"
@@ -727,18 +733,24 @@
             }
         });
 
-        document.addEventListener("click", function (e) {
-            if (!e.target.closest(".search-field")) {
-                suggestionBox.style.display = "none";
+        function navigateIfMatch() {
+            if (searchInput.value.trim().toLowerCase() === "cardihealth") {
+                window.location.href = "cardiHealth.html";
+            }
+        }
+
+        // Evento de teclado no campo de busca (pressionando "Enter")
+        searchInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+                navigateIfMatch();
             }
         });
 
-        searchInput.addEventListener("keydown", function (e) {
-            if (e.key === "Enter" && searchInput.value === "Cardi Health") {
-                window.location.href = "cardiHealth.html";
-            }
+        // Evento de clique no botão de pesquisa
+        searchButton.addEventListener("click", function () {
+            navigateIfMatch();
         });
-    });
+        });
 </script>
 
 </html>

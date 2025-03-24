@@ -3,326 +3,369 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assessment Screen</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Patient Assessment</title>
+    <link rel="stylesheet" href="medical.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="img/evalia.png" type="image/png" /> 
   </head>
   <body>
-    <main class="assessment-screen">
-      <div class="assessment-container">
-        <header class="main-header">
-          <nav class="breadcrumb">
-            <div class="breadcrumb-item">Dashboard</div>
-            <div class="breadcrumb-item-with-icon">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/157f5593218305b74f7205064cc3c5513cc51739?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-                class="breadcrumb-icon"
-                alt=""
-              />
-              <div class="breadcrumb-text">New assessment</div>
-            </div>
-            <div class="breadcrumb-item-with-icon">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/157f5593218305b74f7205064cc3c5513cc51739?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-                class="breadcrumb-icon"
-                alt=""
-              />
-              <div class="breadcrumb-text">Set up your assessment</div>
-            </div>
-            <div class="breadcrumb-item-with-icon active">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/157f5593218305b74f7205064cc3c5513cc51739?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-                class="breadcrumb-icon"
-                alt=""
-              />
-              <div class="breadcrumb-text">Application assessment</div>
-            </div>
-          </nav>
-        </header>
-
-        <section class="assessment-content">
-          <div class="stepper-container">
-            <div class="stepper">
-              <div class="step completed">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d3fa031c695041f1aada40040a7ede9598eb2a9?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-                  class="step-icon"
-                  alt=""
-                />
-                <div class="step-label">
-                  Medical Standards & SAMD Certification
-                </div>
-              </div>
-              <div class="step-divider completed"></div>
-              <div class="step current">Functionalities</div>
-              <div class="step-divider"></div>
-              <div class="step">
-                <div class="step-circle"></div>
-                <div class="step-label">Usability</div>
-              </div>
-              <div class="step-divider"></div>
-              <div class="step">
-                <div class="step-circle"></div>
-                <div class="step-label">Interface</div>
-              </div>
-            </div>
-
-            <div class="title-section">
-              <h1 class="main-title">
-                Prioritize features by their importance for patient monitoring
-              </h1>
-              <p class="description">
-                Prioritize from low to high. Unprioritized features will be
-                selected as low relevance.
-              </p>
-            </div>
+    <div class="screen">
+      <header class="header">
+        <nav class="breadcrumb">
+          <a href="dashboard.html" class="breadcrumb-item">Dashboard</a>
+          <div class="breadcrumb-current">
+            <img
+              src="icons/navigation/chevron-right.svg"
+              class="breadcrumb-icon"
+              alt="Breadcrumb separator"
+            />
+            <a href="patientList.html" class="breadcrumb-item">New assessment</a>
           </div>
+          <div class="breadcrumb-current">
+            <img
+              src="icons/navigation/chevron-right.svg"
+              class="breadcrumb-icon"
+              alt="Breadcrumb separator"
+            />
+            <a href="selectApplication.html" class="breadcrumb-item">Set up your assessment</a>
+          </div>
+          <div class="breadcrumb-current">
+            <img
+              src="icons/navigation/chevron-right.svg"
+              class="breadcrumb-icon"
+              alt="Breadcrumb separator"
+            />
+            <span class="breadcrumb-item-current">Application assessment</span>
+          </div>
+        </nav>
+      </header>
 
-          <div class="relevance-legend">
-            <div class="relevance-title">Relevance</div>
-            <div class="relevance-options">
-              <div class="relevance-option">
-                <div class="option-label">Low</div>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/776b46f8a21503c8cbe2fdf21c67d92208a3af3c?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-                  class="option-icon"
-                  alt=""
-                />
-              </div>
-              <div class="relevance-option">
-                <div class="option-label">Moderate</div>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/776b46f8a21503c8cbe2fdf21c67d92208a3af3c?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-                  class="option-icon"
-                  alt=""
-                />
-              </div>
-              <div class="relevance-option">
-                <div class="option-label">High</div>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/776b46f8a21503c8cbe2fdf21c67d92208a3af3c?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-                  class="option-icon"
-                  alt=""
-                />
-              </div>
-            </div>
+      <main class="main-content">
+        <section class="stepper">
+          <div class="step">
+            <img
+              src="icons/navigation/step.svg"
+              class="step-icon"
+              alt="Loading"
+            />
+            <span class="step-label">Medical Standards & SAMD Certification</span>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step">
+            <div class="step-circle"></div>
+            <div class="step-label">Functionalities</div>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step">
+            <div class="step-circle"></div>
+            <div class="step-label">Usability</div>
+          </div>
+          <div class="step-divider"></div>
+          <div class="step">
+            <div class="step-circle"></div>
+            <div class="step-label">Interface</div>
           </div>
         </section>
 
-        <div class="spacer"></div>
-      </div>
+        <section class="title-section">
+          <h1 class="page-title">Rate the following key medical standards</h1>
+          <p class="page-description">
+            Rate based on the CardiHealth app and the specific requirements and
+            patient needs.
+          </p>
+        </section>
 
-      <div class="scrollbar">
-        <div class="scrollbar-thumb"></div>
-      </div>
+      <section class="rating-legend">
+        <h2 class="rating-title">Rating</h2>
+        <div class="rating-scale">
+          <div class="rating-item">
+            <span class="rating-text">1 Star</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/776b46f8a21503c8cbe2fdf21c67d92208a3af3c?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+              class="star-icon"
+              alt="Star icon"
+            />
+          </div>
+          <div class="rating-item">
+            <span class="rating-text">2 start</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/776b46f8a21503c8cbe2fdf21c67d92208a3af3c?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+              class="star-icon"
+              alt="Star icon"
+            />
+          </div>
+          <div class="rating-item">
+            <span class="rating-text">3 stars</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/776b46f8a21503c8cbe2fdf21c67d92208a3af3c?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+              class="star-icon"
+              alt="Star icon"
+            />
+          </div>
+          <div class="rating-item">
+            <span class="rating-text">4 stars</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/776b46f8a21503c8cbe2fdf21c67d92208a3af3c?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+              class="star-icon"
+              alt="Star icon"
+            />
+          </div>
+          <div class="rating-item">
+            <span class="rating-text">5 stars</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/776b46f8a21503c8cbe2fdf21c67d92208a3af3c?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+              class="star-icon"
+              alt="Star icon"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="spacer"></div>
 
       <section class="topics-container">
         <div class="topics-list">
           <article class="topic-card">
             <div class="topic-content">
-              <div class="topic-info">
-                <h2 class="topic-title">Blood pressure</h2>
+              <div class="topic-text">
+                <h3 class="topic-title">Certification as SAMD</h3>
                 <p class="topic-description">
-                  Manual recording of blood pressure measurements
+                  It is important that the application is certified as SAMD
+                  (Software as a Medical Device) to ensure compliance with medical
+                  device regulations.
                 </p>
               </div>
-              <div class="relevance-selector">
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Low</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Moderate</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">High</div>
+              <div class="topic-rating">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                  class="star-rating"
+                  alt="Star rating"
+                />
+                <div class="star-group">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
                 </div>
               </div>
             </div>
           </article>
-
           <article class="topic-card">
             <div class="topic-content">
-              <div class="topic-info">
-                <h2 class="topic-title">General Measures</h2>
+              <div class="topic-text">
+                <h3 class="topic-title">Privacy Laws Compliance</h3>
                 <p class="topic-description">
-                  Additional measurements: heart rate, weight, blood glucose,
-                  etc.
+                  It is essential that the application complies with privacy laws
+                  such as LGPD and GDPR to protect user data.)
                 </p>
               </div>
-              <div class="relevance-selector">
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Low</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Moderate</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">High</div>
+              <div class="topic-rating">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1370bd9428cca8bc526142ab364db3558c3f6702?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                  class="star-rating"
+                  alt="Star rating"
+                />
+                <div class="star-group">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1370bd9428cca8bc526142ab364db3558c3f6702?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1370bd9428cca8bc526142ab364db3558c3f6702?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1370bd9428cca8bc526142ab364db3558c3f6702?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1370bd9428cca8bc526142ab364db3558c3f6702?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
                 </div>
               </div>
             </div>
           </article>
-
           <article class="topic-card">
             <div class="topic-content">
-              <div class="topic-info">
-                <h2 class="topic-title">Reminders</h2>
+              <div class="topic-text">
+                <h3 class="topic-title">Data Security</h3>
                 <p class="topic-description">
-                  Taking medication; blood pressure measurements.
+                  It is crucial for the application to implement encryption and
+                  authentication measures to safeguard user data.
                 </p>
               </div>
-              <div class="relevance-selector">
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Low</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Moderate</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">High</div>
+              <div class="topic-rating">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                  class="star-rating"
+                  alt="Star rating"
+                />
+                <div class="star-group">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
                 </div>
               </div>
             </div>
           </article>
-
           <article class="topic-card">
             <div class="topic-content">
-              <div class="topic-info">
-                <h2 class="topic-title">Analysis and recomendations</h2>
+              <div class="topic-text">
+                <h3 class="topic-title">Sector-Specific Certifications</h3>
                 <p class="topic-description">
-                  Trend analysis and recommendation for consultation with a
-                  health professional.
+                  The application should have relevant certifications (e.g., ISO,
+                  CE) and undergo regular audits to demonstrate compliance.
                 </p>
               </div>
-              <div class="relevance-selector">
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Low</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Moderate</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">High</div>
+              <div class="topic-rating">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                  class="star-rating"
+                  alt="Star rating"
+                />
+                <div class="star-group">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
                 </div>
               </div>
             </div>
           </article>
-
           <article class="topic-card">
             <div class="topic-content">
-              <div class="topic-info">
-                <h2 class="topic-title">Recording habits</h2>
+              <div class="topic-text">
+                <h3 class="topic-title">Transparency and Ethics</h3>
                 <p class="topic-description">
-                  Recording habits: physical activity, eating routine
+                  The application must clearly communicate with users about their
+                  rights and terms of service, ensuring ethical data handling
                 </p>
               </div>
-              <div class="relevance-selector">
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Low</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Moderate</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">High</div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="topic-card">
-            <div class="topic-content">
-              <div class="topic-info">
-                <h2 class="topic-title">Record physical values</h2>
-                <p class="topic-description">
-                  Recording the user's physical characteristics: weight, height
-                </p>
-              </div>
-              <div class="relevance-selector">
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Low</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Moderate</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">High</div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="topic-card">
-            <div class="topic-content">
-              <div class="topic-info">
-                <h2 class="topic-title">Automatic recording</h2>
-                <p class="topic-description">
-                  Automatic recording of measurements (e.g. using smart
-                  devices).
-                </p>
-              </div>
-              <div class="relevance-selector">
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Low</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Moderate</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">High</div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="topic-card">
-            <div class="topic-content">
-              <div class="topic-info">
-                <h2 class="topic-title">Data sharing</h2>
-                <p class="topic-description">
-                  Availability and sharing of data acquired by the application
-                  with the hospital system for cross-checking clinical data.
-                </p>
-              </div>
-              <div class="relevance-selector">
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Low</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">Moderate</div>
-                </div>
-                <div class="relevance-option-container">
-                  <div class="relevance-label">High</div>
+              <div class="topic-rating">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                  class="star-rating"
+                  alt="Star rating"
+                />
+                <div class="star-group">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b35587aeef3c211ac67e1ca994d2aef58615cc3?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
+                    class="star"
+                    alt="Star"
+                  />
                 </div>
               </div>
             </div>
           </article>
         </div>
-
-        <div class="spacer-bottom"></div>
+        <div class="bottom-spacer"></div>
       </section>
 
       <footer class="navigation-buttons">
-        <button class="nav-button prev-button">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1c35c56a4b38e73e66c75f00afb848870f2e4b7?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-            class="button-icon"
-            alt=""
-          />
-          <span class="button-label">Previous step</span>
-        </button>
-        <button class="nav-button next-button">
-          <span class="button-label">Next step</span>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/090b9620747fc952ef6b1e1c7c86a8e493799563?placeholderIfAbsent=true&apiKey=0e6ad74ce5204fe7921c69a8095d4254"
-            class="button-icon"
-            alt=""
-          />
-        </button>
+              <button class="btn btn-outline previous">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9c57ab22192c42deac09b031db2fea45a20b61cc64626296ecff0f5fb97b999?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="btn-icon"
+                  alt="Previous"
+                />
+                <span class="btn-label">Previous step</span>
+              </button>
+              <button class="btn btn-disabled next">
+                <span class="btn-label">Next step</span>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f99f77719375f90161843b2832d7be19dc78f8c9edb84043dfd06cc624ffd17?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                  class="btn-icon"
+                  alt="Next"
+                />
+              </button>
       </footer>
     </main>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const previousButton = document.querySelector(".previous");
+      const nextButton = document.querySelector(".next");
+      // Evento para o botão "Previous"
+      previousButton.addEventListener("click", function () {
+          window.location.href = "selectApplication.html";
+      });
+
+      // Evento para o botão "Next"
+      nextButton.addEventListener("click", function () {
+              window.location.href = "functionalities.html";
+      });
+    });
+  </script>
 </html>
