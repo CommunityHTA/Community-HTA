@@ -3,41 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assessment Completion</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Begin assessment</title>
+    <link rel="stylesheet" href="assessmentComplete.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="img/evalia.png" type="image/png" /> 
   </head>
   <body>
-    <main class="screen">
-      <header class="header-container">
+    <div class="screen">
+     <header class="header">
         <nav class="breadcrumb">
-          <span class="breadcrumb-item">Dashboard</span>
-          <div class="breadcrumb-item-wrapper">
+          <a href="dashboard.html" class="breadcrumb-item">Dashboard</a>
+          <div class="breadcrumb-current">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/157f5593218305b74f7205064cc3c5513cc51739?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-              class="breadcrumb-arrow"
-              alt="Navigation arrow"
+              src="icons/navigation/chevron-right.svg"
+              class="breadcrumb-icon"
+              alt="Breadcrumb separator"
             />
-            <span class="breadcrumb-item">New assessment</span>
+            <a href="patientList.html" class="breadcrumb-item">New assessment</a>
           </div>
-          <div class="breadcrumb-item-wrapper active">
+          <div class="breadcrumb-current">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/157f5593218305b74f7205064cc3c5513cc51739?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-              class="breadcrumb-arrow"
-              alt="Navigation arrow"
+              src="icons/navigation/chevron-right.svg"
+              class="breadcrumb-icon"
+              alt="Breadcrumb separator"
             />
-            <span class="breadcrumb-item">Set up your assessment</span>
+            <span class="breadcrumb-item-current">Set up your assessment</span>
           </div>
         </nav>
       </header>
-
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/85959a65ac4f32b24cfe7bbbaf278c1da9172d4c?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-        class="success-icon"
-        alt="Success icon"
+        src="icons/system/check-circle.svg"
+        class="step-icon-check"
+        alt="Check"
       />
 
       <h1 class="page-title">
@@ -94,8 +94,8 @@
       </section>
 
       <section class="action-buttons">
-        <button class="button button-outline">Go back</button>
-        <button class="button button-primary">
+        <button class="button button-outline previous">Go back</button>
+        <button class="button button-primary next">
           <span class="button-text">Proceed to assessment</span>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/090b9620747fc952ef6b1e1c7c86a8e493799563?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
@@ -106,4 +106,19 @@
       </section>
     </main>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const previousButton = document.querySelector(".previous");
+      const nextButton = document.querySelector(".next");
+      // Evento para o botão "Previous"
+      previousButton.addEventListener("click", function () {
+          window.location.href = "selectApplication.html";
+      });
+
+      // Evento para o botão "Next"
+      nextButton.addEventListener("click", function () {
+              window.location.href = "dashboard.html";
+      });
+    });
+  </script>
 </html>

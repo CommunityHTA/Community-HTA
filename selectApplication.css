@@ -487,8 +487,8 @@ html, body {
 }
 
 .btn-outline {
-  border: 2px solid #2d54df;
-  color: #2d54df;
+  border: 2px solid #2D54DF;
+  color: #2D54DF;
   background-color: transparent;
 }
 
@@ -507,10 +507,9 @@ html, body {
 }
 
 .next.active {
-  background-color: blue;
+  background-color: #2d54df;
   cursor: pointer;
-  opacity: 1;
-  border: 2px solid blue;
+  border: 2px solid #2d54df;
   color: #fff;
 }
 

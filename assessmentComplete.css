@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family:
     "DM Sans",
@@ -13,6 +20,8 @@ body {
     Helvetica,
     sans-serif;
   background-color: rgba(249, 249, 249, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main container */
@@ -20,11 +29,11 @@ body {
   border-radius: 1px;
   background-color: rgba(249, 249, 249, 1);
   display: flex;
-  padding-bottom: 188px;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
   align-items: center;
   width: 100%;
+  height: 100vh;
 }
 
 @media (max-width: 991px) {
@@ -33,94 +42,85 @@ body {
   }
 }
 
-/* Header section */
-.header-container {
-  background-color: rgba(249, 249, 249, 1);
-  align-self: stretch;
-  min-height: 50px;
+/* Header styles */
+.header {
+  border-bottom: 1px solid #c5cbe4;
+  display: flex;
+  height: 68px;
   width: 100%;
-  font-family:
-    DM Sans,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
+  padding: 25px 32px;
+  align-items: center;
   font-size: 14px;
   color: #8a8ea1;
   font-weight: 400;
-  border-bottom: 1px solid rgba(197, 203, 228, 1);
-  padding: 16px 32px;
+  justify-content: space-between;
 }
 
-@media (max-width: 991px) {
-  .header-container {
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-/* Breadcrumb navigation */
 .breadcrumb {
   display: flex;
   min-width: 240px;
+  margin: auto 0;
   align-items: center;
   gap: 7px;
 }
 
 .breadcrumb-item {
-  margin-top: auto;
-  margin-bottom: auto;
+  align-self: stretch;
+  margin: auto 0;
+  color: #8a8ea1;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.breadcrumb-item-wrapper {
-  display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-  align-items: center;
-  gap: 7px;
-}
 
-.breadcrumb-item-wrapper.active {
-  color: #161d44;
-  font-weight: 500;
-}
-
-.breadcrumb-arrow {
+.breadcrumb-icon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
   width: 16px;
-  align-self: stretch;
-  margin-top: auto;
-  margin-bottom: auto;
-  flex-shrink: 0;
+  margin: auto 0;
+  filter: invert(64%) sepia(5%) saturate(180%) hue-rotate(200deg);
 }
 
-@media (max-width: 991px) {
-  .breadcrumb-item {
-    white-space: normal;
-  }
+
+.breadcrumb-current {
+  align-self: stretch;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  gap: 7px;
+  color: #161d44;
+  font-weight: 500;
+  justify-content: start;
+}
+
+.breadcrumb-item-current {
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.breadcrumb-text {
+  margin: auto 0;
+}
+
+.breadcrumb-item.active {
+  color: #161d44;
+  font-weight: 500;
 }
 
 /* Success icon */
-.success-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 80px;
-  margin-top: 137px;
+.step-icon-check {
+  margin-top: 40px;
+  width: 64px;
+  filter: invert(49%) sepia(80%) saturate(442%) hue-rotate(56deg) brightness(96%) contrast(85%);
 }
 
-@media (max-width: 991px) {
-  .success-icon {
-    margin-top: 40px;
-  }
-}
 
 /* Page title */
 .page-title {
-  margin-top: 32px;
+  margin-top: 24px;
   width: 582px;
   max-width: 100%;
   font-family:
@@ -129,16 +129,10 @@ body {
     Roboto,
     Helvetica,
     sans-serif;
-  font-size: 40px;
+  font-size: 32px;
   color: #1b2559;
   font-weight: 500;
   text-align: center;
-}
-
-@media (max-width: 991px) {
-  .page-title {
-    max-width: 100%;
-  }
 }
 
 /* Connection container */
@@ -150,13 +144,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 .divider-line {
   aspect-ratio: 500;
   object-fit: contain;
   object-position: center;
-  width: 580px;
+  width: 900px;
   max-width: 100%;
 }
 
@@ -164,8 +159,8 @@ body {
   align-self: stretch;
   display: flex;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   align-items: center;
   gap: 32px;
   justify-content: center;
@@ -184,14 +179,14 @@ body {
   align-items: stretch;
   border-radius: 20px;
   border: 1px solid var(--Neutral-White-300, #f9f9f9);
-  box-shadow:
-    0px 0px 1px 0px rgba(12, 26, 75, 0.24),
-    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+  box-shadow:  
+    0px 0px 2px 0px rgba(12, 26, 75, 0.3),
+    0px 5px 12px -1px rgba(50, 50, 71, 0.1);
   background-color: #f9f9f9;
   display: flex;
   margin-top: auto;
   margin-bottom: auto;
-  min-height: 200px;
+  height: 180px;
   flex-direction: column;
   font-family:
     DM Sans,
@@ -201,8 +196,7 @@ body {
     sans-serif;
   font-size: 18px;
   color: #161d44;
-  font-weight: 500;
-  width: 200px;
+  width: 180px;
 }
 
 .profile-image {
@@ -219,6 +213,7 @@ body {
   width: 100%;
   text-align: center;
   font-size: 18px;
+  font-weight: 500;
 }
 
 /* Connection arrow */
@@ -240,16 +235,16 @@ body {
   align-items: stretch;
   border-radius: 20px;
   border: 1px solid var(--Neutral-White-300, #f9f9f9);
-  box-shadow:
-    0px 0px 1px 0px rgba(12, 26, 75, 0.24),
-    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    box-shadow:  
+    0px 0px 2px 0px rgba(12, 26, 75, 0.3),
+    0px 5px 12px -1px rgba(50, 50, 71, 0.1);
   background-color: #f9f9f9;
   display: flex;
   margin-top: auto;
   margin-bottom: auto;
-  min-height: 200px;
+  height: 180px;
   flex-direction: column;
-  width: 200px;
+  width: 180px;
 }
 
 .app-icon-wrapper {
@@ -304,7 +299,8 @@ body {
 /* Action buttons */
 .action-buttons {
   display: flex;
-  margin-top: 64px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   align-items: center;
   gap: 16px;
   font-family:
@@ -322,7 +318,8 @@ body {
 @media (max-width: 991px) {
   .action-buttons {
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -331,8 +328,8 @@ body {
   border-radius: 10000px;
   min-width: 240px;
   margin-top: auto;
-  margin-bottom: auto;
-  min-height: 56px;
+  margin-bottom: 0;
+  min-height: 40px;
   padding: 18px 16px;
   gap: 8px;
   width: 300px;
@@ -350,12 +347,12 @@ body {
 
 .button-outline {
   background-color: rgba(249, 249, 249, 1);
-  border: 2px solid rgba(45, 84, 223, 1);
+  border: 2px solid #2D54DF;
   color: #2d54df;
 }
 
 .button-primary {
-  background-color: rgba(45, 84, 223, 1);
+  background-color: #2D54DF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -376,3 +373,4 @@ body {
   margin-bottom: auto;
   flex-shrink: 0;
 }
+
