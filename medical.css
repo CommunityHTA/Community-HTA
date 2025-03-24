@@ -198,51 +198,23 @@ body {
   filter: invert(35%) sepia(99%) saturate(338%) hue-rotate(66deg) brightness(92%) contrast(89%);
 }
 
-.title-section {
-  margin-top: 40px;
+
+/* Section titles */
+.section-title {
+  height: 80px;
 }
 
-.page-title {
+.title {
   color: #0c112f;
+  height: 30px;
   font-size: 24px;
   font-weight: 500;
-  margin: 0;
 }
 
-.page-description {
-  color: rgba(99, 115, 145, 1);
-  font-size: 14px;
-  font-weight: 400;
-  margin-top: 4px;
-  margin-bottom: 0;
-}
-
-
-.assessment-title {
-  color: #0c112f;
-  font-size: 24px;
-  font-weight: 500;
-  margin: 0;
-}
-
-@media (max-width: 991px) {
-  .assessment-title {
-    max-width: 100%;
-  }
-}
-
-.assessment-description {
+.subtitle {
   color: #637391;
   font-size: 14px;
   font-weight: 400;
-  margin-top: 4px;
-  margin-bottom: 0;
-}
-
-@media (max-width: 991px) {
-  .assessment-description {
-    max-width: 100%;
-  }
 }
 
 .rating-legend {
@@ -269,6 +241,12 @@ body {
   font-weight: 500;
   white-space: nowrap;
   text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+  justify-content: start;
 }
 
 @media (max-width: 991px) {
@@ -327,56 +305,42 @@ body {
 
 .topics-container {
   width: 100%;
-  padding: 0 24px;
+  padding: 8px 16px 0 0;
   height: 420px;
   overflow-y: auto;
 }
 
-@media (max-width: 991px) {
-  .topics-container {
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
+
 
 .topics-list {
   width: 100%;
 }
 
-@media (max-width: 991px) {
-  .topics-list {
-    max-width: 100%;
-  }
-}
+
 
 .topic-card {
   align-items: stretch;
   border-radius: 8px;
-  border: 0.5px solid var(--Neutral-Ecclesiastical-Blue-100, #f0f3ff);
   box-shadow:
     0px 0px 1px 0px rgba(12, 26, 75, 0.24),
     0px 3px 8px -1px rgba(50, 50, 71, 0.05);
   background-color: #fff;
   display: flex;
-  min-height: 106px;
+  height: 100px;
   width: 100%;
   padding: 16px 40px 16px 16px;
   overflow: hidden;
-  justify-content: start;
-  margin-bottom: 13px;
+  justify-content: center;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  margin-left: 4px;
+  margin-top: 8px;
 }
 
 .topic-card:first-child {
   margin-top: 0;
 }
 
-@media (max-width: 991px) {
-  .topic-card {
-    max-width: 100%;
-    padding-right: 20px;
-  }
-}
 
 .topic-content {
   display: flex;
@@ -392,12 +356,6 @@ body {
   flex-basis: 0%;
 }
 
-@media (max-width: 991px) {
-  .topic-content {
-    max-width: 100%;
-  }
-}
-
 .topic-text {
   align-self: stretch;
   display: flex;
@@ -410,16 +368,10 @@ body {
   width: 700px;
 }
 
-@media (max-width: 991px) {
-  .topic-text {
-    max-width: 100%;
-  }
-}
-
 .topic-title {
   align-self: start;
   gap: 8px;
-  font-size: 18px;
+  font-size: 16px;
   color: #0c112f;
   font-weight: 500;
   margin: 0;
@@ -427,7 +379,7 @@ body {
 
 .topic-description {
   color: #47548c;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   margin-top: 8px;
   margin-bottom: 0;
@@ -479,6 +431,29 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   flex-shrink: 0;
+  filter: invert(87%) sepia(17%) saturate(605%) hue-rotate(194deg) brightness(96%) contrast(86%);
+  transition: filter 0.3s, fill 0.3s;
+  cursor: pointer;
+}
+
+.str {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-shrink: 0;
+  filter: invert(87%) sepia(17%) saturate(605%) hue-rotate(194deg) brightness(96%) contrast(86%);
+}
+
+.star.hovered {
+  filter: invert(45%) sepia(13%) saturate(932%) hue-rotate(181deg) brightness(94%) contrast(87%);
+}
+
+.star.selected {
+  filter: invert(57%) sepia(100%) saturate(623%) hue-rotate(358deg) brightness(100%) contrast(104%);
 }
 
 .bottom-spacer {
@@ -496,82 +471,83 @@ body {
   }
 }
 
+
+/* Navigation buttons */
 .navigation-buttons {
-  background-color: rgba(249, 249, 249, 1);
-  border-color: rgba(197, 203, 228, 1);
-  border-top-width: 1px;
+  border-top: 1px solid #c5cbe4;
   display: flex;
   width: 100%;
-  padding: 24px 32px;
+  height: 60hv;
+  padding: 16px 32px;
   align-items: center;
-  gap: 40px 100px;
-  font-size: 16px;
+  gap: 100px;
   font-weight: 500;
   text-align: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(249, 249, 249, 1);
 }
 
-@media (max-width: 991px) {
-  .navigation-buttons {
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.prev-button {
+.btn {
   border-radius: 10000px;
-  border-color: rgba(45, 84, 223, 1);
-  border-style: solid;
-  border-width: 2px;
-  background-color: transparent;
-  align-self: stretch;
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-  min-height: 40px;
+  height: 40px;
   padding: 10px 16px;
   align-items: center;
   gap: 8px;
-  color: #2d54df;
   justify-content: center;
   cursor: pointer;
+  font-size: 16px;
 }
 
-.button-icon {
+.btn-outline {
+  border: 2px solid #2D54DF;
+  color: #2D54DF;
+  background-color: transparent;
+}
+
+.btn-disabled {
+  background-color: #c5cbe4;
+  border: 1px solid #c5cbe4;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.btn-icon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
   width: 20px;
-  align-self: stretch;
-  margin-top: auto;
-  margin-bottom: auto;
-  flex-shrink: 0;
 }
-
-.button-label {
-  align-self: stretch;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.next-button {
+.next {
   border-radius: 10000px;
-  background-color: rgba(197, 203, 228, 1);
-  border-color: rgba(197, 203, 228, 1);
-  border-style: solid;
-  border-width: 1px;
-  align-self: stretch;
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-  min-height: 40px;
+  height: 40px;
   padding: 10px 16px;
   align-items: center;
   gap: 8px;
-  color: #fff;
   justify-content: center;
+  cursor: not-allowed;
+  font-size: 16px;
+  background-color: #c5cbe4;
+  border: 1px solid #c5cbe4;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.next.active {
+  background-color: #2D54DF;
   cursor: pointer;
+  opacity: 1;
+  color: white; /* Mudança de cor do texto quando ativo */
+}
+
+.next.btn-disabled {
+  background-color: #c5cbe4;
+  border: 1px solid #c5cbe4;
+  color: #fff;
+  cursor: not-allowed;
 }
 

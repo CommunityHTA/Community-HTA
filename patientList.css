@@ -198,23 +198,23 @@ body {
   filter: invert(35%) sepia(99%) saturate(338%) hue-rotate(66deg) brightness(92%) contrast(89%);
 }
 
-.title-section {
-  margin-top: 40px;
+/* Section titles */
+.section-title {
+  margin-top: 26px;
+  height: 80px;
 }
 
-.page-title {
+.title {
   color: #0c112f;
+  height: 30px;
   font-size: 24px;
   font-weight: 500;
-  margin: 0;
 }
 
-.page-description {
-  color: rgba(99, 115, 145, 1);
+.subtitle {
+  color: #637391;
   font-size: 14px;
   font-weight: 400;
-  margin-top: 4px;
-  margin-bottom: 0;
 }
 
 /* Search Section */
