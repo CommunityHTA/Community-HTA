@@ -1,60 +1,107 @@
-.assessment-screen {
-  border-radius: 1px;
-  background-color: #f9f9f9;
-  display: flex;
-  padding-bottom: 188px;
-  flex-direction: column;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  align-items: stretch;
+}
+
+.screen {
+  border-radius: 1px;
+  background-color: rgba(249, 249, 249, 1);
   font-family:
-    "DM Sans",
+    DM Sans,
     -apple-system,
     Roboto,
     Helvetica,
     sans-serif;
-}
-
-.main-header {
-  border-bottom: 1px solid #c5cbe4;
   display: flex;
-  padding: 16px 32px;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  overflow: visible;
+}
+/* Header Section */
+.header {
+  border-color: rgba(197, 203, 228, 1);
+  border-bottom-width: 1px;
+  display: flex;
+  min-height: 68px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px 32px;
   align-items: center;
+  font-size: 14px;
   justify-content: space-between;
+  border-bottom: 1px solid #ccc;
 }
 
-.breadcrumb-nav {
+@media (max-width: 991px) {
+  .header {
+    padding: 25px 20px;
+  }
+}
+
+.breadcrumb {
+  align-self: stretch;
   display: flex;
-  min-width: 240px;
+  margin: auto 0;
   align-items: center;
   gap: 7px;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  font-size: 14px;
-  color: #8a8ea1;
+  justify-content: start;
 }
 
 .breadcrumb-item {
+  align-self: stretch;
   margin: auto 0;
+  color: #8a8ea1;
+  font-weight: 400;
+  white-space: nowrap;
   text-decoration: none;
-  color: inherit;
+  cursor: pointer;
 }
 
-.breadcrumb-separator {
+
+@media (max-width: 991px) {
+  .breadcrumb-item {
+    white-space: initial;
+  }
+}
+
+.breadcrumb-current {
+  align-self: stretch;
   display: flex;
+  margin: auto 0;
   align-items: center;
   gap: 7px;
-}
-
-.separator-icon {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-}
-
-.breadcrumb-separator.current {
   color: #161d44;
   font-weight: 500;
+  justify-content: start;
 }
+
+.breadcrumb-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+  align-self: stretch;
+  margin: auto 0;
+  flex-shrink: 0;
+}
+
+.breadcrumb-item-current {
+  align-self: stretch;
+  margin: auto 0;
+}
+
 
 .content-container {
   margin-top: 137px;

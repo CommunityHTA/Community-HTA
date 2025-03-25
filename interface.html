@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patient Assessment</title>
-    <link rel="stylesheet" href="functionalities.css" />
+    <link rel="stylesheet" href="interface.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -54,24 +54,32 @@
                   <span class="step-label">Medical Standards & SAMD Certification</span>
                 </div>
           <div class="step-divider"></div>
+          <div class="step completed">
+                  <img
+                    src="icons/system/check-circle.svg"
+                      class="step-icon-check"
+                      alt="Check"
+                  />
+                    <span class="step-label">Functionalities</span>
+                </div>
+          <div class="step-divider"></div>
+          <div class="step completed">
+                  <img
+                    src="icons/system/check-circle.svg"
+                      class="step-icon-check"
+                      alt="Check"
+                  />
+                    <span class="step-label">Usability</span>
+                </div>
+          <div class="step-divider"></div>
           <div class="step active">
                     <img
                       src="icons/navigation/step.svg"
                       class="step-icon"
                       alt="Loading"
                     />
-                    <span class="step-label">Functionalities</span>
+                    <span class="step-label">Interface</span>
                 </div>
-          <div class="step-divider"></div>
-          <div class="step">
-            <div class="step-circle"></div>
-            <div class="step-label">Usability</div>
-          </div>
-          <div class="step-divider"></div>
-          <div class="step">
-            <div class="step-circle"></div>
-            <div class="step-label">Interface</div>
-          </div>
         </section>
 
         <section class="section-title">
@@ -82,35 +90,45 @@
               </section>
 
 
-      <section class="rating-legend">
-        <h2 class="rating-title">RELEVANCE</h2>
-        <div class="rating-scale">
-          <div class="rating-item">
-            <span class="rating-text">Low</span>
+  <section class="rating-legend">
+      <h2 class="rating-title">RELEVANCE</h2>
+      <div class="rating-scale">
+        <div class="rating-item">
+          <span class="rating-text">Low</span>
+          <div class="tooltip-container">
             <img
               src="icons/system/information-circle.svg"
-              alt=""
+              alt="Info"
               class="info-icon"
             />
-          </div>
-          <div class="rating-item">
-            <span class="rating-text">Medium</span>
-            <img
-              src="icons/system/information-circle.svg"
-              alt=""
-              class="info-icon"
-            />
-          </div>
-          <div class="rating-item">
-            <span class="rating-text">High</span>
-            <img
-              src="icons/system/information-circle.svg"
-              alt=""
-              class="info-icon"
-            />
+            <div class="tooltip">Non-essential for patient needs</div>
           </div>
         </div>
-      </section>
+        <div class="rating-item">
+          <span class="rating-text">Medium</span>
+          <div class="tooltip-container">
+            <img
+              src="icons/system/information-circle.svg"
+              alt="Info"
+              class="info-icon"
+            />
+            <div class="tooltip">Supports patient needs, but not critical</div>
+          </div>
+        </div>
+        <div class="rating-item">
+          <span class="rating-text">High</span>
+          <div class="tooltip-container">
+            <img
+              src="icons/system/information-circle.svg"
+              alt="Info"
+              class="info-icon"
+            />
+            <div class="tooltip">Essential for patient care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
       <div class="spacer"></div>
 
@@ -255,7 +273,7 @@
 
       // Evento para o botão "Previous"
     previousButton.addEventListener("click", function () {
-        window.location.href = "medical.html";
+        window.location.href = "usability.html";
     });
 
     // Evento para o botão "Next"
@@ -283,5 +301,19 @@
         });
     });
 });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const infoIcons = document.querySelectorAll(".info-icon");
+    const labels = ["LOW", "MEDIUM", "HIGH"];
+    
+    infoIcons.forEach((icon, index) => {
+      const tooltip = document.createElement("span");
+      tooltip.classList.add("tooltip");
+      tooltip.textContent = labels[index];
+      icon.appendChild(tooltip);
+    });
+  });
+</script>
+
   </script>
 </html>

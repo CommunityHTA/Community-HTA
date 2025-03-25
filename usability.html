@@ -45,24 +45,32 @@
 
       <main class="main-content">
         <section class="stepper">
-          <div class="step">
-            <img
-              src="icons/navigation/step.svg"
-              class="step-icon"
-              alt="Loading"
-            />
-            <span class="step-label">Medical Standards & SAMD Certification</span>
-          </div>
+          <div class="step completed">
+                  <img
+                    src="icons/system/check-circle.svg"
+                      class="step-icon-check"
+                      alt="Check"
+                  />
+                  <span class="step-label">Medical Standards & SAMD Certification</span>
+                </div>
           <div class="step-divider"></div>
-          <div class="step">
-            <div class="step-circle"></div>
-            <div class="step-label">Functionalities</div>
-          </div>
+          <div class="step completed">
+                  <img
+                    src="icons/system/check-circle.svg"
+                      class="step-icon-check"
+                      alt="Check"
+                  />
+                    <span class="step-label">Functionalities</span>
+                </div>
           <div class="step-divider"></div>
-          <div class="step">
-            <div class="step-circle"></div>
-            <div class="step-label">Usability</div>
-          </div>
+          <div class="step active">
+                    <img
+                      src="icons/navigation/step.svg"
+                      class="step-icon"
+                      alt="Loading"
+                    />
+                    <span class="step-label">Usability</span>
+                </div>
           <div class="step-divider"></div>
           <div class="step">
             <div class="step-circle"></div>
@@ -442,13 +450,13 @@
 
       // Evento para o botão "Previous"
     previousButton.addEventListener("click", function () {
-        window.location.href = "selectApplication.html";
+        window.location.href = "functionalities.html";
     });
 
     // Evento para o botão "Next"
     nextButton.addEventListener("click", function () {
         if (nextButton.classList.contains("active")) {
-            window.location.href = "functionalities.html";
+            window.location.href = "interface.html";
         }
     });
 });
