@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="icon" href="img/evalia.png" type="image/png" /> 
+    <script src="https://d3js.org/d3.v6.min.js"></script>
   </head>
   <body>
     <div class="screen">
@@ -43,10 +44,16 @@
         </nav>
       </header>
 
-        <section class="content-container">
-            <div class="content-wrapper">
-                <article class="results-column">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/85959a65ac4f32b24cfe7bbbaf278c1da9172d4c?placeholderIfAbsent=true" alt="Success" class="success-icon" />
+      <main class="main-content">
+        <div class="content-wrapper">
+          <section class="assessment-column">
+            
+ <article class="results-column">
+                    <img
+                    src="icons/system/check-circle.svg"
+                      class="success-icon"
+                      alt="Check"
+                  />
 
                     <section class="results-header">
                         <h1 class="results-title">Assessment complete!</h1>
@@ -59,43 +66,38 @@
                         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d5e378165fd8b49f740431ae44c1735a41ce1124?placeholderIfAbsent=true" alt="Preview Top" class="preview-image" />
                         <div class="app-card">
                             <div class="app-icon-wrapper">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/faa4455563d23c579c9c6ba60709305002869da8?placeholderIfAbsent=true" alt="App Background" class="app-icon-bg" />
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f57317c50c333c953104d48f67c29ffc289a6964?placeholderIfAbsent=true" alt="App Icon" class="app-icon" />
+                                <img
+                                      src="img/logo_cardiHealth.png"
+                                      alt="CardiHealth"
+                                      class="app-icon"
+                                    />
                             </div>
-                            <h2 class="app-name">HealthTracker</h2>
+                            <h2 class="app-name">CardiHealth</h2>
                         </div>
                         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b01930777055d9d3ac2e2ca9e969a4b4747012da?placeholderIfAbsent=true" alt="Preview Bottom" class="preview-image" />
                     </section>
-
-                    <div class="action-buttons">
-                        <button class="btn-secondary">Discard assessment</button>
-                        <button class="btn-primary">End assessment</button>
-                    </div>
                 </article>
+            <section class="action-buttons">
+                <button class="button button-outline previous">Discard assessment</button>
+                <button class="button button-primary next">
+                  <span class="button-text">End assessment</span>
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/090b9620747fc952ef6b1e1c7c86a8e493799563?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
+                    class="button-icon"
+                    alt="Arrow icon"
+                  />
+                </button>
+              </section>
+          </section>
 
-                <aside class="details-column">
+          <aside class="details-column">
                     <div class="assessment-card">
                         <button class="details-button">
                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9e2fb6fb8e4a1e061532531ac49dd692ed1d0a4?placeholderIfAbsent=true" alt="Details" class="details-icon" />
                             <span>View details</span>
                         </button>
 
-                        <div class="progress-circle-container">
-                            <div class="progress-circle-wrapper">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c0b81b02b40bec219b6b285cd19538d3ef33df23?placeholderIfAbsent=true" alt="Progress Background" class="progress-bg" />
-                                <div class="progress-circle-inner">
-                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc40d9e891ace8713b4f3dcef27f6b0019583d2c?placeholderIfAbsent=true" alt="Progress Layer 1" class="progress-layer" />
-                                    <div class="progress-circle-content">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c51480a3b916f8834f0bdc93045c620b51f4b0d4?placeholderIfAbsent=true" alt="Progress Layer 2" class="progress-layer" />
-                                        <div class="progress-score">
-                                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d1e4bcebf731b7bbdd7a38c5c48678271d273cc8?placeholderIfAbsent=true" alt="Progress Final" class="progress-layer" />
-                                            <span class="score-value">81%</span>
-                                            <span class="score-label">TOTAL</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <svg id="chart" class="grafico"></svg>
 
                         <ul class="assessment-metrics">
                             <li class="metric-item">
@@ -132,8 +134,60 @@
                         </ul>
                     </div>
                 </aside>
-            </div>
-        </section>
-    </main>
+        </div>
 </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const previousButton = document.querySelector(".previous");
+      const nextButton = document.querySelector(".next");
+      // Evento para o botão "Previous"
+      previousButton.addEventListener("click", function () {
+          window.location.href = "selectApplication.html";
+      });
+
+      // Evento para o botão "Next"
+      nextButton.addEventListener("click", function () {
+              window.location.href = "dashboard.html";
+      });
+    });
+
+        const data = [79, 82, 86, 73];
+        const colors = ["#174EA6", "#4CAF50", "#FFC107", "#8E24AA", "#D6D9E0"];
+        const width = 400, height = 400, radius = 150;
+        const svg = d3.select("#chart")
+            .attr("viewBox", `0 0 ${width} ${height}`)
+            .append("g")
+            .attr("transform", `translate(${width / 2},${height / 2})`);
+
+        const arc = d3.arc()
+            .innerRadius(d => radius - (d.index * 18)) 
+            .outerRadius(d => radius - (d.index * 18) + 12) 
+            .startAngle(0)
+            .cornerRadius(6); 
+
+        data.forEach((value, i) => {
+            svg.append("path")
+                .datum({ index: i, endAngle: (value / 100) * 2 * Math.PI })
+                .attr("d", arc)
+                .attr("fill", colors[i]);
+        });
+
+        svg.append("text")
+            .attr("x", 0)
+            .attr("y", -10) // Pequeno ajuste para centralização
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "middle")
+            .attr("font-size", "50px") // Aumentei de 40px para 50px
+            .attr("fill", "#1b2559")
+            .attr("font-weight", "bold")
+            .text("81%");
+
+        svg.append("text")
+            .attr("x", 0)
+            .attr("y", 50) // Pequeno ajuste para ficar logo abaixo
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "middle")
+            .attr("font-size", "24px") // Aumentei de 20px para 24px
+            .text("TOTAL");
+  </script>
 </html>

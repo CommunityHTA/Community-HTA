@@ -137,11 +137,9 @@
           <article class="topic-card">
             <div class="topic-content">
               <div class="topic-text">
-                <h3 class="topic-title">Certification as SAMD</h3>
+                <h3 class="topic-title">Visual style</h3>
                 <p class="topic-description">
-                  It is important that the application is certified as SAMD
-                  (Software as a Medical Device) to ensure compliance with medical
-                  device regulations.
+                  Maintaining a consistent visual style and typography to enhance user experience and brand identity.
                 </p>
               </div>
               <div class="topic-rating">
@@ -154,11 +152,9 @@
           <article class="topic-card">
             <div class="topic-content">
               <div class="topic-text">
-                <h3 class="topic-title">Certification as SAMD</h3>
+                <h3 class="topic-title">Clear information</h3>
                 <p class="topic-description">
-                  It is important that the application is certified as SAMD
-                  (Software as a Medical Device) to ensure compliance with medical
-                  device regulations.
+                  Important information is clearly presented with a visual hierarchy that highlights key details for easy understanding.
                 </p>
               </div>
               <div class="topic-rating">
@@ -171,11 +167,9 @@
           <article class="topic-card">
             <div class="topic-content">
               <div class="topic-text">
-                <h3 class="topic-title">Certification as SAMD</h3>
+                <h3 class="topic-title">Color scheme</h3>
                 <p class="topic-description">
-                  It is important that the application is certified as SAMD
-                  (Software as a Medical Device) to ensure compliance with medical
-                  device regulations.
+                  A calm and appropriate color scheme reduces distractions, helping users stay focused on essential tasks.
                 </p>
               </div>
               <div class="topic-rating">
@@ -188,11 +182,9 @@
           <article class="topic-card">
             <div class="topic-content">
               <div class="topic-text">
-                <h3 class="topic-title">Certification as SAMD</h3>
+                <h3 class="topic-title">Icons & Graphics</h3>
                 <p class="topic-description">
-                  It is important that the application is certified as SAMD
-                  (Software as a Medical Device) to ensure compliance with medical
-                  device regulations.
+                  High-quality icons, graphics, and relevant imagery support content and make user interaction more intuitive.
                 </p>
               </div>
               <div class="topic-rating">
@@ -205,11 +197,9 @@
           <article class="topic-card">
             <div class="topic-content">
               <div class="topic-text">
-                <h3 class="topic-title">Certification as SAMD</h3>
+                <h3 class="topic-title">Animations</h3>
                 <p class="topic-description">
-                  It is important that the application is certified as SAMD
-                  (Software as a Medical Device) to ensure compliance with medical
-                  device regulations.
+                  Smooth and polished animations or transitions enhance the user experience by creating a seamless interaction flow.
                 </p>
               </div>
               <div class="topic-rating">
@@ -222,11 +212,69 @@
           <article class="topic-card">
             <div class="topic-content">
               <div class="topic-text">
-                <h3 class="topic-title">Certification as SAMD</h3>
+                <h3 class="topic-title">Professional appearance</h3>
                 <p class="topic-description">
-                  It is important that the application is certified as SAMD
-                  (Software as a Medical Device) to ensure compliance with medical
-                  device regulations.
+                  A professional, clutter-free design creates a trustworthy environment, fostering confidence in the app's reliability.
+                </p>
+              </div>
+              <div class="topic-rating">
+                  <button class="rating-button low">Low</button>
+                  <button class="rating-button moderate">Moderate</button>
+                  <button class="rating-button high">High</button>
+              </div>
+            </div>
+          </article>
+          <article class="topic-card">
+            <div class="topic-content">
+              <div class="topic-text">
+                <h3 class="topic-title">Visually appealing</h3>
+                <p class="topic-description">
+                  A modern, visually appealing design engages users while staying in line with current design trends and functionality.
+                </p>
+              </div>
+              <div class="topic-rating">
+                  <button class="rating-button low">Low</button>
+                  <button class="rating-button moderate">Moderate</button>
+                  <button class="rating-button high">High</button>
+              </div>
+            </div>
+          </article>
+          <article class="topic-card">
+            <div class="topic-content">
+              <div class="topic-text">
+                <h3 class="topic-title">Text Readability</h3>
+                <p class="topic-description">
+                  Text is readable with appropriate contrast, ensuring accessibility and ease of reading for all users.
+                </p>
+              </div>
+              <div class="topic-rating">
+                  <button class="rating-button low">Low</button>
+                  <button class="rating-button moderate">Moderate</button>
+                  <button class="rating-button high">High</button>
+              </div>
+            </div>
+          </article>
+          <article class="topic-card">
+            <div class="topic-content">
+              <div class="topic-text">
+                <h3 class="topic-title">Minimal Layout</h3>
+                <p class="topic-description">
+                  A clean, minimalist layout focuses on functionality and simplicity, avoiding unnecessary elements that could overwhelm users.
+                </p>
+              </div>
+              <div class="topic-rating">
+                  <button class="rating-button low">Low</button>
+                  <button class="rating-button moderate">Moderate</button>
+                  <button class="rating-button high">High</button>
+              </div>
+            </div>
+          </article>
+          <article class="topic-card">
+            <div class="topic-content">
+              <div class="topic-text">
+                <h3 class="topic-title">Navigation</h3>
+                <p class="topic-description">
+                  Visually distinct buttons and clear section separations ensure easy navigation and improve the overall usability of the app.
                 </p>
               </div>
               <div class="topic-rating">
@@ -252,6 +300,11 @@
                 />
                 <span class="btn-label">Previous step</span>
               </button>
+              <p class="linha subtitle left"><img
+              src="icons/system/information-circle.svg"
+              alt="Info"
+              class="button-icon"
+            />Unprioritized features will be marked low relevance. You can still continue.</p>
               <button class="btn active next">
                   <span class="btn-label">Next step</span>
                   <img
@@ -274,11 +327,15 @@
       const modal = document.createElement("div");
       modal.classList.add("modal");
       modal.innerHTML = `
-        <div class="modal-content">
-          <p>Please select a rating for all topics before proceeding.</p>
-          <button class="close-modal">Close</button>
-          <button class="continue-modal">Continue</button>
-        </div>
+          <div class="modal-content">
+              <h2>Some features were not prioritized.</h2>
+              <h2>Would you like to continue?</h2>
+              <p>They will be considered as low relevance.</p>
+              <div class="modal-buttons">
+                  <button class="btn btn-outline close-modal">Return to prioritization</button>
+                  <button class="btn next active continue-modal">Continue anyway</button>
+              </div>
+          </div>
       `;
       document.body.appendChild(modal);
 
@@ -316,7 +373,7 @@
           });
 
           if (allRated) {
-              window.location.href = "usability.html";
+              window.location.href = "results.html";
           } else {
               modal.style.display = "block";
           }
