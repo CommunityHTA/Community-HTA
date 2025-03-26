@@ -257,42 +257,75 @@
       </footer>
     </main>
   </body>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const previousButton = document.querySelector(".previous");
-    const nextButton = document.querySelector(".next");
-    const topicCards = document.querySelectorAll(".topic-card");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const previousButton = document.querySelector(".previous");
+      const nextButton = document.querySelector(".next");
+      const topicCards = document.querySelectorAll(".topic-card");
+      
+      const modal = document.createElement("div");
+      modal.classList.add("modal");
+      modal.innerHTML = `
+        <div class="modal-content">
+          <p>Please select a rating for all topics before proceeding.</p>
+          <button class="close-modal">Close</button>
+          <button class="continue-modal">Continue</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      const closeModalButton = modal.querySelector(".close-modal");
+      const continueModalButton = modal.querySelector(".continue-modal");
+      
+      closeModalButton.addEventListener("click", function () {
+          modal.style.display = "none";
+      });
+
+      continueModalButton.addEventListener("click", function () {
+          topicCards.forEach(card => {
+              const selected = card.querySelector(".rating-button.selected");
+              if (!selected) {
+                  card.querySelector(".rating-button.low").classList.add("selected");
+              }
+          });
+          modal.style.display = "none";
+          window.location.href = "usability.html";
+      });
 
       // Evento para o botão "Previous"
-    previousButton.addEventListener("click", function () {
-        window.location.href = "medical.html";
-    });
+      previousButton.addEventListener("click", function () {
+          window.location.href = "medical.html";
+      });
 
-    // Evento para o botão "Next"
-    nextButton.addEventListener("click", function () {
-        if (nextButton.classList.contains("active")) {
-            window.location.href = "usability.html";
-        }
-    });
-});
+      // Evento para o botão "Next"
+      nextButton.addEventListener("click", function () {
+          let allRated = true;
+          topicCards.forEach(card => {
+              const selected = card.querySelector(".rating-button.selected");
+              if (!selected) {
+                  allRated = false;
+              }
+          });
 
-    document.addEventListener("DOMContentLoaded", function () {
-    const topicCards = document.querySelectorAll(".topic-card");
+          if (allRated) {
+              window.location.href = "usability.html";
+          } else {
+              modal.style.display = "block";
+          }
+      });
 
-    topicCards.forEach(card => {
-        const buttons = card.querySelectorAll(".rating-button");
+      // Adiciona funcionalidade para os botões de rating
+      topicCards.forEach(card => {
+          const buttons = card.querySelectorAll(".rating-button");
 
-        buttons.forEach(button => {
-            button.addEventListener("click", function () {
-                // Remove a seleção de outros botões no mesmo card
-                buttons.forEach(btn => btn.classList.remove("selected"));
-
-                // Adiciona a classe 'selected' ao botão clicado
-                this.classList.add("selected");
-            });
-        });
-    });
-});
-  </script>
+          buttons.forEach(button => {
+              button.addEventListener("click", function () {
+                  buttons.forEach(btn => btn.classList.remove("selected"));
+                  this.classList.add("selected");
+              });
+          });
+      });
+  });
+</script>
 </html>
 
