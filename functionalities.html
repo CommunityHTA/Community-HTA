@@ -82,35 +82,45 @@
               </section>
 
 
-      <section class="rating-legend">
-        <h2 class="rating-title">RELEVANCE</h2>
-        <div class="rating-scale">
-          <div class="rating-item">
-            <span class="rating-text">Low</span>
+        <section class="rating-legend">
+      <h2 class="rating-title">RELEVANCE</h2>
+      <div class="rating-scale">
+        <div class="rating-item">
+          <span class="rating-text">Low</span>
+          <div class="tooltip-container">
             <img
               src="icons/system/information-circle.svg"
-              alt=""
+              alt="Info"
               class="info-icon"
             />
-          </div>
-          <div class="rating-item">
-            <span class="rating-text">Medium</span>
-            <img
-              src="icons/system/information-circle.svg"
-              alt=""
-              class="info-icon"
-            />
-          </div>
-          <div class="rating-item">
-            <span class="rating-text">High</span>
-            <img
-              src="icons/system/information-circle.svg"
-              alt=""
-              class="info-icon"
-            />
+            <div class="tooltip">Non-essential for patient needs</div>
           </div>
         </div>
-      </section>
+        <div class="rating-item">
+          <span class="rating-text">Medium</span>
+          <div class="tooltip-container">
+            <img
+              src="icons/system/information-circle.svg"
+              alt="Info"
+              class="info-icon"
+            />
+            <div class="tooltip">Supports patient needs, but not critical</div>
+          </div>
+        </div>
+        <div class="rating-item">
+          <span class="rating-text">High</span>
+          <div class="tooltip-container">
+            <img
+              src="icons/system/information-circle.svg"
+              alt="Info"
+              class="info-icon"
+            />
+            <div class="tooltip">Essential for patient care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
       <div class="spacer"></div>
 
