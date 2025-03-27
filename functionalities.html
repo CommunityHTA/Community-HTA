@@ -334,9 +334,13 @@
       const modal = document.createElement("div");
       modal.classList.add("modal");
       modal.innerHTML = `
+      <style>body {
+            font-family: 'Roboto', sans-serif;
+        }h2 {
+    line-height: 1.5; /* Garante que não haja espaçamento extra entre as linhas */
+}</style>
           <div class="modal-content">
-              <h2>Some features were not prioritized.</h2>
-              <h2>Would you like to continue?</h2>
+              <h2>Some features were not prioritized.<br>Would you like to continue?</h2>
               <p>They will be considered as low relevance.</p>
               <div class="modal-buttons">
                   <button class="btn btn-outline close-modal">Return to prioritization</button>

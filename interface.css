@@ -412,6 +412,11 @@ body {
     gap: 8px;
 }
 
+.rating-button:hover {
+    background-color: #EAEEFC;
+    color: #0C112F;
+}
+
 .rating-button.low.selected {
     border: 1px solid #004f92;
     color: #004f92;
@@ -615,18 +620,29 @@ body {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    width: 500px;
 }
 
 /* Estilo dos textos */
 .modal-content h2 {
-    font-family: 'Roboto', sans-serif;
+     font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
     font-size: 20px;
     color: #1A1A1A;
     margin-bottom: 8px;
 }
 
 .modal-content p {
-    font-family: 'Roboto', sans-serif;
+     font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
     font-size: 14px;
     color: #666;
     margin-bottom: 16px;
@@ -637,5 +653,11 @@ body {
     display: flex;
     gap: 12px;
     justify-content: center;
+     font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
 }
 

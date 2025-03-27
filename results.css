@@ -462,9 +462,21 @@ html, body {
     background: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
+     font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
 }
 
 .modal-content {
+  font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -477,14 +489,24 @@ html, body {
 
 /* Estilo dos textos */
 .modal-content h2 {
-    font-family: 'Roboto', sans-serif;
+  font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
     font-size: 20px;
     color: #1A1A1A;
     margin-bottom: 8px;
 }
 
 .modal-content p {
-    font-family: 'Roboto', sans-serif;
+  font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
     font-size: 14px;
     color: #666;
     margin-bottom: 16px;
@@ -492,6 +514,12 @@ html, body {
 
 /* Container dos botões */
 .modal-buttons {
+  font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
     display: flex;
     gap: 12px;
     justify-content: center;
@@ -504,12 +532,18 @@ html, body {
     justify-content: center;
     gap: 12px;
     margin-bottom: 16px;
+     font-family:
+    DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
 }
 
 /* Quadrados azuis */
 .square {
-    width: 60px;
-    height: 60px;
+    width: 140px;
+    height: 140px;
     border-radius: 8px;
 }
 
