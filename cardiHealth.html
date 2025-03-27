@@ -117,6 +117,12 @@
                           />
                           <span class="button-text">View details</span>
                         </button>
+                        <div class="modal" id="imageModal">
+                          <div class="modal-content">
+                            <button class="close-button">X</button>
+                            <img src="img/app_details.png" alt="Imagem grande">
+                          </div>
+                        </div>
                       </div>
                       <div class="rating-container">
                         <div class="rating-wrapper">
@@ -156,6 +162,12 @@
                           class="rating-icon"
                         />
                       </div>
+                      <div class="modal" id="ratingModal">
+                          <div class="modal-content">
+                            <button class="close-button">X</button>
+                            <img src="img/ratings.png" alt="Imagem grande">
+                          </div>
+                        </div>
                     </header>
                     <section class="features-section">
                       <div class="feature-item">
@@ -722,6 +734,42 @@ document.addEventListener("DOMContentLoaded", function () {
     // Evento de clique no botão de pesquisa
     searchButton.addEventListener("click", function () {
         navigateIfMatch();
+    });
+
+    function openModal(modal) {
+      modal.style.display = "flex";
+    }
+
+    // Função para fechar modal
+    function closeModal(modal) {
+      modal.style.display = "none";
+    }
+
+    // Selecionando elementos
+    const imageModal = document.getElementById("imageModal");
+    const ratingModal = document.getElementById("ratingModal");
+
+    const openImageModalBtn = document.querySelector(".view-details-button");
+    const openRatingModalBtn = document.querySelector(".rating-container");
+
+    const closeButtons = document.querySelectorAll(".close-button");
+
+    // Eventos de abertura
+    openImageModalBtn.addEventListener("click", () => openModal(imageModal));
+    openRatingModalBtn.addEventListener("click", () => openModal(ratingModal));
+
+    // Eventos de fechamento (todos os botões de fechar)
+    closeButtons.forEach(button => {
+      button.addEventListener("click", (event) => {
+        closeModal(event.target.closest(".modal"));
+      });
+    });
+
+    // Fechar modal ao clicar fora do conteúdo
+    window.addEventListener("click", (event) => {
+      if (event.target.classList.contains("modal")) {
+        closeModal(event.target);
+      }
     });
 });
 
