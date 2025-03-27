@@ -510,113 +510,76 @@
                 <section class="appointments-section">
                   <h3 class="section-title">Appointment history</h3>
                   <div class="appointments-timeline">
-                    <div class="timeline-indicators">
-                      <div class="timeline-dot"></div>
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/45655b917721a455e8289d1c7f72c126bf5cbe47288b8f4a649d00ea6100d8bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                        class="timeline-connector"
-                        alt=""
-                      />
-                      <div class="timeline-dot"></div>
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/45655b917721a455e8289d1c7f72c126bf5cbe47288b8f4a649d00ea6100d8bc?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                        class="timeline-connector"
-                        alt=""
-                      />
-                      <div class="timeline-dot"></div>
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce15f6aad4df5bea0d68fa3705ece5aae369fe125441a89353b2d95d7dd1ea67?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                        class="timeline-connector"
-                        alt=""
-                      />
+
+                    <article class="timeline">
+                    <div class="timeline__visualization">
+                      <div class="timeline__dot"></div>
+                      <div class="timeline__dot"></div>
+                      <div class="timeline__dot"></div>
                     </div>
 
-                    <div class="timeline-content">
-                      <div class="appointment">
-                        <time class="appointment-date"
-                          >5 February, 10:30 AM</time
-                        >
-                        <div class="appointment-card purple">
-                          <div class="appointment-details">
-                            <div class="appointment-info">
-                              <h4 class="appointment-title">
-                                Flow up - Chest Pain
-                              </h4>
-                              <div class="doctor-info">
-                                <img
-                                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/28d10b3f8051bfa7cf72d9f9ea2bb904977874dbcca412a1eb3bf8ca8e0a192f?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                                  class="doctor-avatar"
-                                  alt="Doctor"
-                                />
-                                <span class="doctor-name"
-                                  >Dr. James Carter</span
-                                >
-                              </div>
-                            </div>
-                            <span class="appointment-tag purple"
-                              >Medication</span
-                            >
+                    <div class="timeline__content">
+                      <time class="timeline__date">5 February, 10:30 AM</time>
+                      <article class="timeline-card timeline-card--purple">
+                        <div class="timeline-card__content">
+                          <div class="timeline-card__header">
+                            <h2 class="timeline-card__title">Flow up - Chest Pain</h2>
+                            <figure class="doctor-info">
+                              <img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/45a099a34b328d707d4f2db9af567fbcc604f5fe?placeholderIfAbsent=true&apiKey=d3b0d6c7755a4fdea16aada9ba48d018"
+                                class="doctor-info__avatar"
+                                alt="Dr. James Carter"
+                              />
+                              <figcaption class="doctor-info__name">Dr. James Carter</figcaption>
+                            </figure>
                           </div>
-                          <div class="appointment-indicator purple"></div>
+                          <span class="tag tag--purple">Medication</span>
                         </div>
-                      </div>
+                        <div class="timeline-card__indicator"></div>
+                      </article>
 
-                      <div class="appointment">
-                        <time class="appointment-date"
-                          >28 January, 02:45 PM</time
-                        >
-                        <div class="appointment-card red">
-                          <div class="appointment-details">
-                            <div class="appointment-info">
-                              <h4 class="appointment-title">
-                                Emergency - Chest Pain
-                              </h4>
-                              <div class="doctor-info">
-                                <img
-                                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/18553a9c54be9152617c4711cb7a8250123a0ca72de05ad5dda4d140b2955183?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                                  class="doctor-avatar"
-                                  alt="Doctor"
-                                />
-                                <span class="doctor-name"
-                                  >Drª. Emily Bennett</span
-                                >
-                              </div>
-                            </div>
-                            <span class="appointment-tag red">Emergency</span>
+                      <time class="timeline__date">28 January, 02:45 PM</time>
+                      <article class="timeline-card timeline-card--red">
+                        <div class="timeline-card__content">
+                          <div class="timeline-card__header">
+                            <h2 class="timeline-card__title">Emergency - Chest Pain</h2>
+                            <figure class="doctor-info">
+                              <img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1e8104a181798760c4d7c0b34b351a27dbedd5e?placeholderIfAbsent=true&apiKey=d3b0d6c7755a4fdea16aada9ba48d018"
+                                class="doctor-info__avatar"
+                                alt="Drª. Emily Bennett"
+                              />
+                              <figcaption class="doctor-info__name">
+                                Drª. Emily Bennett
+                              </figcaption>
+                            </figure>
                           </div>
-                          <div class="appointment-indicator red"></div>
+                          <span class="tag tag--red">Emergency</span>
                         </div>
-                      </div>
+                        <div class="timeline-card__indicator"></div>
+                      </article>
 
-                      <div class="appointment">
-                        <time class="appointment-date"
-                          >4 January, 09:30 AM</time
-                        >
-                        <div class="appointment-card blue">
-                          <div class="appointment-details">
-                            <div class="appointment-info">
-                              <h4 class="appointment-title">
-                                Medication Adjustment
-                              </h4>
-                              <div class="doctor-info">
-                                <img
-                                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7456287aa1cee1c2517b4828a38bd50fa56c680d9ed8fa03c19d9d41ee81df53?placeholderIfAbsent=true&apiKey=b548a82f0b244047909ff37cf86f743b"
-                                  class="doctor-avatar"
-                                  alt="Doctor"
-                                />
-                                <span class="doctor-name"
-                                  >Dr. Daniel Reyes</span
-                                >
-                              </div>
-                            </div>
-                            <span class="appointment-tag blue"
-                              >Regular Check-up</span
-                            >
+                      <time class="timeline__date">4 January, 09:30 AM</time>
+                      <article class="timeline-card timeline-card--blue">
+                        <div class="timeline-card__content">
+                          <div class="timeline-card__header">
+                            <h2 class="timeline-card__title">Medication Adjustment</h2>
+                            <figure class="doctor-info">
+                              <img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/3cf8ab0ef73bd886e53ac0cc03f24bd2e425ce0d?placeholderIfAbsent=true&apiKey=d3b0d6c7755a4fdea16aada9ba48d018"
+                                class="doctor-info__avatar"
+                                alt="Dr. Daniel Reyes"
+                              />
+                              <figcaption class="doctor-info__name">Dr. Daniel Reyes</figcaption>
+                            </figure>
                           </div>
-                          <div class="appointment-indicator blue"></div>
+                          <span class="tag tag--blue">Regular Check-up</span>
                         </div>
-                      </div>
+                        <div class="timeline-card__indicator"></div>
+                      </article>
                     </div>
+                  </article>
+
                   </div>
                 </section>
               </div>

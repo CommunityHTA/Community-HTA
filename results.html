@@ -137,19 +137,100 @@
         </div>
 </body>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const previousButton = document.querySelector(".previous");
-      const nextButton = document.querySelector(".next");
-      // Evento para o botão "Previous"
-      previousButton.addEventListener("click", function () {
-          window.location.href = "selectApplication.html";
-      });
 
-      // Evento para o botão "Next"
-      nextButton.addEventListener("click", function () {
-              window.location.href = "dashboard.html";
-      });
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const previousButton = document.querySelector(".previous");
+    const nextButton = document.querySelector(".next");
+
+    // Criar a Modal (inicialmente oculta)
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.style.display = "none";
+    modal.innerHTML = `
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="square blue"><img
+                      src="img/logo_cardiHealth.png"
+                      alt="Cardi Health Product"
+                      class="image"
+                    /></div>
+            <img
+                src="icons/navigation/vector.svg"
+                alt=""
+                class="button-icon"
+              />
+            <div class="square blue"><img
+                      src="img/josesilva.png"
+                      alt="José Silva"
+                      class="image"
+                    /></div>
+        </div>
+        <h2>Do you want to send the results for José Silva?</h2>
+        <p>The app has been successfully connected to the patient.</p>
+        <div class="modal-buttons">
+            <button class="btn button-outline close-modal">Don’t send results</button>
+            <button class="btn button-primary next active continue-modal">Send results</button>
+        </div>
+    </div>
+`;
+
+    document.body.appendChild(modal);
+
+// Criar a segunda Modal (Sucesso)
+    const successModal = document.createElement("div");
+    successModal.classList.add("modal");
+    successModal.style.display = "none";
+    successModal.innerHTML = `
+    <div class="modal-content">
+        <div class="check-icon-icon">
+             <img
+                    src="icons/system/check-circle.svg"
+                      class="success-icon"
+                      alt="Check"
+                  />
+        </div>
+        <h2>Your assessment has been successfully</h2>
+       <h2>submitted to José Silva!</h2>
+    </div>
+    `;
+
+    document.body.appendChild(successModal);
+
+    const closeModalButton = modal.querySelector(".close-modal");
+    const continueModalButton = modal.querySelector(".continue-modal");
+
+    // Fechar a primeira modal e ir para a dashboard
+    closeModalButton.addEventListener("click", function () {
+        modal.style.display = "none";
+        window.location.href = "dashboard.html";
     });
+
+    // Quando clicar em "Send Results"
+    continueModalButton.addEventListener("click", function () {
+        modal.style.display = "none"; // Fecha a primeira modal
+        successModal.style.display = "flex"; // Exibe a segunda modal
+        
+        // Após 2 segundos, redireciona para a dashboard
+        setTimeout(() => {
+            window.location.href = "dashboard.html";
+        }, 3000);
+    });
+
+    // Evento para voltar ao selecionar "Previous"
+    previousButton.addEventListener("click", function () {
+        window.location.href = "selectApplication.html";
+    });
+
+    // Evento para abrir a Modal ao clicar no botão "Next"
+    nextButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        modal.style.display = "flex";
+    });
+});
+
 
         const data = [79, 82, 86, 73];
         const colors = ["#174EA6", "#4CAF50", "#FFC107", "#8E24AA", "#D6D9E0"];
@@ -189,5 +270,6 @@
             .attr("dominant-baseline", "middle")
             .attr("font-size", "24px") // Aumentei de 20px para 24px
             .text("TOTAL");
+
   </script>
 </html>
